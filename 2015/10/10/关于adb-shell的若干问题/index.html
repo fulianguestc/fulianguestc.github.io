@@ -3,25 +3,37 @@
 <head>
   <meta charset="utf-8">
   
-  <title>关于adb shell的若干问题 | 少数派报告</title>
+  <title>关于adb-shell的若干问题 | 少数派报告</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最近一直在进行安卓开发，在windows下启动adb shell只要配置环境变量就好了，并且网上教程很多，那么在MAC下如何配置呢？大体思路是一致的，只是要用命令行来操作。首先启动终端，然后输入：
-fuliangdeMacBook-Pro:~ fuliang$ touch .bash_profile
-fuliangdeMacBook-Pro:~ fuliang$ open -e .bash_pro">
+  <meta name="description" content="最近一直在进行安卓开发，在windows下启动adb shell只要配置环境变量就好了，并且网上教程很多，那么在MAC下如何配置呢？
+大体思路是一致的，只是要用命令行来操。
+首先启动终端，然后输入：
+$ touch .bash_profile
+$ open -e .bash_profile
+这时会打开.bash_profile这个文档,
+export PATH=${PATH}:/Users/***">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于adb shell的若干问题">
+<meta property="og:title" content="关于adb-shell的若干问题">
 <meta property="og:url" content="http://yoursite.com/2015/10/10/关于adb-shell的若干问题/index.html">
 <meta property="og:site_name" content="少数派报告">
-<meta property="og:description" content="最近一直在进行安卓开发，在windows下启动adb shell只要配置环境变量就好了，并且网上教程很多，那么在MAC下如何配置呢？大体思路是一致的，只是要用命令行来操作。首先启动终端，然后输入：
-fuliangdeMacBook-Pro:~ fuliang$ touch .bash_profile
-fuliangdeMacBook-Pro:~ fuliang$ open -e .bash_pro">
+<meta property="og:description" content="最近一直在进行安卓开发，在windows下启动adb shell只要配置环境变量就好了，并且网上教程很多，那么在MAC下如何配置呢？
+大体思路是一致的，只是要用命令行来操。
+首先启动终端，然后输入：
+$ touch .bash_profile
+$ open -e .bash_profile
+这时会打开.bash_profile这个文档,
+export PATH=${PATH}:/Users/***">
 <meta property="og:image" content="https://raw.githubusercontent.com/fulianguestc/markdownphotos/master/geny.png">
-<meta property="og:updated_time" content="2015-10-10T08:56:26.000Z">
+<meta property="og:updated_time" content="2015-10-10T12:09:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于adb shell的若干问题">
-<meta name="twitter:description" content="最近一直在进行安卓开发，在windows下启动adb shell只要配置环境变量就好了，并且网上教程很多，那么在MAC下如何配置呢？大体思路是一致的，只是要用命令行来操作。首先启动终端，然后输入：
-fuliangdeMacBook-Pro:~ fuliang$ touch .bash_profile
-fuliangdeMacBook-Pro:~ fuliang$ open -e .bash_pro">
+<meta name="twitter:title" content="关于adb-shell的若干问题">
+<meta name="twitter:description" content="最近一直在进行安卓开发，在windows下启动adb shell只要配置环境变量就好了，并且网上教程很多，那么在MAC下如何配置呢？
+大体思路是一致的，只是要用命令行来操。
+首先启动终端，然后输入：
+$ touch .bash_profile
+$ open -e .bash_profile
+这时会打开.bash_profile这个文档,
+export PATH=${PATH}:/Users/***">
   
     <link rel="alternative" href="/atom.xml" title="少数派报告" type="application/atom+xml">
   
@@ -74,9 +86,13 @@ fuliangdeMacBook-Pro:~ fuliang$ open -e .bash_pro">
         <section id="main"><article id="post-关于adb-shell的若干问题" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/10/10/关于adb-shell的若干问题/" class="article-date">
-  <time datetime="2015-10-10T08:56:26.000Z" itemprop="datePublished">2015-10-10</time>
+  <time datetime="2015-10-10T12:09:33.000Z" itemprop="datePublished">2015-10-10</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -85,7 +101,7 @@ fuliangdeMacBook-Pro:~ fuliang$ open -e .bash_pro">
         
   
     <h1 class="article-title" itemprop="name">
-      关于adb shell的若干问题
+      关于adb-shell的若干问题
     </h1>
   
 
@@ -93,18 +109,21 @@ fuliangdeMacBook-Pro:~ fuliang$ open -e .bash_pro">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最近一直在进行安卓开发，在windows下启动adb shell只要配置环境变量就好了，并且网上教程很多，那么在MAC下如何配置呢？<br><br>大体思路是一致的，只是要用命令行来操作。<br><br>首先启动终端，然后输入：</p>
-<pre><code>fuliangdeMacBook-<span class="constant">Pro</span><span class="symbol">:~</span> fuliang<span class="variable">$ </span>touch .bash_profile
-fuliangdeMacBook-<span class="constant">Pro</span><span class="symbol">:~</span> fuliang<span class="variable">$ </span>open -e .bash_profile
+        <p>最近一直在进行安卓开发，在windows下启动adb shell只要配置环境变量就好了，并且网上教程很多，那么在MAC下如何配置呢？</p>
+<p>大体思路是一致的，只是要用命令行来操。</p>
+<p>首先启动终端，然后输入：</p>
+<pre><code><span class="variable">$ </span>touch .bash_profile
+<span class="variable">$ </span>open -e .bash_profile
 </code></pre><p>这时会打开.bash_profile这个文档,</p>
 <pre><code>export <span class="constant">PATH</span>=<span class="variable">${</span><span class="constant">PATH</span>}<span class="symbol">:/Users/***/sdk/platform-tools</span>
-</code></pre><p>在后面输入<code>platform-tools</code>所在的目录路径，比如笔者的路径就是<code>/Users/***/sdk/platform-tools</code>，所以写成上面的形式。然后直接关闭文档自动保存。<br><br>这时候在终端输入<code>adb</code>，就不会提示错误信息了，然后启动安卓模拟器，再次输入<code>adb shell</code>即可。</p>
+</code></pre><p>在后面输入<code>platform-tools</code>所在的目录路径，比如笔者的路径就是<code>/Users/***/sdk/platform-tools</code>，所以写成上面的形式。然后直接关闭文档自动保存。</p>
+<p>这时候在终端输入<code>adb</code>，就不会提示错误信息了，然后启动安卓模拟器，再次输入<code>adb shell</code>即可。</p>
 <p>进行安卓开发时相信很多人都会用Genymotion，笔者发现默认的ADB会产生端口被占用的问题，其实解决这个问题的方法很简单，只需要在设置中改成自己的sdk就好了。如下图：<br><img src="https://raw.githubusercontent.com/fulianguestc/markdownphotos/master/geny.png" alt="geny"><br>OVER~ ~ ~!</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/10/关于adb-shell的若干问题/" data-id="cifkuoehp00016i00saerywg8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/10/10/关于adb-shell的若干问题/" data-id="cifl1rksa0001x600hcf21hsq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -129,6 +148,13 @@ fuliangdeMacBook-<span class="constant">Pro</span><span class="symbol">:~</span>
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
   
     
   
@@ -150,7 +176,7 @@ fuliangdeMacBook-<span class="constant">Pro</span><span class="symbol">:~</span>
       <ul>
         
           <li>
-            <a href="/2015/10/10/关于adb-shell的若干问题/">关于adb shell的若干问题</a>
+            <a href="/2015/10/10/关于adb-shell的若干问题/">关于adb-shell的若干问题</a>
           </li>
         
           <li>
