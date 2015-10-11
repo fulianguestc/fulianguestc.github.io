@@ -3,17 +3,39 @@
 <head>
   <meta charset="utf-8">
   
-  <title>少数派报告</title>
+  <title>Java中this的用法 | 少数派报告</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="think+">
-<meta property="og:type" content="website">
-<meta property="og:title" content="少数派报告">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="1.隐式参数与显示参数
+方法用于操作对象以及存取它们的实力域。例如，方法：
+public void raiseSalary(double byPercent)
+{
+    double raise = salary * byPercent / 100;
+    salary += raise;
+}
+raiseSalary方法有两个参数。第一个参数被称为隐式参数，是出现在方法名前的Employee类">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java中this的用法">
+<meta property="og:url" content="http://yoursite.com/2015/10/11/java中this的用法/index.html">
 <meta property="og:site_name" content="少数派报告">
-<meta property="og:description" content="think+">
+<meta property="og:description" content="1.隐式参数与显示参数
+方法用于操作对象以及存取它们的实力域。例如，方法：
+public void raiseSalary(double byPercent)
+{
+    double raise = salary * byPercent / 100;
+    salary += raise;
+}
+raiseSalary方法有两个参数。第一个参数被称为隐式参数，是出现在方法名前的Employee类">
+<meta property="og:updated_time" content="2015-10-11T14:30:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="少数派报告">
-<meta name="twitter:description" content="think+">
+<meta name="twitter:title" content="Java中this的用法">
+<meta name="twitter:description" content="1.隐式参数与显示参数
+方法用于操作对象以及存取它们的实力域。例如，方法：
+public void raiseSalary(double byPercent)
+{
+    double raise = salary * byPercent / 100;
+    salary += raise;
+}
+raiseSalary方法有两个参数。第一个参数被称为隐式参数，是出现在方法名前的Employee类">
   
     <link rel="alternative" href="/atom.xml" title="少数派报告" type="application/atom+xml">
   
@@ -63,9 +85,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-java中this的用法" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-java中this的用法" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/10/11/java中this的用法/" class="article-date">
   <time datetime="2015-10-11T14:30:46.000Z" itemprop="datePublished">2015-10-11</time>
@@ -82,8 +102,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/10/11/java中this的用法/">Java中this的用法</a>
+    <h1 class="article-title" itemprop="name">
+      Java中this的用法
     </h1>
   
 
@@ -146,107 +166,40 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-关于adb-shell的若干问题" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/10/10/关于adb-shell的若干问题/" class="article-date">
-  <time datetime="2015-10-10T12:09:33.000Z" itemprop="datePublished">2015-10-10</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Android/">Android</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/10/10/关于adb-shell的若干问题/">关于adb-shell的若干问题</a>
-    </h1>
+    <a href="/2015/10/10/关于adb-shell的若干问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">关于adb-shell的若干问题</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近一直在进行安卓开发，在windows下启动adb shell只要配置环境变量就好了，并且网上教程很多，那么在MAC下如何配置呢？</p>
-<p>大体思路是一致的，只是要用命令行来操。</p>
-<p>首先启动终端，然后输入：</p>
-<pre><code><span class="variable">$ </span>touch .bash_profile
-<span class="variable">$ </span>open -e .bash_profile
-</code></pre><p>这时会打开.bash_profile这个文档,</p>
-<pre><code>export <span class="constant">PATH</span>=<span class="variable">${</span><span class="constant">PATH</span>}<span class="symbol">:/Users/***/sdk/platform-tools</span>
-</code></pre><p>在后面输入<code>platform-tools</code>所在的目录路径，比如笔者的路径就是<code>/Users/***/sdk/platform-tools</code>，所以写成上面的形式。然后直接关闭文档自动保存。</p>
-<p>这时候在终端输入<code>adb</code>，就不会提示错误信息了，然后启动安卓模拟器，再次输入<code>adb shell</code>即可。</p>
-<p>进行安卓开发时相信很多人都会用Genymotion，笔者发现默认的ADB会产生端口被占用的问题，其实解决这个问题的方法很简单，只需要在设置中改成自己的sdk就好了。如下图：<br><img src="https://raw.githubusercontent.com/fulianguestc/markdownphotos/master/geny.png" alt="geny"><br>OVER~ ~ ~!</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/10/关于adb-shell的若干问题/" data-id="cifmh24eu0001dn00f2ehzjsf" class="article-share-link">分享到</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
 
 
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/10/10/hello-world/" class="article-date">
-  <time datetime="2015-10-10T09:18:10.000Z" itemprop="datePublished">2015-10-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/10/10/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/10/hello-world/" data-id="cifmh24dg0000dn00spy8dywb" class="article-share-link">分享到</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-  
-</section>
+  <section id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="post-java中this的用法" data-title="Java中this的用法" data-url="http://yoursite.com/2015/10/11/java中this的用法/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'fulianguestc'};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+      </script>
+    <!-- 多说公共JS代码 end -->
+  </section>
+  </section>
         
           <aside id="sidebar">
   
