@@ -65,10 +65,91 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Java的基本数据类型" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/10/12/Java的基本数据类型/" class="article-date">
+  <time datetime="2015-10-12T01:34:05.000Z" itemprop="datePublished">2015-10-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Java的基本数据类型</p>
+<p>Java是一种强类型语言，所以需要为每一个变量声明一种类型。在Java中，一共有8种基本类型，其中有4种整型、2种浮点类型、1钟字符类型char和1种表示真值的boolean类型。</p>
+<blockquote>
+<p>dd</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/10/12/Java的基本数据类型/" data-id="cifn9ovd40000m10088p1oqnv" class="article-share-link">分享到</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-关于adb-shell的若干问题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/10/11/关于adb-shell的若干问题/" class="article-date">
+  <time datetime="2015-10-11T15:47:37.000Z" itemprop="datePublished">2015-10-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/10/11/关于adb-shell的若干问题/">关于adb-shell的若干问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近一直在进行安卓开发，在windows下启动adb shell只要配置环境变量就好了，并且网上教程很多，那么在MAC下如何配置呢？</p>
+<p>大体思路是一致的，只是要用命令行来操。</p>
+<p>首先启动终端，然后输入：</p>
+<pre><code><span class="variable">$ </span>touch .bash_profile
+<span class="variable">$ </span>open -e .bash_profile
+</code></pre><p>这时会打开.bash_profile这个文档,</p>
+<pre><code>export <span class="constant">PATH</span>=<span class="variable">${</span><span class="constant">PATH</span>}<span class="symbol">:/Users/***/sdk/platform-tools</span>
+</code></pre><p>在后面输入<code>platform-tools</code>所在的目录路径，比如笔者的路径就是<code>/Users/***/sdk/platform-tools</code>，所以写成上面的形式。然后直接关闭文档自动保存。</p>
+<p>这时候在终端输入<code>adb</code>，就不会提示错误信息了，然后启动安卓模拟器，再次输入<code>adb shell</code>即可。</p>
+<p>进行安卓开发时相信很多人都会用Genymotion，笔者发现默认的ADB会产生端口被占用的问题，其实解决这个问题的方法很简单，只需要在设置中改成自己的sdk就好了。如下图：<br><img src="https://raw.githubusercontent.com/fulianguestc/markdownphotos/master/geny.png" alt="geny"><br>OVER~ ~ ~!</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/10/11/关于adb-shell的若干问题/" data-id="cifmoky0z0001zl00gvauln9z" class="article-share-link">分享到</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-java中this的用法" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/10/11/java中this的用法/" class="article-date">
-  <time datetime="2015-10-11T15:30:00.000Z" itemprop="datePublished">2015-10-11</time>
+  <time datetime="2015-10-11T15:30:11.000Z" itemprop="datePublished">2015-10-11</time>
 </a>
     
   <div class="article-category">
@@ -140,61 +221,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/11/java中this的用法/" data-id="cifmnodxe0004vw00nymuu67z" class="article-share-link">分享到</a>
+      <a data-url="http://yoursite.com/2015/10/11/java中this的用法/" data-id="cifmoky180004zl00j420c1kc" class="article-share-link">分享到</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/this/">this</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-关于adb-shell的若干问题" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/10/10/关于adb-shell的若干问题/" class="article-date">
-  <time datetime="2015-10-10T12:09:33.000Z" itemprop="datePublished">2015-10-10</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Android/">Android</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/10/10/关于adb-shell的若干问题/">关于adb-shell的若干问题</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近一直在进行安卓开发，在windows下启动adb shell只要配置环境变量就好了，并且网上教程很多，那么在MAC下如何配置呢？</p>
-<p>大体思路是一致的，只是要用命令行来操。</p>
-<p>首先启动终端，然后输入：</p>
-<pre><code><span class="variable">$ </span>touch .bash_profile
-<span class="variable">$ </span>open -e .bash_profile
-</code></pre><p>这时会打开.bash_profile这个文档,</p>
-<pre><code>export <span class="constant">PATH</span>=<span class="variable">${</span><span class="constant">PATH</span>}<span class="symbol">:/Users/***/sdk/platform-tools</span>
-</code></pre><p>在后面输入<code>platform-tools</code>所在的目录路径，比如笔者的路径就是<code>/Users/***/sdk/platform-tools</code>，所以写成上面的形式。然后直接关闭文档自动保存。</p>
-<p>这时候在终端输入<code>adb</code>，就不会提示错误信息了，然后启动安卓模拟器，再次输入<code>adb shell</code>即可。</p>
-<p>进行安卓开发时相信很多人都会用Genymotion，笔者发现默认的ADB会产生端口被占用的问题，其实解决这个问题的方法很简单，只需要在设置中改成自己的sdk就好了。如下图：<br><img src="https://raw.githubusercontent.com/fulianguestc/markdownphotos/master/geny.png" alt="geny"><br>OVER~ ~ ~!</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/10/关于adb-shell的若干问题/" data-id="cifmnodx70001vw004qhcl620" class="article-share-link">分享到</a>
-      
-      
     </footer>
   </div>
   
@@ -237,7 +268,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/10/hello-world/" data-id="cifmnodw50000vw00s7e4bk9s" class="article-share-link">分享到</a>
+      <a data-url="http://yoursite.com/2015/10/10/hello-world/" data-id="cifmokxzt0000zl00me0v8iip" class="article-share-link">分享到</a>
       
       
     </footer>
@@ -283,7 +314,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">4</span></li></ul>
     </div>
   </div>
 
@@ -295,11 +326,15 @@
       <ul>
         
           <li>
-            <a href="/2015/10/11/java中this的用法/">Java中this的用法</a>
+            <a href="/2015/10/12/Java的基本数据类型/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2015/10/10/关于adb-shell的若干问题/">关于adb-shell的若干问题</a>
+            <a href="/2015/10/11/关于adb-shell的若干问题/">关于adb-shell的若干问题</a>
+          </li>
+        
+          <li>
+            <a href="/2015/10/11/java中this的用法/">Java中this的用法</a>
           </li>
         
           <li>
