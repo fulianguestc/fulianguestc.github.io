@@ -65,6 +65,62 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Java的基本数据类型" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/11/02/Java的基本数据类型/" class="article-date">
+  <time datetime="2015-11-02T08:33:49.000Z" itemprop="datePublished">2015-11-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/02/Java的基本数据类型/">Java的基本数据类型以及它们的封装类</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Java是一种强类型语言，所以需要为每一个变量声明一种类型。在Java中，一共有8种基本类型，其中有4种整型、2种浮点类型、1钟字符类型char和1种表示真值的boolean类型。</p>
+<p><strong>备注：</strong>Java有一个能够表示任意精度的算术包，通常称为“大数值”。但它并不是一种新的Java类型，而是一种Java对象。</p>
+<h4 id="整型">整型</h4><p>提供了4种整形，允许时负数，而且不存在无符号类型。int，4字节，32位；short，2字节，16位；long，8字节，64位；byte，1字节，4位。</p>
+<p>byte和short类型主要用于特定场合，例如，底层的文件处理或者需要控制占用存储空间量的大数组。整形范围是固定的，不会有软件移植的问题。</p>
+<h4 id="浮点类型">浮点类型</h4><p>Java中有两种浮点类型。float，4字节；double，8字节。float范围-2^128~2^128，double的精度是float类型的2倍。</p>
+<h4 id="char类型">char类型</h4><p>强烈建议不要在程序中使用char类型，最好将需要处理的字符串用抽象数据类型表示。</p>
+<h4 id="boolean类型">boolean类型</h4><p>有两个值：false和true。整型值和布尔值之间不能相互转换。</p>
+<h4 id="大数值（不是基本类型）">大数值（不是基本类型）</h4><p>如果基本的整数和浮点精度不能够满足需求，那么可以使用java.math包中的两个很有用的类：BigInteger和BigDecimal。这两个类可以处理包含任意长度数字序列的数值。</p>
+<p>使用静态的<code>valueOf</code>方法可以将普通的数值转换为大数值：</p>
+<pre><code><span class="keyword">BigInteger </span>a = <span class="keyword">BigInteger.valueOf(100);</span>
+</code></pre><p>但是不能直接用算术运算符进行处理。而需要使用大数值类中的方法。例如：</p>
+<pre><code>BigInteger c = <span class="operator">a</span>.<span class="built_in">add</span>(b)<span class="comment">;//c = a +b</span>
+</code></pre><h4 id="基本类型的封装类">基本类型的封装类</h4><p>我们一般用new将对象存储在“堆”里，所以用new创建一个对象——特别是小的、简单的变量，往往不是很有效，所以，对于这些类型，java不是用new来创建变量，而是创建一个不是引用的“自动”变量，这个变量直接存储“值”，并置于堆中，因此更加高效。</p>
+<p>有时候我们需要将int这样的基本类型转为对象。所有的基本类型都有一个与之对应的类。例如Integer类对应基本类型int。这些类被称为包装器。这些对象包装器的名字是：Integer、Long、Float、Double、Short、Byte、Character、Void和Boolean。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/11/02/Java的基本数据类型/" data-id="cighowt0w0000j2002ngz7ix9" class="article-share-link">分享到</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/基本类型/">基本类型</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-java中this的用法" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/10/23/java中this的用法/" class="article-date">
@@ -140,7 +196,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/23/java中this的用法/" data-id="cigbljmea0003jm00f8r0cz0t" class="article-share-link">分享到</a>
+      <a data-url="http://yoursite.com/2015/10/23/java中this的用法/" data-id="cighovg980003iq0030kzj0ox" class="article-share-link">分享到</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/this/">this</a></li></ul>
@@ -192,7 +248,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/11/关于adb-shell的若干问题/" data-id="cigbljmdk0000jm00ayhzd225" class="article-share-link">分享到</a>
+      <a data-url="http://yoursite.com/2015/10/11/关于adb-shell的若干问题/" data-id="cighovg8j0000iq00mb1eumra" class="article-share-link">分享到</a>
       
       
     </footer>
@@ -237,7 +293,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/10/hello-world/" data-id="cigbljmeg0008jm00pt0wk2or" class="article-share-link">分享到</a>
+      <a data-url="http://yoursite.com/2015/10/10/hello-world/" data-id="cighovg9e0008iq00wzp7bq6c" class="article-share-link">分享到</a>
       
       
     </footer>
@@ -256,7 +312,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -265,7 +321,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/this/">this</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/this/">this</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/基本类型/">基本类型</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -274,7 +330,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/this/" style="font-size: 10px;">this</a>
+      <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/基本类型/" style="font-size: 10px;">基本类型</a>
     </div>
   </div>
 
@@ -283,7 +339,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -293,6 +349,10 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2015/11/02/Java的基本数据类型/">Java的基本数据类型以及它们的封装类</a>
+          </li>
         
           <li>
             <a href="/2015/10/23/java中this的用法/">Java中this的用法</a>
