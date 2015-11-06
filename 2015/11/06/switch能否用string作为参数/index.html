@@ -3,24 +3,51 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Java的基本数据类型以及它们的封装类 | 少数派报告</title>
+  <title>少数派报告</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Java是一种强类型语言，所以需要为每一个变量声明一种类型。在Java中，一共有8种基本类型，其中有4种整型、2种浮点类型、1钟字符类型char和1种表示真值的boolean类型。
-备注：Java有一个能够表示任意精度的算术包，通常称为“大数值”。但它并不是一种新的Java类型，而是一种Java对象。
-整型提供了4种整形，允许时负数，而且不存在无符号类型。int，4字节，32位；short，2字节">
+  <meta name="description" content="title: 两个小问题
+categories: Java
+
+switch能否用string作为参数case标签必须是整数或枚举常量，不能测试字符串。例如，下面这段代码就存在错误。
+String input = ...;
+switch(input){ //ERROR
+    case &quot;A&quot;: //ERROR
+        ...
+        break;
+    ...
+}
+但是从Java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java的基本数据类型以及它们的封装类">
-<meta property="og:url" content="http://yoursite.com/2015/11/02/Java的基本数据类型/index.html">
+<meta property="og:title" content="少数派报告">
+<meta property="og:url" content="http://yoursite.com/2015/11/06/switch能否用string作为参数/index.html">
 <meta property="og:site_name" content="少数派报告">
-<meta property="og:description" content="Java是一种强类型语言，所以需要为每一个变量声明一种类型。在Java中，一共有8种基本类型，其中有4种整型、2种浮点类型、1钟字符类型char和1种表示真值的boolean类型。
-备注：Java有一个能够表示任意精度的算术包，通常称为“大数值”。但它并不是一种新的Java类型，而是一种Java对象。
-整型提供了4种整形，允许时负数，而且不存在无符号类型。int，4字节，32位；short，2字节">
-<meta property="og:updated_time" content="2015-11-02T08:33:49.000Z">
+<meta property="og:description" content="title: 两个小问题
+categories: Java
+
+switch能否用string作为参数case标签必须是整数或枚举常量，不能测试字符串。例如，下面这段代码就存在错误。
+String input = ...;
+switch(input){ //ERROR
+    case &quot;A&quot;: //ERROR
+        ...
+        break;
+    ...
+}
+但是从Java">
+<meta property="og:updated_time" content="2015-11-06T08:25:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java的基本数据类型以及它们的封装类">
-<meta name="twitter:description" content="Java是一种强类型语言，所以需要为每一个变量声明一种类型。在Java中，一共有8种基本类型，其中有4种整型、2种浮点类型、1钟字符类型char和1种表示真值的boolean类型。
-备注：Java有一个能够表示任意精度的算术包，通常称为“大数值”。但它并不是一种新的Java类型，而是一种Java对象。
-整型提供了4种整形，允许时负数，而且不存在无符号类型。int，4字节，32位；short，2字节">
+<meta name="twitter:title" content="少数派报告">
+<meta name="twitter:description" content="title: 两个小问题
+categories: Java
+
+switch能否用string作为参数case标签必须是整数或枚举常量，不能测试字符串。例如，下面这段代码就存在错误。
+String input = ...;
+switch(input){ //ERROR
+    case &quot;A&quot;: //ERROR
+        ...
+        break;
+    ...
+}
+但是从Java">
   
     <link rel="alternative" href="/atom.xml" title="少数派报告" type="application/atom+xml">
   
@@ -70,74 +97,64 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Java的基本数据类型" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-switch能否用string作为参数" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/11/02/Java的基本数据类型/" class="article-date">
-  <time datetime="2015-11-02T08:33:49.000Z" itemprop="datePublished">2015-11-02</time>
+    <a href="/2015/11/06/switch能否用string作为参数/" class="article-date">
+  <time datetime="2015-11-06T08:25:35.000Z" itemprop="datePublished">2015-11-06</time>
 </a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Java/">Java</a>
-  </div>
-
   </div>
   <div class="article-inner">
     
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Java的基本数据类型以及它们的封装类
-    </h1>
-  
-
-      </header>
-    
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Java是一种强类型语言，所以需要为每一个变量声明一种类型。在Java中，一共有8种基本类型，其中有4种整型、2种浮点类型、1钟字符类型char和1种表示真值的boolean类型。</p>
-<p><strong>备注：</strong>Java有一个能够表示任意精度的算术包，通常称为“大数值”。但它并不是一种新的Java类型，而是一种Java对象。</p>
-<h4 id="整型">整型</h4><p>提供了4种整形，允许时负数，而且不存在无符号类型。int，4字节，32位；short，2字节，16位；long，8字节，64位；byte，1字节，4位。</p>
-<p>byte和short类型主要用于特定场合，例如，底层的文件处理或者需要控制占用存储空间量的大数组。整形范围是固定的，不会有软件移植的问题。</p>
-<h4 id="浮点类型">浮点类型</h4><p>Java中有两种浮点类型。float，4字节；double，8字节。float范围-2^128~2^128，double的精度是float类型的2倍。</p>
-<h4 id="char类型">char类型</h4><p>强烈建议不要在程序中使用char类型，最好将需要处理的字符串用抽象数据类型表示。</p>
-<h4 id="boolean类型">boolean类型</h4><p>有两个值：false和true。整型值和布尔值之间不能相互转换。</p>
-<h4 id="大数值（不是基本类型）">大数值（不是基本类型）</h4><p>如果基本的整数和浮点精度不能够满足需求，那么可以使用java.math包中的两个很有用的类：BigInteger和BigDecimal。这两个类可以处理包含任意长度数字序列的数值。</p>
-<p>使用静态的<code>valueOf</code>方法可以将普通的数值转换为大数值：</p>
-<pre><code><span class="keyword">BigInteger </span>a = <span class="keyword">BigInteger.valueOf(100);</span>
-</code></pre><p>但是不能直接用算术运算符进行处理。而需要使用大数值类中的方法。例如：</p>
-<pre><code>BigInteger c = <span class="operator">a</span>.<span class="built_in">add</span>(b)<span class="comment">;//c = a +b</span>
-</code></pre><h4 id="基本类型的封装类">基本类型的封装类</h4><p>我们一般用new将对象存储在“堆”里，所以用new创建一个对象——特别是小的、简单的变量，往往不是很有效，所以，对于这些类型，java不是用new来创建变量，而是创建一个不是引用的“自动”变量，这个变量直接存储“值”，并置于堆中，因此更加高效。</p>
-<p>有时候我们需要将int这样的基本类型转为对象。所有的基本类型都有一个与之对应的类。例如Integer类对应基本类型int。这些类被称为包装器。这些对象包装器的名字是：Integer、Long、Float、Double、Short、Byte、Character、Void和Boolean。</p>
+        <p>title: 两个小问题</p>
+<p>categories: Java</p>
+<hr>
+<h5 id="switch能否用string作为参数">switch能否用string作为参数</h5><p>case标签必须是整数或枚举常量，不能测试字符串。例如，下面这段代码就存在错误。</p>
+<pre><code><span class="built_in">String</span> input = <span class="attribute">...</span>;
+switch(input){ <span class="comment">//ERROR</span>
+    <span class="keyword">case</span> <span class="string">"A"</span>: <span class="comment">//ERROR</span>
+        <span class="attribute">...</span>
+        break;
+    <span class="attribute">...</span>
+}
+</code></pre><p>但是从Java SE 7开始，case标签还可以是字符串字面量。也就是像上面的写法在Java SE 7中是没有问题的。</p>
+<h5 id="equals与==的区别">equals与==的区别</h5><p>检测字符串是否相等可以使equals方法检测两个字符串是否相等。对于表达式：</p>
+<pre><code>s.<span class="function"><span class="title">equals</span><span class="params">(t)</span></span>
+</code></pre><p>如果字符串s与字符串t相等，则返回true；否则，返回false.</p>
+<p>要想检测两个字符串是否相等，而不区分大小写，可以使用<code>equalsIgnoreCase</code>方法。</p>
+<p>一定不能使用<code>==</code>运算符检测两个字符串是否相等！这个运算符只能够确定两个字符串是否放在同一个位置，它们必然相等。但是，完全有可能将内容相同的多个字符串的拷贝放置在不同的位置上。（引用）</p>
+<pre><code><span class="built_in">string</span> greeting = <span class="string">"Hello"</span>;
+<span class="keyword">if</span>(greeting == <span class="string">"Hello"</span>) ... <span class="comment">//probably true</span>
+<span class="keyword">if</span>(greeting.substring(<span class="number">0</span>,<span class="number">3</span>) == <span class="string">"Hel"</span>) ... probably <span class="literal">false</span>
+</code></pre><p>我们再看一个例子</p>
+<pre><code><span class="keyword">public</span> <span class="keyword">class</span> Test{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>{
+        Integer n1 = <span class="keyword">new</span> Integer(<span class="number">47</span>);
+        Integer n2 = <span class="keyword">new</span> Integer(<span class="number">47</span>);
+        System.out.println(n1 == n2);
+    }
+}
+</code></pre><p>这段代码的输出是false。这是因为<code>==</code>比较的是对象的引用。那么如果我们想比较两个对象的实际内容是否相同，就必须使用特殊方法equals()。但是该方法如果直接在自定义类中调用那就又有很多问题。以后我们会讨论。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/02/Java的基本数据类型/" data-id="cigneb7jx000alm00nrnour95" class="article-share-link">分享到</a>
+      <a data-url="http://yoursite.com/2015/11/06/switch能否用string作为参数/" data-id="cigneb7jj0003lm00hq77qejb" class="article-share-link">分享到</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/基本类型/">基本类型</a></li></ul>
-
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2015/11/02/Java中的四种引用/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Java中的四种引用
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/10/23/java中this的用法/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2015/11/02/Java中的四种引用/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Java中this的用法</div>
+      <div class="article-nav-title">Java中的四种引用</div>
     </a>
   
 </nav>
@@ -148,7 +165,7 @@
 
   <section id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="post-Java的基本数据类型" data-title="Java的基本数据类型以及它们的封装类" data-url="http://yoursite.com/2015/11/02/Java的基本数据类型/"></div>
+    <div class="ds-thread" data-thread-key="post-switch能否用string作为参数" data-title="" data-url="http://yoursite.com/2015/11/06/switch能否用string作为参数/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
