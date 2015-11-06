@@ -68,7 +68,7 @@
     <article id="post-switch能否用string作为参数" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/11/06/switch能否用string作为参数/" class="article-date">
-  <time datetime="2015-11-06T08:56:12.000Z" itemprop="datePublished">2015-11-06</time>
+  <time datetime="2015-11-06T09:02:37.000Z" itemprop="datePublished">2015-11-06</time>
 </a>
     
   <div class="article-category">
@@ -92,7 +92,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>今天来看两个小问题。</p>
-<h5 id="switch能否用string作为参数">switch能否用string作为参数</h5><p>case标签必须是整数或枚举常量，不能测试字符串。例如，下面这段代码就存在错误。</p>
+<h5 id="switch能否用String作为参数">switch能否用String作为参数</h5><p>case标签必须是整数或枚举常量，不能测试字符串。例如，下面这段代码就存在错误。</p>
 <pre><code><span class="built_in">String</span> input = <span class="attribute">...</span>;
 switch(input){ <span class="comment">//ERROR</span>
     <span class="keyword">case</span> <span class="string">"A"</span>: <span class="comment">//ERROR</span>
@@ -107,9 +107,9 @@ switch(input){ <span class="comment">//ERROR</span>
 </code></pre><p>如果字符串s与字符串t相等，则返回true；否则，返回false.</p>
 <p>要想检测两个字符串是否相等，而不区分大小写，可以使用<code>equalsIgnoreCase</code>方法。</p>
 <p>一定不能使用<code>==</code>运算符检测两个字符串是否相等！这个运算符只能够确定两个字符串是否放在同一个位置，它们必然相等。但是，完全有可能将内容相同的多个字符串的拷贝放置在不同的位置上。（引用）</p>
-<pre><code><span class="built_in">string</span> greeting = <span class="string">"Hello"</span>;
-<span class="keyword">if</span>(greeting == <span class="string">"Hello"</span>) ... <span class="comment">//probably true</span>
-<span class="keyword">if</span>(greeting.substring(<span class="number">0</span>,<span class="number">3</span>) == <span class="string">"Hel"</span>) ... probably <span class="literal">false</span>
+<pre><code><span class="built_in">String</span> greeting = <span class="string">"Hello"</span>;
+<span class="keyword">if</span>(greeting == <span class="string">"Hello"</span>) <span class="attribute">...</span> <span class="comment">//probably true</span>
+<span class="keyword">if</span>(greeting<span class="built_in">.</span>substring(<span class="number">0</span>,<span class="number">3</span>) == <span class="string">"Hel"</span>) <span class="attribute">...</span> probably <span class="literal">false</span>
 </code></pre><p>我们再看一个例子</p>
 <pre><code><span class="keyword">public</span> <span class="keyword">class</span> Test{
     <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>{
@@ -123,7 +123,7 @@ switch(input){ <span class="comment">//ERROR</span>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/06/switch能否用string作为参数/" data-id="cignfk8op0003sw00hbxxcryi" class="article-share-link">分享到</a>
+      <a data-url="http://yoursite.com/2015/11/06/switch能否用string作为参数/" data-id="cignfmz840003tl00qawoebjj" class="article-share-link">分享到</a>
       
       
     </footer>
@@ -197,7 +197,7 @@ switch(input){ <span class="comment">//ERROR</span>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/06/Java中的四种引用/" data-id="cignfk8p4000fsw00e3jgx6jl" class="article-share-link">分享到</a>
+      <a data-url="http://yoursite.com/2015/11/06/Java中的四种引用/" data-id="cignfmz8k000ftl00p9trsno6" class="article-share-link">分享到</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/引用、强弱软虚/">引用、强弱软虚</a></li></ul>
@@ -253,7 +253,7 @@ switch(input){ <span class="comment">//ERROR</span>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/02/Java的基本数据类型/" data-id="cignfk8p1000bsw00t7wp0cma" class="article-share-link">分享到</a>
+      <a data-url="http://yoursite.com/2015/11/02/Java的基本数据类型/" data-id="cignfmz8h000btl00bjkvcnjt" class="article-share-link">分享到</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/基本类型/">基本类型</a></li></ul>
@@ -340,7 +340,7 @@ switch(input){ <span class="comment">//ERROR</span>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/23/java中this的用法/" data-id="cignfk8ou0006sw004cev5xg4" class="article-share-link">分享到</a>
+      <a data-url="http://yoursite.com/2015/10/23/java中this的用法/" data-id="cignfmz890006tl00wlit0zog" class="article-share-link">分享到</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/this/">this</a></li></ul>
@@ -392,7 +392,7 @@ switch(input){ <span class="comment">//ERROR</span>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/11/关于adb-shell的若干问题/" data-id="cignfk8o30000sw00s2tlk881" class="article-share-link">分享到</a>
+      <a data-url="http://yoursite.com/2015/10/11/关于adb-shell的若干问题/" data-id="cignfmz6y0000tl00mi6bzti3" class="article-share-link">分享到</a>
       
       
     </footer>
@@ -437,7 +437,7 @@ switch(input){ <span class="comment">//ERROR</span>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/10/hello-world/" data-id="cignfk8oy000asw009h0a5e9u" class="article-share-link">分享到</a>
+      <a data-url="http://yoursite.com/2015/10/10/hello-world/" data-id="cignfmz8e000atl00rpfh8g7u" class="article-share-link">分享到</a>
       
       
     </footer>
