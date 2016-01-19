@@ -213,7 +213,7 @@ a {
   z-index: 99;
 }
 #container #mobile-nav #header {
-  padding: 10px 0 0 0;header-menu
+  padding: 10px 0 0 0;
 }
 #container #mobile-nav #header .profilepic {
   display: block;
@@ -222,7 +222,7 @@ a {
 }
 #container #mobile-nav #header .header-menu {
   height: auto;
-  margin: 3px;
+  margin: 10px;
 }
 #container #mobile-nav #header .header-menu ul {
   text-align: center;
