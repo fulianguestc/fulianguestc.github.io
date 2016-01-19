@@ -221,7 +221,7 @@ a {
   z-index: 100;
 }
 #container #mobile-nav #header .header-menu {
-  height: 10px;
+  height: auto;
   margin: 10px;
 }
 #container #mobile-nav #header .header-menu ul {
