@@ -4,45 +4,37 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>两个小问题 | 少数派报告</title>
+  <title>关于adb-shell的若干问题 | 少数派报告</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今天来看两个小问题。
-switch能否用String作为参数case标签必须是整数或枚举常量，不能测试字符串。例如，下面这段代码就存在错误。
-String input = ...;
-switch(input){ //ERROR
-    case &quot;A&quot;: //ERROR
-        ...
-        break;
-    ...
-}
-但是从Java SE 7开始，case标签还可以是字符">
+  <meta name="description" content="最近一直在进行安卓开发，在windows下启动adb shell只要配置环境变量就好了，并且网上教程很多，那么在MAC下如何配置呢？
+大体思路是一致的，只是要用命令行来操。
+首先启动终端，然后输入：
+$ touch .bash_profile
+$ open -e .bash_profile
+这时会打开.bash_profile这个文档,
+export PATH=${PATH}:/Users/***">
 <meta property="og:type" content="article">
-<meta property="og:title" content="两个小问题">
-<meta property="og:url" content="http://sspaiblog.com/2015/11/06/switch能否用string作为参数/index.html">
+<meta property="og:title" content="关于adb-shell的若干问题">
+<meta property="og:url" content="http://sspaiblog.com/关于adb-shell的若干问题/index.html">
 <meta property="og:site_name" content="少数派报告">
-<meta property="og:description" content="今天来看两个小问题。
-switch能否用String作为参数case标签必须是整数或枚举常量，不能测试字符串。例如，下面这段代码就存在错误。
-String input = ...;
-switch(input){ //ERROR
-    case &quot;A&quot;: //ERROR
-        ...
-        break;
-    ...
-}
-但是从Java SE 7开始，case标签还可以是字符">
-<meta property="og:updated_time" content="2015-11-06T09:04:37.000Z">
+<meta property="og:description" content="最近一直在进行安卓开发，在windows下启动adb shell只要配置环境变量就好了，并且网上教程很多，那么在MAC下如何配置呢？
+大体思路是一致的，只是要用命令行来操。
+首先启动终端，然后输入：
+$ touch .bash_profile
+$ open -e .bash_profile
+这时会打开.bash_profile这个文档,
+export PATH=${PATH}:/Users/***">
+<meta property="og:image" content="https://raw.githubusercontent.com/fulianguestc/markdownphotos/master/geny.png">
+<meta property="og:updated_time" content="2015-10-11T15:47:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="两个小问题">
-<meta name="twitter:description" content="今天来看两个小问题。
-switch能否用String作为参数case标签必须是整数或枚举常量，不能测试字符串。例如，下面这段代码就存在错误。
-String input = ...;
-switch(input){ //ERROR
-    case &quot;A&quot;: //ERROR
-        ...
-        break;
-    ...
-}
-但是从Java SE 7开始，case标签还可以是字符">
+<meta name="twitter:title" content="关于adb-shell的若干问题">
+<meta name="twitter:description" content="最近一直在进行安卓开发，在windows下启动adb shell只要配置环境变量就好了，并且网上教程很多，那么在MAC下如何配置呢？
+大体思路是一致的，只是要用命令行来操。
+首先启动终端，然后输入：
+$ touch .bash_profile
+$ open -e .bash_profile
+这时会打开.bash_profile这个文档,
+export PATH=${PATH}:/Users/***">
   
     <link rel="alternative" href="/atom.xml" title="少数派报告" type="application/atom+xml">
   
@@ -232,11 +224,11 @@ switch(input){ //ERROR
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-switch能否用string作为参数" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-关于adb-shell的若干问题" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/11/06/switch能否用string作为参数/" class="article-date">
-  	<time datetime="2015-11-06T09:04:37.000Z" itemprop="datePublished">2015-11-06</time>
+      <a href="/关于adb-shell的若干问题/" class="article-date">
+  	<time datetime="2015-10-11T15:47:37.000Z" itemprop="datePublished">2015-10-11</time>
 </a>
     </div>
   
@@ -249,7 +241,7 @@ switch(input){ //ERROR
         
   
     <h1 class="article-title" itemprop="name">
-      两个小问题
+      关于adb-shell的若干问题
     </h1>
   
 
@@ -259,7 +251,7 @@ switch(input){ //ERROR
         
         
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Java/">Java</a>
+	<a class="article-category-link" href="/categories/Android/">Android</a>
 	</div>
 
 
@@ -269,34 +261,16 @@ switch(input){ //ERROR
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天来看两个小问题。</p>
-<h5 id="switch能否用String作为参数">switch能否用String作为参数</h5><p>case标签必须是整数或枚举常量，不能测试字符串。例如，下面这段代码就存在错误。</p>
-<pre><code><span class="built_in">String</span> input = <span class="attribute">...</span>;
-switch(input){ <span class="comment">//ERROR</span>
-    <span class="keyword">case</span> <span class="string">"A"</span>: <span class="comment">//ERROR</span>
-        <span class="attribute">...</span>
-        break;
-    <span class="attribute">...</span>
-}
-</code></pre><p>但是从Java SE 7开始，case标签还可以是字符串字面量。也就是像上面的写法在Java SE 7中是没有问题的。</p>
-<hr>
-<h5 id="equals与==的区别">equals与==的区别</h5><p>检测字符串是否相等可以使equals方法检测两个字符串是否相等。对于表达式：</p>
-<pre><code>s.<span class="function"><span class="title">equals</span><span class="params">(t)</span></span>
-</code></pre><p>如果字符串s与字符串t相等，则返回true；否则，返回false。</p>
-<p>要想检测两个字符串是否相等，而不区分大小写，可以使用<code>equalsIgnoreCase</code>方法。</p>
-<p>一定不能使用<code>==</code>运算符检测两个字符串是否相等！这个运算符只能够确定两个字符串是否放在同一个位置，它们必然相等。但是，完全有可能将内容相同的多个字符串的拷贝放置在不同的位置上。（引用）</p>
-<pre><code><span class="built_in">String</span> greeting = <span class="string">"Hello"</span>;
-<span class="keyword">if</span>(greeting == <span class="string">"Hello"</span>) <span class="attribute">...</span> <span class="comment">//probably true</span>
-<span class="keyword">if</span>(greeting<span class="built_in">.</span>substring(<span class="number">0</span>,<span class="number">3</span>) == <span class="string">"Hel"</span>) <span class="attribute">...</span> probably <span class="literal">false</span>
-</code></pre><p>我们再看一个例子</p>
-<pre><code><span class="keyword">public</span> <span class="keyword">class</span> Test{
-    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>{
-        Integer n1 = <span class="keyword">new</span> Integer(<span class="number">47</span>);
-        Integer n2 = <span class="keyword">new</span> Integer(<span class="number">47</span>);
-        System.out.println(n1 == n2);
-    }
-}
-</code></pre><p>这段代码的输出是false。这是因为<code>==</code>比较的是对象的引用。那么如果我们想比较两个对象的实际内容是否相同，就必须使用特殊方法equals()。但是该方法如果直接在自定义类中调用那就又有很多问题。以后我们会讨论。</p>
+        <p>最近一直在进行安卓开发，在windows下启动adb shell只要配置环境变量就好了，并且网上教程很多，那么在MAC下如何配置呢？</p>
+<p>大体思路是一致的，只是要用命令行来操。</p>
+<p>首先启动终端，然后输入：</p>
+<pre><code><span class="variable">$ </span>touch .bash_profile
+<span class="variable">$ </span>open -e .bash_profile
+</code></pre><p>这时会打开.bash_profile这个文档,</p>
+<pre><code>export <span class="constant">PATH</span>=<span class="variable">${</span><span class="constant">PATH</span>}<span class="symbol">:/Users/***/sdk/platform-tools</span>
+</code></pre><p>在后面输入<code>platform-tools</code>所在的目录路径，比如笔者的路径就是<code>/Users/***/sdk/platform-tools</code>，所以写成上面的形式。然后直接关闭文档自动保存。</p>
+<p>这时候在终端输入<code>adb</code>，就不会提示错误信息了，然后启动安卓模拟器，再次输入<code>adb shell</code>即可。</p>
+<p>进行安卓开发时相信很多人都会用Genymotion，笔者发现默认的ADB会产生端口被占用的问题，其实解决这个问题的方法很简单，只需要在设置中改成自己的sdk就好了。如下图：<br><img src="https://raw.githubusercontent.com/fulianguestc/markdownphotos/master/geny.png" alt="geny"><br>OVER~ ~ ~!</p>
 
       
     </div>
@@ -306,18 +280,18 @@ switch(input){ <span class="comment">//ERROR</span>
     
 <nav id="article-nav">
   
-    <a href="/2016/01/18/Object有哪些公有方法/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/java中this的用法/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          Object中公有方法
+          Java中this的用法
         
       </div>
     </a>
   
   
-    <a href="/2015/11/06/Java中的四种引用/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Java中的四种引用</div>
+    <a href="/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -352,7 +326,7 @@ switch(input){ <span class="comment">//ERROR</span>
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="switch能否用string作为参数" data-title="两个小问题" data-url="http://sspaiblog.com/2015/11/06/switch能否用string作为参数/"></div>
+	<div class="ds-thread" data-thread-key="关于adb-shell的若干问题" data-title="关于adb-shell的若干问题" data-url="http://sspaiblog.com/关于adb-shell的若干问题/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

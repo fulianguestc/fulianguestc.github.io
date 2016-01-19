@@ -4,36 +4,21 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Java中this的用法 | 少数派报告</title>
+  <title>Hello World | 少数派报告</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最初接触Java时，就一直无法理解this的用法，觉得很多地方都有它的身影。下面就简单介绍一下this的集中基本用法。
-主要参考书籍《Java核心技术.卷1》。
-1. 隐式参数与显示参数
-方法用于操作对象以及存取它们的实力域。例如，方法：
-public void raiseSalary(double byPercent)
-{
-    double raise = salary * byPercen">
+  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java中this的用法">
-<meta property="og:url" content="http://sspaiblog.com/2015/10/23/java中this的用法/index.html">
+<meta property="og:title" content="Hello World">
+<meta property="og:url" content="http://sspaiblog.com/hello-world/index.html">
 <meta property="og:site_name" content="少数派报告">
-<meta property="og:description" content="最初接触Java时，就一直无法理解this的用法，觉得很多地方都有它的身影。下面就简单介绍一下this的集中基本用法。
-主要参考书籍《Java核心技术.卷1》。
-1. 隐式参数与显示参数
-方法用于操作对象以及存取它们的实力域。例如，方法：
-public void raiseSalary(double byPercent)
-{
-    double raise = salary * byPercen">
-<meta property="og:updated_time" content="2015-10-23T14:10:48.000Z">
+<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick">
+<meta property="og:updated_time" content="2015-10-10T09:18:10.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java中this的用法">
-<meta name="twitter:description" content="最初接触Java时，就一直无法理解this的用法，觉得很多地方都有它的身影。下面就简单介绍一下this的集中基本用法。
-主要参考书籍《Java核心技术.卷1》。
-1. 隐式参数与显示参数
-方法用于操作对象以及存取它们的实力域。例如，方法：
-public void raiseSalary(double byPercent)
-{
-    double raise = salary * byPercen">
+<meta name="twitter:title" content="Hello World">
+<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick">
   
     <link rel="alternative" href="/atom.xml" title="少数派报告" type="application/atom+xml">
   
@@ -223,11 +208,11 @@ public void raiseSalary(double byPercent)
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-java中this的用法" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/10/23/java中this的用法/" class="article-date">
-  	<time datetime="2015-10-23T14:10:49.000Z" itemprop="datePublished">2015-10-23</time>
+      <a href="/hello-world/" class="article-date">
+  	<time datetime="2015-10-10T09:18:10.000Z" itemprop="datePublished">2015-10-10</time>
 </a>
     </div>
   
@@ -240,7 +225,7 @@ public void raiseSalary(double byPercent)
         
   
     <h1 class="article-title" itemprop="name">
-      Java中this的用法
+      Hello World
     </h1>
   
 
@@ -248,15 +233,7 @@ public void raiseSalary(double byPercent)
       
       <div class="article-info article-info-post">
         
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/this/">this</a></li></ul>
-	</div>
-
         
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Java/">Java</a>
-	</div>
-
 
         <div class="clearfix"></div>
       </div>
@@ -264,51 +241,15 @@ public void raiseSalary(double byPercent)
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最初接触Java时，就一直无法理解<code>this</code>的用法，觉得很多地方都有它的身影。下面就简单介绍一下<code>this</code>的集中基本用法。</p>
-<p>主要参考书籍《Java核心技术.卷1》。</p>
-<h5 id="1-_隐式参数与显示参数">1. 隐式参数与显示参数</h5><hr>
-<p>方法用于操作对象以及存取它们的实力域。例如，方法：</p>
-<pre><code><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">raiseSalary</span><span class="params">(<span class="keyword">double</span> byPercent)</span>
-</span>{
-    <span class="keyword">double</span> raise = salary * byPercent / <span class="number">100</span>;
-    salary += raise;
-}
-</code></pre><p><code>raiseSalary</code>方法有两个参数。第一个参数被称为<strong>隐式</strong>参数，是出现在方法名前的<code>Employee</code>类(本方法所在类)对象。第二个参数位于方法名后面括号中的数值，这是一个<strong>显式</strong>参数。</p>
-<p>显示参数是明显地列在方法声明中的的显示参数，例如<code>double byparent</code>。隐式参数没有出现在方法声明中。</p>
-<p>在每一个方法中，关键字<code>this</code>表示隐式参数。如果需要的话，可以用下列方式编写<code>raiseSalary</code>方法：</p>
-<pre><code><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">raiseSalary</span><span class="params">(<span class="keyword">double</span> byPercent)</span>
-</span>{
-    <span class="keyword">double</span> raise = <span class="keyword">this</span>.salary*byPercent/<span class="number">100</span>;
-    <span class="keyword">this</span>.salary += raise;
-}
-</code></pre><p>这样的好处是可以将实力域与局部变量明显地区分开来</p>
-<h5 id="2-_参数名">2. 参数名</h5><hr>
-<p>在编写很小的构造器时，常常在参数名上出现错误。通常，参数用单个字符命名：</p>
-<pre><code><span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(String n, <span class="keyword">double</span> s)</span>
-</span>{
-    name = n;
-    salary = s;
-}
-</code></pre><p>还一种常用的技巧,它基于这样的事实:参数变量用同样的名字将实例域屏蔽起来。例如,如果将参数命名为salary,salary将引用这个参数,而不是实例域。但是,可以采用<code>this.salary</code>的 形式访问实例域。回想一下,this指示隐式参数,也就是被构造的对象。下面是一个示例：</p>
-<pre><code><span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(String name, <span class="keyword">double</span> salary)</span>
-</span>{
-    <span class="keyword">this</span>.name = name;
-    <span class="keyword">this</span>.salary = salary;
-}
-</code></pre><h5 id="3-_调用另一个构造器">3. 调用另一个构造器</h5><hr>
-<p>关键字this引用方法的隐式参数。然而,这个关键字还有另外一个含义。</p>
-<p>如果构造器的第一个语句形如this(…),这个构造器将调用同一个类的另一个构造器。下面是一个典型的例子:</p>
-<pre><code><span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(<span class="keyword">double</span> s)</span>
-</span>{
-    <span class="comment">// calls Employee(String, double)</span>
-    <span class="keyword">this</span>(<span class="string">"Employee #"</span> + nextId, s);
-    nextId;
-}
-</code></pre><p>当调用<code>new Employee(60000)</code>时,<code>Employee(double)</code>构造器将调用<code>Employee(String, double)</code>构造器。    </p>
-<p>采用这样的方法使用this关键字非常有用，这样对公共的构造器代码部分之编写一次即可。</p>
-<h5 id="4-_this与super的异同">4. this与super的异同</h5><hr>
-<p>有些人认为super与this引用是类似的概念,实际上,这样比较并不太恰当。这是因 为super不是一个对象的引用,不能将super赋给另一个对象变量,它只是一个指示编译器 调用超类方法的特有关键字。</p>
-<p>关键字this有两个用途:一是引用隐式参数,二是调用该类其他的构造 器。同样,super关键字也有两个用途:一是调用超类的方法,二是调用超类的构造器。 在调用构造器的时候,这两个关键字的使用方式很相似。调用构造器的语句只能作为另 一个构造器的第一条语句出现。构造参数既可以传递给本类(this)的其他构造器,也可 以传递给超类(super)的构造器。</p>
+        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 
       
     </div>
@@ -318,20 +259,15 @@ public void raiseSalary(double byPercent)
     
 <nav id="article-nav">
   
-    <a href="/2015/11/02/Java的基本数据类型/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/关于adb-shell的若干问题/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          Java的基本数据类型以及它们的封装类
+          关于adb-shell的若干问题
         
       </div>
     </a>
   
-  
-    <a href="/2015/10/11/关于adb-shell的若干问题/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">关于adb-shell的若干问题</div>
-      <strong class="article-nav-caption">></strong>
-    </a>
   
 </nav>
 
@@ -364,7 +300,7 @@ public void raiseSalary(double byPercent)
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="java中this的用法" data-title="Java中this的用法" data-url="http://sspaiblog.com/2015/10/23/java中this的用法/"></div>
+	<div class="ds-thread" data-thread-key="hello-world" data-title="Hello World" data-url="http://sspaiblog.com/hello-world/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

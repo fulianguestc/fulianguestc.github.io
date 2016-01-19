@@ -4,36 +4,45 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Object中公有方法 | 少数派报告</title>
+  <title>两个小问题 | 少数派报告</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="参考书籍：《Java核心技术》、《Java编程思想》
-Obeject是所有类的超类，java是一门单根继承的程序语言。所有类都是由Object类扩展而来的。
-equals方法用于检测一个对象是否等于另一个对象。在Object类中，这个方法用于判断两个对象是否具有相同的引用。如果两个对象具有相同的引用，它们一定是相等的。
-下面看一个例子：
-class Test{
-    int index;
-}">
+  <meta name="description" content="今天来看两个小问题。
+switch能否用String作为参数case标签必须是整数或枚举常量，不能测试字符串。例如，下面这段代码就存在错误。
+String input = ...;
+switch(input){ //ERROR
+    case &quot;A&quot;: //ERROR
+        ...
+        break;
+    ...
+}
+但是从Java SE 7开始，case标签还可以是字符">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Object中公有方法">
-<meta property="og:url" content="http://sspaiblog.com/2016/01/18/Object有哪些公有方法/index.html">
+<meta property="og:title" content="两个小问题">
+<meta property="og:url" content="http://sspaiblog.com/switch能否用string作为参数/index.html">
 <meta property="og:site_name" content="少数派报告">
-<meta property="og:description" content="参考书籍：《Java核心技术》、《Java编程思想》
-Obeject是所有类的超类，java是一门单根继承的程序语言。所有类都是由Object类扩展而来的。
-equals方法用于检测一个对象是否等于另一个对象。在Object类中，这个方法用于判断两个对象是否具有相同的引用。如果两个对象具有相同的引用，它们一定是相等的。
-下面看一个例子：
-class Test{
-    int index;
-}">
-<meta property="og:updated_time" content="2016-01-18T08:51:10.000Z">
+<meta property="og:description" content="今天来看两个小问题。
+switch能否用String作为参数case标签必须是整数或枚举常量，不能测试字符串。例如，下面这段代码就存在错误。
+String input = ...;
+switch(input){ //ERROR
+    case &quot;A&quot;: //ERROR
+        ...
+        break;
+    ...
+}
+但是从Java SE 7开始，case标签还可以是字符">
+<meta property="og:updated_time" content="2015-11-06T09:04:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Object中公有方法">
-<meta name="twitter:description" content="参考书籍：《Java核心技术》、《Java编程思想》
-Obeject是所有类的超类，java是一门单根继承的程序语言。所有类都是由Object类扩展而来的。
-equals方法用于检测一个对象是否等于另一个对象。在Object类中，这个方法用于判断两个对象是否具有相同的引用。如果两个对象具有相同的引用，它们一定是相等的。
-下面看一个例子：
-class Test{
-    int index;
-}">
+<meta name="twitter:title" content="两个小问题">
+<meta name="twitter:description" content="今天来看两个小问题。
+switch能否用String作为参数case标签必须是整数或枚举常量，不能测试字符串。例如，下面这段代码就存在错误。
+String input = ...;
+switch(input){ //ERROR
+    case &quot;A&quot;: //ERROR
+        ...
+        break;
+    ...
+}
+但是从Java SE 7开始，case标签还可以是字符">
   
     <link rel="alternative" href="/atom.xml" title="少数派报告" type="application/atom+xml">
   
@@ -223,11 +232,11 @@ class Test{
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-Object有哪些公有方法" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-switch能否用string作为参数" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/01/18/Object有哪些公有方法/" class="article-date">
-  	<time datetime="2016-01-18T08:51:10.000Z" itemprop="datePublished">2016-01-18</time>
+      <a href="/switch能否用string作为参数/" class="article-date">
+  	<time datetime="2015-11-06T09:04:37.000Z" itemprop="datePublished">2015-11-06</time>
 </a>
     </div>
   
@@ -240,7 +249,7 @@ class Test{
         
   
     <h1 class="article-title" itemprop="name">
-      Object中公有方法
+      两个小问题
     </h1>
   
 
@@ -248,10 +257,6 @@ class Test{
       
       <div class="article-info article-info-post">
         
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Object/">Object</a></li></ul>
-	</div>
-
         
 	<div class="article-category tagcloud">
 	<a class="article-category-link" href="/categories/Java/">Java</a>
@@ -264,36 +269,34 @@ class Test{
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>参考书籍：《Java核心技术》、《Java编程思想》</p>
-<p>Obeject是所有类的超类，java是一门单根继承的程序语言。所有类都是由Object类扩展而来的。</p>
-<h5 id="equals方法">equals方法</h5><p>用于检测一个对象是否等于另一个对象。在Object类中，这个方法用于判断两个对象是否具有相同的引用。如果两个对象具有相同的引用，它们一定是相等的。</p>
-<p>下面看一个例子：</p>
-<pre><code><span class="keyword">class</span> <span class="title">Test</span>{
-    <span class="keyword">int</span> index;
+        <p>今天来看两个小问题。</p>
+<h5 id="switch能否用String作为参数">switch能否用String作为参数</h5><p>case标签必须是整数或枚举常量，不能测试字符串。例如，下面这段代码就存在错误。</p>
+<pre><code><span class="built_in">String</span> input = <span class="attribute">...</span>;
+switch(input){ <span class="comment">//ERROR</span>
+    <span class="keyword">case</span> <span class="string">"A"</span>: <span class="comment">//ERROR</span>
+        <span class="attribute">...</span>
+        break;
+    <span class="attribute">...</span>
 }
-
-<span class="keyword">public</span> <span class="keyword">class</span> <span class="title">TestEqual</span>{
-    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span>(<span class="params">String[] args</span>)</span>{
-        Test test1 = <span class="keyword">new</span> Test();
-        Test test2 = <span class="keyword">new</span> Test();
-        System.<span class="keyword">out</span>.print(test1.equals(test2));
+</code></pre><p>但是从Java SE 7开始，case标签还可以是字符串字面量。也就是像上面的写法在Java SE 7中是没有问题的。</p>
+<hr>
+<h5 id="equals与==的区别">equals与==的区别</h5><p>检测字符串是否相等可以使equals方法检测两个字符串是否相等。对于表达式：</p>
+<pre><code>s.<span class="function"><span class="title">equals</span><span class="params">(t)</span></span>
+</code></pre><p>如果字符串s与字符串t相等，则返回true；否则，返回false。</p>
+<p>要想检测两个字符串是否相等，而不区分大小写，可以使用<code>equalsIgnoreCase</code>方法。</p>
+<p>一定不能使用<code>==</code>运算符检测两个字符串是否相等！这个运算符只能够确定两个字符串是否放在同一个位置，它们必然相等。但是，完全有可能将内容相同的多个字符串的拷贝放置在不同的位置上。（引用）</p>
+<pre><code><span class="built_in">String</span> greeting = <span class="string">"Hello"</span>;
+<span class="keyword">if</span>(greeting == <span class="string">"Hello"</span>) <span class="attribute">...</span> <span class="comment">//probably true</span>
+<span class="keyword">if</span>(greeting<span class="built_in">.</span>substring(<span class="number">0</span>,<span class="number">3</span>) == <span class="string">"Hel"</span>) <span class="attribute">...</span> probably <span class="literal">false</span>
+</code></pre><p>我们再看一个例子</p>
+<pre><code><span class="keyword">public</span> <span class="keyword">class</span> Test{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>{
+        Integer n1 = <span class="keyword">new</span> Integer(<span class="number">47</span>);
+        Integer n2 = <span class="keyword">new</span> Integer(<span class="number">47</span>);
+        System.out.println(n1 == n2);
     }
 }
-</code></pre><p>这个测试的结果是false。这是因为equals方法是比较引用的，所以除非在自己的新类中覆盖equals方法，否则不可能实现出相等的结果。    </p>
-<p>Java中要求equals方法具有下面的特性：</p>
-<ol>
-<li>自反性：对于任何非空引用x，x.equals(x)应该返回true。</li>
-<li>对称性：对于任何引用x和y，当且仅当y.equals(x)返回true，x.equals(y)也应该返回true。</li>
-<li>传递性：对于任何引用x、y和z，如果x.equals(y)返回true，y.equals(z)返回true，x.equals(z)也应该返回true。</li>
-<li>一致性：如果x和y引用的对象没有发生变化，反复调用x.equals(y)应该返回同样地结果。</li>
-<li>对于任意非空引用x，x.equals(null)应该返回false。</li>
-</ol>
-<p>我们以后再来看如何在自定义类中编写合适的equals方法。</p>
-<h5 id="hashCode方法">hashCode方法</h5><p>散列码（hash code）是由对象导出的一个整型值。散列码是没有规律的。如果x和y是两个不同的对象，x.hashCode()和y.hashCode()基本上不会相同。</p>
-<p>Equals和hashCode的定义必须一致：如果x.equals(y)返回true，那么x.hashcode()就必须与y.hashcode()具有相同的值。</p>
-<h5 id="toString方法">toString方法</h5><p>它用于返回表示对象的字符串。只要对象与一个字符串通过操作符“+”连接起来，Java编译就会自动地调用toString方法，以便获得这个对象的字符串描述。每一个非基本类型的对象都有一个toString方法，而且当编译器需要一个String而只有一个对象时，该方法便会得到调用。</p>
-<hr>
-<p>这里只是对Object中一些公用方法的简单介绍，更详细的介绍我们以后在讨论。</p>
+</code></pre><p>这段代码的输出是false。这是因为<code>==</code>比较的是对象的引用。那么如果我们想比较两个对象的实际内容是否相同，就必须使用特殊方法equals()。但是该方法如果直接在自定义类中调用那就又有很多问题。以后我们会讨论。</p>
 
       
     </div>
@@ -303,9 +306,18 @@ class Test{
     
 <nav id="article-nav">
   
+    <a href="/Object有哪些公有方法/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Object中公有方法
+        
+      </div>
+    </a>
   
-    <a href="/2015/11/06/switch能否用string作为参数/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">两个小问题</div>
+  
+    <a href="/Java中的四种引用/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java中的四种引用</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -340,7 +352,7 @@ class Test{
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Object有哪些公有方法" data-title="Object中公有方法" data-url="http://sspaiblog.com/2016/01/18/Object有哪些公有方法/"></div>
+	<div class="ds-thread" data-thread-key="switch能否用string作为参数" data-title="两个小问题" data-url="http://sspaiblog.com/switch能否用string作为参数/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
