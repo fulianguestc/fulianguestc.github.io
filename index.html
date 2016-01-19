@@ -111,6 +111,8 @@
 					        
 								<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
 					        
+								<a class="mail" target="_blank" href="/fulianguestc@163.com" title="mail">mail</a>
+					        
 						</div>
 					</nav>
 				</section>
@@ -198,6 +200,8 @@
 			        
 						<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
 			        
+						<a class="mail" target="_blank" href="/fulianguestc@163.com" title="mail">mail</a>
+			        
 				</div>
 			</nav>
 		</header>				
@@ -210,7 +214,7 @@
   
     <div class="article-meta">
       <a href="/Object有哪些公有方法/" class="article-date">
-  	<time datetime="2016-01-18T08:51:10.000Z" itemprop="datePublished">2016-01-18</time>
+  	<time datetime="2016-01-19T07:06:18.000Z" itemprop="datePublished">2016-01-19</time>
 </a>
     </div>
   
@@ -257,7 +261,7 @@
 <li>对于任意非空引用x，x.equals(null)应该返回false。</li>
 </ol>
 <p>我们以后再来看如何在自定义类中编写合适的equals方法。</p>
-<h5 id="hashCode方法">hashCode方法</h5><p>散列码（hash code）是由对象导出的一个整型值。散列码是没有规律的。如果x和y是两个不同的对象，x.hashCode()和y.hashCode()基本上不会相同。</p>
+<h5 id="hashCode方法">hashCode方法</h5><p>散列码（hash code）是由对象导出的一个整型值。散列码是没有规律的。如果x和y是两个不同的对象，<code>x.hashCode()</code>和y.hashCode()基本上不会相同。</p>
 <p>Equals和hashCode的定义必须一致：如果x.equals(y)返回true，那么x.hashcode()就必须与y.hashcode()具有相同的值。</p>
 <h5 id="toString方法">toString方法</h5><p>它用于返回表示对象的字符串。只要对象与一个字符串通过操作符“+”连接起来，Java编译就会自动地调用toString方法，以便获得这个对象的字符串描述。每一个非基本类型的对象都有一个toString方法，而且当编译器需要一个String而只有一个对象时，该方法便会得到调用。</p>
 <hr>
