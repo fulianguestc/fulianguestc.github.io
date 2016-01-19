@@ -9,7 +9,7 @@
   <meta name="description" content="think+">
 <meta property="og:type" content="website">
 <meta property="og:title" content="少数派报告">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://sspaiblog.com/index.html">
 <meta property="og:site_name" content="少数派报告">
 <meta property="og:description" content="think+">
 <meta name="twitter:card" content="summary">
@@ -32,7 +32,7 @@
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
 			
-			<img lazy-src="http://ww3.sinaimg.cn/mw690/92c2c1adjw8ezuk8v260fj20to0tpq3l.jpg" class="js-avatar">
+			<img lazy-src="/img/black.png" class="js-avatar">
 			
 		</a>
 
@@ -74,12 +74,12 @@
 					<div class="tips-arrow"></div>
 					<ul class="tips-inner">
 						<li>菜单</li>
-						<li>標籤</li>
+						<li>标签</li>
 						
 						<li>友情链接</li>
 						
 						
-						<li>關於</li>
+						<li>关于我</li>
 						
 					</ul>
 				</div>
@@ -95,6 +95,10 @@
 							<li><a href="/">主页</a></li>
 				        
 							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/">ddd</a></li>
+				        
+							<li><a href="/">aaa</a></li>
 				        
 						</ul>
 					</nav>
@@ -145,7 +149,7 @@
 				
 				<section class="switch-part switch-part4">
 				
-					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？</div>
 				</section>
 				
 			</div>
@@ -164,7 +168,7 @@
 		<header id="header" class="inner">
 			<div class="profilepic">
 			
-				<img lazy-src="http://ww3.sinaimg.cn/mw690/92c2c1adjw8ezuk8v260fj20to0tpq3l.jpg" class="js-avatar">
+				<img lazy-src="/img/black.png" class="js-avatar">
 			
 			</div>
 			<hgroup>
@@ -179,6 +183,10 @@
 					<li><a href="/">主页</a></li>
 		        
 					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/">ddd</a></li>
+		        
+					<li><a href="/">aaa</a></li>
 		        
 		        <div class="clearfix"></div>
 				</ul>
@@ -205,8 +213,8 @@
     <article id="post-Object有哪些公有方法" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/11/13/Object有哪些公有方法/" class="article-date">
-  	<time datetime="2015-11-13T01:39:05.000Z" itemprop="datePublished">2015-11-13</time>
+      <a href="/2016/01/18/Object有哪些公有方法/" class="article-date">
+  	<time datetime="2016-01-18T08:51:10.000Z" itemprop="datePublished">2016-01-18</time>
 </a>
     </div>
   
@@ -219,7 +227,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/13/Object有哪些公有方法/">Object中公有方法</a>
+      <a class="article-title" href="/2016/01/18/Object有哪些公有方法/">Object中公有方法</a>
     </h1>
   
 
@@ -253,7 +261,7 @@
 <li>对于任意非空引用x，x.equals(null)应该返回false。</li>
 </ol>
 <p>我们以后再来看如何在自定义类中编写合适的equals方法。</p>
-<h5 id="hashCode方法">hashCode方法</h5><p>散列吗（hash code）是由对象导出的一个整型值。散列码是没有规律的。如果x和y是两个不同的对象，x.hashCode()和y.hashCode()基本上不会相同。</p>
+<h5 id="hashCode方法">hashCode方法</h5><p>散列码（hash code）是由对象导出的一个整型值。散列码是没有规律的。如果x和y是两个不同的对象，x.hashCode()和y.hashCode()基本上不会相同。</p>
 <p>Equals和hashCode的定义必须一致：如果x.equals(y)返回true，那么x.hashcode()就必须与y.hashcode()具有相同的值。</p>
 <h5 id="toString方法">toString方法</h5><p>它用于返回表示对象的字符串。只要对象与一个字符串通过操作符“+”连接起来，Java编译就会自动地调用toString方法，以便获得这个对象的字符串描述。每一个非基本类型的对象都有一个toString方法，而且当编译器需要一个String而只有一个对象时，该方法便会得到调用。</p>
 <hr>
