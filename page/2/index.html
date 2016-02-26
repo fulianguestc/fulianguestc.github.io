@@ -4,36 +4,17 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Java中this的用法 | 少数派报告</title>
+  <title>少数派报告</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最初接触Java时，就一直无法理解this的用法，觉得很多地方都有它的身影。下面就简单介绍一下this的集中基本用法。
-主要参考书籍《Java核心技术.卷1》。
-1. 隐式参数与显示参数
-方法用于操作对象以及存取它们的实力域。例如，方法：
-public void raiseSalary(double byPercent)
-{
-    double raise = salary * byPercen">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Java中this的用法">
-<meta property="og:url" content="http://sspaiblog.com/java中this的用法/index.html">
+  <meta name="description" content="think+">
+<meta property="og:type" content="website">
+<meta property="og:title" content="少数派报告">
+<meta property="og:url" content="http://sspaiblog.com/page/2/index.html">
 <meta property="og:site_name" content="少数派报告">
-<meta property="og:description" content="最初接触Java时，就一直无法理解this的用法，觉得很多地方都有它的身影。下面就简单介绍一下this的集中基本用法。
-主要参考书籍《Java核心技术.卷1》。
-1. 隐式参数与显示参数
-方法用于操作对象以及存取它们的实力域。例如，方法：
-public void raiseSalary(double byPercent)
-{
-    double raise = salary * byPercen">
-<meta property="og:updated_time" content="2015-10-23T14:10:48.000Z">
+<meta property="og:description" content="think+">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java中this的用法">
-<meta name="twitter:description" content="最初接触Java时，就一直无法理解this的用法，觉得很多地方都有它的身影。下面就简单介绍一下this的集中基本用法。
-主要参考书籍《Java核心技术.卷1》。
-1. 隐式参数与显示参数
-方法用于操作对象以及存取它们的实力域。例如，方法：
-public void raiseSalary(double byPercent)
-{
-    double raise = salary * byPercen">
+<meta name="twitter:title" content="少数派报告">
+<meta name="twitter:description" content="think+">
   
     <link rel="alternative" href="/atom.xml" title="少数派报告" type="application/atom+xml">
   
@@ -217,7 +198,83 @@ public void raiseSalary(double byPercent)
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-java中this的用法" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap">
+  
+    <article id="post-Java的基本数据类型" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/Java的基本数据类型/" class="article-date">
+  	<time datetime="2015-11-02T08:33:49.000Z" itemprop="datePublished">2015-11-02</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Java的基本数据类型/">Java的基本数据类型以及它们的封装类</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Java是一种强类型语言，所以需要为每一个变量声明一种类型。在Java中，一共有8种基本类型，其中有4种整型、2种浮点类型、1钟字符类型char和1种表示真值的boolean类型。</p>
+<p><strong>备注：</strong>Java有一个能够表示任意精度的算术包，通常称为“大数值”。但它并不是一种新的Java类型，而是一种Java对象。</p>
+<h4 id="整型">整型</h4><p>提供了4种整形，允许时负数，而且不存在无符号类型。int，4字节，32位；short，2字节，16位；long，8字节，64位；byte，1字节，4位。</p>
+<p>byte和short类型主要用于特定场合，例如，底层的文件处理或者需要控制占用存储空间量的大数组。整形范围是固定的，不会有软件移植的问题。</p>
+<h4 id="浮点类型">浮点类型</h4><p>Java中有两种浮点类型。float，4字节；double，8字节。float范围-2^128~2^128，double的精度是float类型的2倍。</p>
+<h4 id="char类型">char类型</h4><p>强烈建议不要在程序中使用char类型，最好将需要处理的字符串用抽象数据类型表示。</p>
+<h4 id="boolean类型">boolean类型</h4><p>有两个值：false和true。整型值和布尔值之间不能相互转换。</p>
+<h4 id="大数值（不是基本类型）">大数值（不是基本类型）</h4><p>如果基本的整数和浮点精度不能够满足需求，那么可以使用java.math包中的两个很有用的类：BigInteger和BigDecimal。这两个类可以处理包含任意长度数字序列的数值。</p>
+<p>使用静态的<code>valueOf</code>方法可以将普通的数值转换为大数值：</p>
+<pre><code><span class="keyword">BigInteger </span>a = <span class="keyword">BigInteger.valueOf(100);</span>
+</code></pre><p>但是不能直接用算术运算符进行处理。而需要使用大数值类中的方法。例如：</p>
+<pre><code>BigInteger c = <span class="operator">a</span>.<span class="built_in">add</span>(b)<span class="comment">;//c = a +b</span>
+</code></pre><h4 id="基本类型的封装类">基本类型的封装类</h4><p>我们一般用new将对象存储在“堆”里，所以用new创建一个对象——特别是小的、简单的变量，往往不是很有效，所以，对于这些类型，java不是用new来创建变量，而是创建一个不是引用的“自动”变量，这个变量直接存储“值”，并置于堆中，因此更加高效。</p>
+<p>有时候我们需要将int这样的基本类型转为对象。所有的基本类型都有一个与之对应的类。例如Integer类对应基本类型int。这些类被称为包装器。这些对象包装器的名字是：Integer、Long、Float、Double、Short、Byte、Character、Void和Boolean。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/基本类型/">基本类型</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Java/">Java</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-java中this的用法" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/java中this的用法/" class="article-date">
@@ -233,27 +290,12 @@ public void raiseSalary(double byPercent)
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      Java中this的用法
+    <h1 itemprop="name">
+      <a class="article-title" href="/java中this的用法/">Java中this的用法</a>
     </h1>
   
 
       </header>
-      
-      <div class="article-info article-info-post">
-        
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/this/">this</a></li></ul>
-	</div>
-
-        
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Java/">Java</a>
-	</div>
-
-
-        <div class="clearfix"></div>
-      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -307,77 +349,168 @@ public void raiseSalary(double byPercent)
       
     </div>
     
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/Java的基本数据类型/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Java的基本数据类型以及它们的封装类
-        
-      </div>
-    </a>
-  
-  
-    <a href="/关于adb-shell的若干问题/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">关于adb-shell的若干问题</div>
-      <strong class="article-nav-caption">></strong>
-    </a>
-  
-</nav>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/this/">this</a></li></ul>
+	</div>
 
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Java/">Java</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
   
 </article>
 
 
-<div class="share_jia">
-	<!-- JiaThis Button BEGIN -->
-	<div class="jiathis_style">
-		<span class="jiathis_txt">分享到: &nbsp; </span>
-		<a class="jiathis_button_facebook"></a> 
-    <a class="jiathis_button_twitter"></a>
-    <a class="jiathis_button_plus"></a> 
-    <a class="jiathis_button_tsina"></a>
-		<a class="jiathis_button_cqq"></a>
-		<a class="jiathis_button_douban"></a>
-		<a class="jiathis_button_weixin"></a>
-		<a class="jiathis_button_tumblr"></a>
-    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+
+
+
+
+
+
+
+  
+    <article id="post-关于adb-shell的若干问题" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/关于adb-shell的若干问题/" class="article-date">
+  	<time datetime="2015-10-11T15:47:37.000Z" itemprop="datePublished">2015-10-11</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/关于adb-shell的若干问题/">关于adb-shell的若干问题</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近一直在进行安卓开发，在windows下启动adb shell只要配置环境变量就好了，并且网上教程很多，那么在MAC下如何配置呢？</p>
+<p>大体思路是一致的，只是要用命令行来操。</p>
+<p>首先启动终端，然后输入：</p>
+<pre><code><span class="variable">$ </span>touch .bash_profile
+<span class="variable">$ </span>open -e .bash_profile
+</code></pre><p>这时会打开.bash_profile这个文档,</p>
+<pre><code>export <span class="constant">PATH</span>=<span class="variable">${</span><span class="constant">PATH</span>}<span class="symbol">:/Users/***/sdk/platform-tools</span>
+</code></pre><p>在后面输入<code>platform-tools</code>所在的目录路径，比如笔者的路径就是<code>/Users/***/sdk/platform-tools</code>，所以写成上面的形式。然后直接关闭文档自动保存。</p>
+<p>这时候在终端输入<code>adb</code>，就不会提示错误信息了，然后启动安卓模拟器，再次输入<code>adb shell</code>即可。</p>
+<p>进行安卓开发时相信很多人都会用Genymotion，笔者发现默认的ADB会产生端口被占用的问题，其实解决这个问题的方法很简单，只需要在设置中改成自己的sdk就好了。如下图：<br><img src="https://raw.githubusercontent.com/fulianguestc/markdownphotos/master/geny.png" alt="geny"><br>OVER~ ~ ~!</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Android/">Android</a>
 	</div>
-	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
-	<!-- JiaThis Button END -->
-</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
 
 
 
 
 
 
-<div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="java中this的用法" data-title="Java中this的用法" data-url="http://sspaiblog.com/java中this的用法/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"true"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
+
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/hello-world/" class="article-date">
+  	<time datetime="2015-10-10T09:18:10.000Z" itemprop="datePublished">2015-10-10</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
 
 
 
 
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </nav>
+  
 </div>
       <footer id="footer">
   <div class="outer">
@@ -401,8 +534,8 @@ public void raiseSalary(double byPercent)
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: false,
-		isPost: true,
+		isHome: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

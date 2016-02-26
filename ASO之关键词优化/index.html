@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>ASO之关键词优化 | 少数派报告</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="总结自公众号【姑婆那些事儿】ASO关键词优化系列，形成关键词干货篇，并融入自己的思考——
+输出结果：本文以及拾光官网www.keshile.net
+
+一、什么是关键词关键词即AppStore搜索引擎收录用户频繁搜索的索引词。对于ASO关键字调查，至今为止，尚未有一款工具把开发者从无聊并庞大的调查中解放出来（目前对应用的关键字调查并没有好工具）。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ASO之关键词优化">
+<meta property="og:url" content="http://sspaiblog.com/ASO之关键词优化/index.html">
+<meta property="og:site_name" content="少数派报告">
+<meta property="og:description" content="总结自公众号【姑婆那些事儿】ASO关键词优化系列，形成关键词干货篇，并融入自己的思考——
+输出结果：本文以及拾光官网www.keshile.net
+
+一、什么是关键词关键词即AppStore搜索引擎收录用户频繁搜索的索引词。对于ASO关键字调查，至今为止，尚未有一款工具把开发者从无聊并庞大的调查中解放出来（目前对应用的关键字调查并没有好工具）。">
+<meta property="og:image" content="https://raw.githubusercontent.com/fulianguestc/markdownphotos/master/Forest.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fulianguestc/markdownphotos/master/keywords.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fulianguestc/markdownphotos/master/分词工具.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fulianguestc/markdownphotos/master/关键词扩展.png">
+<meta property="og:updated_time" content="2016-02-26T09:31:30.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ASO之关键词优化">
+<meta name="twitter:description" content="总结自公众号【姑婆那些事儿】ASO关键词优化系列，形成关键词干货篇，并融入自己的思考——
+输出结果：本文以及拾光官网www.keshile.net
+
+一、什么是关键词关键词即AppStore搜索引擎收录用户频繁搜索的索引词。对于ASO关键字调查，至今为止，尚未有一款工具把开发者从无聊并庞大的调查中解放出来（目前对应用的关键字调查并没有好工具）。">
+  
+    <link rel="alternative" href="/atom.xml" title="少数派报告" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/black.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">少数派</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">think+</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/categories/工作日志">工作日志</a></li>
+				        
+							<li><a href="/tags/读书笔记">读书笔记</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com" title="weibo">weibo</a>
+					        
+								<a class="zhihu" target="_blank" href="http://www.zhihu.com" title="zhihu">zhihu</a>
+					        
+								<a class="mail" target="_blank" href="mailto:fulianguestc@163.com" title="mail">mail</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/ASO/" style="font-size: 20px;">ASO</a> <a href="/tags/Object/" style="font-size: 10px;">Object</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/产品策划-运营/" style="font-size: 20px;">产品策划/运营</a> <a href="/tags/基本类型/" style="font-size: 10px;">基本类型</a> <a href="/tags/引用、强弱软虚/" style="font-size: 10px;">引用、强弱软虚</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="/404">有价值的404</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">少数派</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/img/black.png" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">少数派</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">think+</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/categories/工作日志">工作日志</a></li>
+		        
+					<li><a href="/tags/读书笔记">读书笔记</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com" title="weibo">weibo</a>
+			        
+						<a class="zhihu" target="_blank" href="http://www.zhihu.com" title="zhihu">zhihu</a>
+			        
+						<a class="mail" target="_blank" href="mailto:fulianguestc@163.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-ASO之关键词优化" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/ASO之关键词优化/" class="article-date">
+  	<time datetime="2016-02-26T09:31:30.000Z" itemprop="datePublished">2016-02-26</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ASO之关键词优化
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ASO/">ASO</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/产品策划-运营/">产品策划/运营</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/工作日志/">工作日志</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>总结自公众号【姑婆那些事儿】ASO关键词优化系列，形成关键词干货篇，并融入自己的思考——</p>
+<p>输出结果：本文以及拾光官网www.keshile.net</p>
+</blockquote>
+<h5 id="一、什么是关键词">一、什么是关键词</h5><p>关键词即AppStore搜索引擎收录用户频繁搜索的索引词。<br>对于ASO关键字调查，至今为止，尚未有一款工具把开发者从无聊并庞大的调查中解放出来（目前对应用的关键字调查并没有好工具）。</p>
+<a id="more"></a>
+<p>AppStore搜索引擎对于关键词权重的排序：app name &gt; app keywords &gt; app Description &gt; IAP item Name/Description</p>
+<p>如何做100个字符(即app keywords)，附<a href="http://tools.appying.com/metaCounts.html" target="_blank" rel="external">100字符监测工具</a>。</p>
+<h5 id="二、关键词的作用？">二、关键词的作用？</h5><p>关键词使App更容易被AppStore搜索引擎收录，在关键词搜索结果中显示App。本文介绍如何利用100个字符，做出更多的关键词覆盖，增加App的曝光机会。<br>没有在关键字上花时间，这会直接导致损失大量潜在下载量。</p>
+<h5 id="三、如何评估关键词运营效果？">三、如何评估关键词运营效果？</h5><ul>
+<li>KCN(Keywords Covering Number),即关键词有效覆盖个数。100个字符被AppStore搜索引擎分割出尽可能多的关键词数目，即KCN值越大越有利。</li>
+<li>iAR(iOS App Rank for iTunes)，即IOS App权重，会影响到App的ASO情况，包括搜索排名、搜索联想排序等，其值跟下载量、评论、榜单排名、关键词覆盖数目、关键词搜索排名等相关，KCN的优化也能增大iAR值。</li>
+</ul>
+<h5 id="四、热词/关键词选择原则——选择流量大、并且竞争难度小的热词。">四、热词/关键词选择原则——选择流量大、并且竞争难度小的热词。</h5><p>一些ASO的基本术语：</p>
+<ol>
+<li>关联性（Relevance）：某个特定的关键字与你的应用以及目标用户之间的相关性，只有具有关联性的关键字才能产生有效转化。</li>
+<li>难度（Difficulty）：某一特定关键字的竞争激励程度，这个值越高意味着它更难进入前列排名。（容易被挤下去了）</li>
+<li>流量（Traffic）：特定关键字的抢手程度，在搜索中被搜索的次数越高，这个值就越高（热度）。</li>
+</ol>
+<p>（一）获取关键字数据</p>
+<p>现在，你已经有了一个关键字字库，之后你必须获得特定的应用商店数据，许多ASO工具都会为你呈现关键字流量和关键字难度。这个步骤很关键，之后，你需要获得每一个关键字的流量和难度，这一点非常重要，因为在进入第二步之前，你需要把关键字库中那些零流量的关键字全部清空（或者把他们放到一个待定区，因为有些关键字很有可能在未来一段时间内再次获得流量，谁能想到flappy bird突然能红起来呢？）。根据你的游戏类型，以及你采用ASO工具采集到的信息，平均一下iPhone和iPad的得分，从而获得一个合计难度/流量数字。</p>
+<p>（二）明智地选择你的关键字</p>
+<p>Appstore对于关键字列表的长度限制在100个字符以内，在这个有限的长度内，我们需要决定到底使用哪些关键字。目的是从关键字库中选择适当的关键字，带来有效的下载量。首先，我们要记住：</p>
+<p>高相关性+适当的难度+一般的流量=下载量的增加</p>
+<p>分析：</p>
+<ul>
+<li>适当的难度：我们需要一些排名不算太困难的关键字，因为我们的产品本身在Appstore上基本上是没有知名度的。</li>
+<li>一些流量：我们需要有一定搜索量的关键字，否则我们会浪费100字符的空间，没有流量就不会带来下载</li>
+</ul>
+<p>（三）选择关键字的难度</p>
+<p>如何选择竞争难度小的热词？</p>
+<p>竞争难度大小，就得看商务人员对整个行业竞品的了解程度了，需要你每天观察各个积分墙上竞品都在疯狂做哪些词，尽量避开这些热词，优先选择竞争难度小的词来做。</p>
+<p>为关键字打分。为你所有有流量的关键字做一个排名，并为他们的难度分一下等级。</p>
+<p>排名依据有：</p>
+<ul>
+<li>总下载量（当前版本和以往版本）</li>
+<li>下载动量（下载加速度）</li>
+<li>评论量（正反面评论和历史评论）</li>
+<li>玩家活跃度（应用被打开的频率）</li>
+<li>抛弃率（应用被删除的比率）</li>
+<li>点击下载率（有多少下载量来自于搜索下载）</li>
+</ul>
+<p>一般来说，我们的应用中排名前十的有流量的关键字需要大量的测试和评估，所以不要期望一次就选中你想要的关键字。ASO优化需要时间，需要持续的监控和调整，这是一个不断发展的过程。</p>
+<p>定期修改关键字。因为Appstore会经常改变他们的算法，所以我们需要有快速反应和修改的能力。选择一个高相关、低难度的关键字以及至少有一些搜索量的关键字是你最好的而选择。每一次更新关键字列表都会给你带来更多的收获，所以第一次提交后要放弃，保持筛选的过程。</p>
+<p>（四）难度等级</p>
+<p>如果你的软件已经上线，那么现在可以分一下关键字排名列表了，理想情况下，你应该随时关注关键字对下载所造成的影响。这个信息很有价值，因为它会帮助你对于后续的决策作出很好的指导作用。知道你的关键字排名对于你确定之后的难度等级也是一件很重要的事，分出难度等级可以帮你快速缩小潜在的关键字列表。</p>
+<p>我们排列出以下难度等级：</p>
+<ol>
+<li>目标关键字：（难度小于2，以及排名小于10），这是你的首选，这种关键字让你有机会出现在搜索的前十位中；</li>
+<li>备选关键字：（难度在2-4之间，以及排名在10-30之间）这是你的备选，如果你不能确定足够多的目标难度关键字，那么你可以用这些关键字填满你的列表；</li>
+<li>排除关键字：（难度大于4，排名大于30）：这是你需要排除的关键字。这些关键字几乎没有机会帮你带来下载量。</li>
+</ol>
+<p>如果没有足够的备选关键字——理想状态下，你应该拥有足够多的目标关键字可以选择。如果没有足够的备选关键字的话，建议重新读一次第一篇文章。游戏上架才是真正的开始，从游戏上架的那一刻，你就应该时刻追踪关注你的关键字排名情况，关注评论、排名、下载等元素，确定你到底需要哪些关键字。</p>
+<p>（五）流量为王</p>
+<p>没有流量就没有一切。在有了一定流量的情况下，我们会更多关注难度和关联度。比方说你只有一个关键字可以填写了，但是你还有三个潜在关键字可以做选择，如果他们都是高关联度和相同难度的话，那么自然要选择高流量的关键字。</p>
+<p>如何选择流量大的热词？衡量流量大小的方法：</p>
+<ul>
+<li>通过搜索词热度（<a href="http://tools.appying.com/apphot.html" target="_blank" rel="external">app热度查询网址</a>）来看，比如热词A热度为5000，热词B热度为7000，那么热词B流量更大。（热度越高+相关=流量越大）</li>
+<li>asou的“asou趋势-搜索排行“可以看到各个分类中的热词分布，对于优化关键词也有一些帮助，有兴趣的可以研究一下。一般优化上去的热词，在没有竞品竞争的情况下，排名一般不会有太大波动，可谓一劳永逸吧。</li>
+<li>选定了一些主词后，在appstore搜索这个词，下拉联想词中的词也很有参考价值。也可以辅助百度指数来验证流量大小（但百度指数主要是web端，web端搜索行为和移动端还是有一些差别的）。</li>
+</ul>
+<p>验证效果：可以通过appannie，和asou（ios的）最新推出的ASO指数来验证，指数越高说明ASO做的越好。</p>
+<p>小雨：对拾光关键词的优化——forest，专心，拾光，效率等词的热度如下，参考<a href="http://tools.appying.com/apphot.html" target="_blank" rel="external">app热度查询</a>。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">热度</th>
+<th style="text-align:center">名称</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">4605</td>
+<td style="text-align:center">专注力</td>
+</tr>
+<tr>
+<td style="text-align:center">4619</td>
+<td style="text-align:center">专注</td>
+</tr>
+<tr>
+<td style="text-align:center">4605</td>
+<td style="text-align:center">专心 告别拖延症</td>
+</tr>
+<tr>
+<td style="text-align:center">4760</td>
+<td style="text-align:center">专心</td>
+</tr>
+<tr>
+<td style="text-align:center">4605</td>
+<td style="text-align:center">智能机器人</td>
+</tr>
+<tr>
+<td style="text-align:center">4633</td>
+<td style="text-align:center">掌控</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>7344</strong></td>
+<td style="text-align:center"><strong>学霸君</strong></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>5893</strong></td>
+<td style="text-align:center"><strong>学霸</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">4605</td>
+<td style="text-align:center">效率助手、效率大师、效率日记、效率笔记、效率达人</td>
+</tr>
+<tr>
+<td style="text-align:center">4606</td>
+<td style="text-align:center">效率手册</td>
+</tr>
+<tr>
+<td style="text-align:center">4605</td>
+<td style="text-align:center">效率达人 - 克服拖延症</td>
+</tr>
+<tr>
+<td style="text-align:center">4608</td>
+<td style="text-align:center">效率办公</td>
+</tr>
+<tr>
+<td style="text-align:center">4708</td>
+<td style="text-align:center">效率</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>5428</strong></td>
+<td style="text-align:center"><strong>我要当学霸</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">4605</td>
+<td style="text-align:center">玩手机</td>
+</tr>
+<tr>
+<td style="text-align:center">4620</td>
+<td style="text-align:center">拖延症</td>
+</tr>
+<tr>
+<td style="text-align:center">4606</td>
+<td style="text-align:center">拖延</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>7549</strong></td>
+<td style="text-align:center"><strong>手机助手</strong></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>6734</strong></td>
+<td style="text-align:center"><strong>手机清理</strong></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>8490</strong></td>
+<td style="text-align:center"><strong>手机管家</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">4605</td>
+<td style="text-align:center">时间管理器 – live time – 时间跟踪器</td>
+</tr>
+<tr>
+<td style="text-align:center">4992</td>
+<td style="text-align:center">时间管理</td>
+</tr>
+<tr>
+<td style="text-align:center">4982</td>
+<td style="text-align:center">时间管理</td>
+</tr>
+<tr>
+<td style="text-align:center">4650</td>
+<td style="text-align:center">时间表</td>
+</tr>
+<tr>
+<td style="text-align:center">4916</td>
+<td style="text-align:center">时间</td>
+</tr>
+<tr>
+<td style="text-align:center">4605</td>
+<td style="text-align:center">监督</td>
+</tr>
+<tr>
+<td style="text-align:center">4605</td>
+<td style="text-align:center">放下手机</td>
+</tr>
+<tr>
+<td style="text-align:center">4669</td>
+<td style="text-align:center">番茄土豆</td>
+</tr>
+<tr>
+<td style="text-align:center">4607</td>
+<td style="text-align:center">番茄时钟</td>
+</tr>
+<tr>
+<td style="text-align:center">4660</td>
+<td style="text-align:center">滴答清单</td>
+</tr>
+<tr>
+<td style="text-align:center">4605</td>
+<td style="text-align:center">低头族</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>6201</strong></td>
+<td style="text-align:center"><strong>办公软件</strong></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>9163</strong></td>
+<td style="text-align:center"><strong>小说</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">4705</td>
+<td style="text-align:center">习惯</td>
+</tr>
+<tr>
+<td style="text-align:center">4607</td>
+<td style="text-align:center">习惯养成</td>
+</tr>
+<tr>
+<td style="text-align:center">4764</td>
+<td style="text-align:center">番茄工作法</td>
+</tr>
+<tr>
+<td style="text-align:center">4630</td>
+<td style="text-align:center">终结者</td>
+</tr>
+<tr>
+<td style="text-align:center">4688</td>
+<td style="text-align:center">管理</td>
+</tr>
+</tbody>
+</table>
+<p>拾光可参考关键词：学霸，学霸君，我要当学霸，手机助手，手机清理，手机管家</p>
+<p>Tips：</p>
+<ul>
+<li>软件名称的利用：空间是很宝贵的，苹果限制了用户100个字符。所以我们要在有限的空间里将关键字的作用发挥到最大。可以在自己软件的名称中加入关键字。不过要记住，如果你想要把自己的产品打造成品牌的话，切忌把自己的软件名称变成垃圾堆哦！</li>
+<li>注意关键字的长度：尽量保证每一个关键字小于10个字符。</li>
+<li>保持快速更新：因为每次更新，你都将有机会删除表现不佳的关键字以及增添新的关键字。</li>
+</ul>
+<h5 id="五、关键词的做法">五、关键词的做法</h5><p>怎么做ASO，需要做哪些，流程如何？总体而言：</p>
+<ol>
+<li>研究目前状态：产品功能是什么？确定用户群体是什么？</li>
+<li>这部分用户群体导出来，为这部分人群匹配相应的用户搜索行为的关键字。</li>
+<li>为相应的用户搜索行为关键字匹配关联热词（收集数据越多越好，数据可参考apple store的联想词或相关工具的数据）。</li>
+<li>把这部分词筛一遍，找出最有效率的集合，提取集合中的有效字符分拆组合（热词不拆分有苹果的审核风险，拆分过细可能无法覆盖，要掌握度）。</li>
+</ol>
+<p>具体步骤如下：</p>
+<ul>
+<li>第一步：知己知彼，建立一个关键字库。</li>
+</ul>
+<p>（一）判断具有关联性的关键字<br>记住要使用那些跟你的应用和用户有高关联度的关键字。有些关键字看起来有着排名优势，可是对于你的产品来说根本没有意义，用户即使搜到了也不会下载。</p>
+<p>（二）分析竞争对手的关键字<br>附：AppYing提供的<a href="www.appduu.co">ASO利器</a>，其功能：</p>
+<ul>
+<li>基于APP现状和大数据分析，我们提供给您合理的关键词优化建议，在您设置好新版关键词（提交到iTC后台）并上线后，我们将持续跟踪评估优化效果（每周跟踪一次），并结合数据给出进一步的优化建议。</li>
+<li>可以定制添加关键词，查看追踪关键词的搜索热度、搜索结果，以及近期变化情况，并且智能解析相关联词汇。</li>
+<li>实时跟踪应用在关键词下的排名，以及该词的搜索结果，有助于开发者查看关键词数据及时迭代关键词。</li>
+<li>结合App属性，人工智能推荐Keywords，提供Keywords优化解决方案与技术支持服务。</li>
+</ul>
+<p>我们可以通过分析竞争对手的情况来判定哪些关键字具有关联性。</p>
+<ol>
+<li>了解自己的潜在用户和竞争对手是谁。你可以在Appstore排行榜内寻找自己的竞争对手。当然这里有个小诀窍，你不用一个个浏览不同的热门应用，只要使用App Figures的Top Apps工具就行，它可以极为便利地为你展示多达三个分类的热门排名应用。除此之外，你还可以查找Appnique的“推荐竞争对手”列表，以及Sensor Tower的“追踪竞争者”工具。</li>
+<li>OK，现在你已经找到你的竞争对手了，利用Sensor Tower的Keywod Spy可以让你发现竞争对手的关键字，这个工具除了让你发现竞争对手的关键字以外，还能让你看到自己产品的关键字与之重叠的情况。</li>
+<li>最后，制作一个广泛的、含有潜在关联性的关键字库，不同的ASO工具可能会给你提供不同的关键字，而你的工作就是手动筛选出最终可以使用的那些关键字。</li>
+</ol>
+<p>小雨：比如——Forest: 保持专注，拒当低头族<br><img src="https://raw.githubusercontent.com/fulianguestc/markdownphotos/master/Forest.png" alt="Forest"></p>
+<p>关键词覆盖数据 : 共覆盖50个词，搜索结果在TOP10的有3个。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">序</th>
+<th style="text-align:center">关键词</th>
+<th style="text-align:center">排名</th>
+<th style="text-align:center">相关APP数量</th>
+<th style="text-align:center">排名第一的iAR值</th>
+<th style="text-align:center">排名第二的iAR值</th>
+<th style="text-align:center">排名第三的iAR值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">效率</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1050</td>
+<td style="text-align:center">7.124</td>
+<td style="text-align:center">1.614</td>
+<td style="text-align:center">1.250</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">专项</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">51</td>
+<td style="text-align:center">3.904</td>
+<td style="text-align:center">6.534</td>
+<td style="text-align:center">1.218</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">书馆</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">471</td>
+<td style="text-align:center">4.877</td>
+<td style="text-align:center">8.239</td>
+<td style="text-align:center">6.219</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">管理图书</td>
+<td style="text-align:center">11    290</td>
+<td style="text-align:center">7.458</td>
+<td style="text-align:center">7.394</td>
+<td style="text-align:center">7.118</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">花儿</td>
+<td style="text-align:center">45</td>
+<td style="text-align:center">1257</td>
+<td style="text-align:center">7.614</td>
+<td style="text-align:center">1.614</td>
+<td style="text-align:center">7.296</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">番茄</td>
+<td style="text-align:center">47</td>
+<td style="text-align:center">313</td>
+<td style="text-align:center">2.869</td>
+<td style="text-align:center">4.025</td>
+<td style="text-align:center">1.614</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">学生会</td>
+<td style="text-align:center">50</td>
+<td style="text-align:center">2158</td>
+<td style="text-align:center">4.812</td>
+<td style="text-align:center">2.988</td>
+<td style="text-align:center">0.000</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center">作息时间</td>
+<td style="text-align:center">55</td>
+<td style="text-align:center">2115</td>
+<td style="text-align:center">5.052</td>
+<td style="text-align:center">7.331</td>
+<td style="text-align:center">1.250</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td style="text-align:center">时间管理</td>
+<td style="text-align:center">63</td>
+<td style="text-align:center">512</td>
+<td style="text-align:center">1.614</td>
+<td style="text-align:center">1.250</td>
+<td style="text-align:center">-</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">10</td>
+<td style="text-align:center">时间表</td>
+<td style="text-align:center">63</td>
+<td style="text-align:center">778</td>
+<td style="text-align:center">6.886</td>
+<td style="text-align:center">1.245</td>
+<td style="text-align:center">5.817</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">11</td>
+<td style="text-align:center">项目管理</td>
+<td style="text-align:center">67</td>
+<td style="text-align:center">730</td>
+<td style="text-align:center">1.419</td>
+<td style="text-align:center">3.216</td>
+<td style="text-align:center">1.846</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">12</td>
+<td style="text-align:center">时间段</td>
+<td style="text-align:center">75</td>
+<td style="text-align:center">2096</td>
+<td style="text-align:center">4.105</td>
+<td style="text-align:center">8.029</td>
+<td style="text-align:center">7.847</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">13</td>
+<td style="text-align:center">学生</td>
+<td style="text-align:center">101</td>
+<td style="text-align:center">2159</td>
+<td style="text-align:center">1.256</td>
+<td style="text-align:center">4.101</td>
+<td style="text-align:center">5.944</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">14</td>
+<td style="text-align:center">考试时间</td>
+<td style="text-align:center">108</td>
+<td style="text-align:center">2144</td>
+<td style="text-align:center">2.901</td>
+<td style="text-align:center">7.094</td>
+<td style="text-align:center">4.552</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">15</td>
+<td style="text-align:center">读数</td>
+<td style="text-align:center">113</td>
+<td style="text-align:center">1904</td>
+<td style="text-align:center">6.244</td>
+<td style="text-align:center">7.458</td>
+<td style="text-align:center">6.717</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">16</td>
+<td style="text-align:center">时间</td>
+<td style="text-align:center">121</td>
+<td style="text-align:center">2097</td>
+<td style="text-align:center">1.250</td>
+<td style="text-align:center">1.239</td>
+<td style="text-align:center">4.601</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">17</td>
+<td style="text-align:center">图书</td>
+<td style="text-align:center">127</td>
+<td style="text-align:center">2177</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">7.394</td>
+<td style="text-align:center">7.458</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">18</td>
+<td style="text-align:center">考题</td>
+<td style="text-align:center">136</td>
+<td style="text-align:center">2180</td>
+<td style="text-align:center">1.811</td>
+<td style="text-align:center">6.521</td>
+<td style="text-align:center">6.232</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">19</td>
+<td style="text-align:center">找工作</td>
+<td style="text-align:center">156</td>
+<td style="text-align:center">2161</td>
+<td style="text-align:center">7.701</td>
+<td style="text-align:center">7.324</td>
+<td style="text-align:center">6.984</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">20</td>
+<td style="text-align:center">大学生</td>
+<td style="text-align:center">161</td>
+<td style="text-align:center">2156</td>
+<td style="text-align:center">7.020</td>
+<td style="text-align:center">4.101</td>
+<td style="text-align:center">4.325</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">21</td>
+<td style="text-align:center">读者</td>
+<td style="text-align:center">163</td>
+<td style="text-align:center">2047</td>
+<td style="text-align:center">1.006</td>
+<td style="text-align:center">6.717</td>
+<td style="text-align:center">7.425</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">22</td>
+<td style="text-align:center">预习</td>
+<td style="text-align:center">163</td>
+<td style="text-align:center">2163</td>
+<td style="text-align:center">1.468</td>
+<td style="text-align:center">1.721</td>
+<td style="text-align:center">7.820</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">23</td>
+<td style="text-align:center">工作</td>
+<td style="text-align:center">165</td>
+<td style="text-align:center">2166</td>
+<td style="text-align:center">7.701</td>
+<td style="text-align:center">6.811</td>
+<td style="text-align:center">7.324</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">24</td>
+<td style="text-align:center">学子</td>
+<td style="text-align:center">166</td>
+<td style="text-align:center">2163</td>
+<td style="text-align:center">5.188</td>
+<td style="text-align:center">1.721</td>
+<td style="text-align:center">6.919</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">25</td>
+<td style="text-align:center">新书</td>
+<td style="text-align:center">183</td>
+<td style="text-align:center">2162</td>
+<td style="text-align:center">2.813</td>
+<td style="text-align:center">2.110</td>
+<td style="text-align:center">6.743</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">26</td>
+<td style="text-align:center">学者</td>
+<td style="text-align:center">191</td>
+<td style="text-align:center">2176</td>
+<td style="text-align:center">1.622</td>
+<td style="text-align:center">7.820</td>
+<td style="text-align:center">1.721</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">27</td>
+<td style="text-align:center">图书馆</td>
+<td style="text-align:center">193</td>
+<td style="text-align:center">1171</td>
+<td style="text-align:center">6.641</td>
+<td style="text-align:center">7.002</td>
+<td style="text-align:center">7.458</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">28</td>
+<td style="text-align:center">管理制度</td>
+<td style="text-align:center">196</td>
+<td style="text-align:center">2154</td>
+<td style="text-align:center">1.429</td>
+<td style="text-align:center">0.402</td>
+<td style="text-align:center">5.804</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">29</td>
+<td style="text-align:center">复习</td>
+<td style="text-align:center">197</td>
+<td style="text-align:center">2164</td>
+<td style="text-align:center">2.562</td>
+<td style="text-align:center">6.837</td>
+<td style="text-align:center">2.007</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">30</td>
+<td style="text-align:center">学习能力</td>
+<td style="text-align:center">212</td>
+<td style="text-align:center">2161</td>
+<td style="text-align:center">1.112</td>
+<td style="text-align:center">1.115</td>
+<td style="text-align:center">1.081</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">31</td>
+<td style="text-align:center">管理员</td>
+<td style="text-align:center">220</td>
+<td style="text-align:center">2142</td>
+<td style="text-align:center">3.330</td>
+<td style="text-align:center">5.804</td>
+<td style="text-align:center">6.622</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">32</td>
+<td style="text-align:center">工作室</td>
+<td style="text-align:center">264</td>
+<td style="text-align:center">2172</td>
+<td style="text-align:center">1.970</td>
+<td style="text-align:center">1.531</td>
+<td style="text-align:center">0.588</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">33</td>
+<td style="text-align:center">学习方法</td>
+<td style="text-align:center">270</td>
+<td style="text-align:center">2177</td>
+<td style="text-align:center">1.795</td>
+<td style="text-align:center">1.109</td>
+<td style="text-align:center">6.496</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">34</td>
+<td style="text-align:center">奇书</td>
+<td style="text-align:center">271</td>
+<td style="text-align:center">2162</td>
+<td style="text-align:center">7.372</td>
+<td style="text-align:center">2.903</td>
+<td style="text-align:center">1.357</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">35</td>
+<td style="text-align:center">好书</td>
+<td style="text-align:center">279</td>
+<td style="text-align:center">2159</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">7.394</td>
+<td style="text-align:center">1.041</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">36</td>
+<td style="text-align:center">语言学习</td>
+<td style="text-align:center">284</td>
+<td style="text-align:center">2180</td>
+<td style="text-align:center">7.172</td>
+<td style="text-align:center">1.622</td>
+<td style="text-align:center">7.500</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">37</td>
+<td style="text-align:center">上下班</td>
+<td style="text-align:center">315</td>
+<td style="text-align:center">2127</td>
+<td style="text-align:center">7.398</td>
+<td style="text-align:center">3.004</td>
+<td style="text-align:center">1.347</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">38</td>
+<td style="text-align:center">管理软件</td>
+<td style="text-align:center">348</td>
+<td style="text-align:center">2141</td>
+<td style="text-align:center">7.338</td>
+<td style="text-align:center">1.449</td>
+<td style="text-align:center">0.311</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">39</td>
+<td style="text-align:center">学校</td>
+<td style="text-align:center">353</td>
+<td style="text-align:center">2158</td>
+<td style="text-align:center">3.115</td>
+<td style="text-align:center">7.452</td>
+<td style="text-align:center">2.869</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">40</td>
+<td style="text-align:center">快乐学习</td>
+<td style="text-align:center">379</td>
+<td style="text-align:center">2163</td>
+<td style="text-align:center">5.029</td>
+<td style="text-align:center">0.469</td>
+<td style="text-align:center">6.623</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">41</td>
+<td style="text-align:center">管理</td>
+<td style="text-align:center">395</td>
+<td style="text-align:center">2134</td>
+<td style="text-align:center">0.974</td>
+<td style="text-align:center">7.118</td>
+<td style="text-align:center">3.744</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">42</td>
+<td style="text-align:center">管理工具</td>
+<td style="text-align:center">398</td>
+<td style="text-align:center">2141</td>
+<td style="text-align:center">6.850</td>
+<td style="text-align:center">5.717</td>
+<td style="text-align:center">5.040</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">43</td>
+<td style="text-align:center">资格考试</td>
+<td style="text-align:center">427</td>
+<td style="text-align:center">2179</td>
+<td style="text-align:center">4.774</td>
+<td style="text-align:center">3.181</td>
+<td style="text-align:center">4.183</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">44</td>
+<td style="text-align:center">小学生</td>
+<td style="text-align:center">439</td>
+<td style="text-align:center">2165</td>
+<td style="text-align:center">5.081</td>
+<td style="text-align:center">7.338</td>
+<td style="text-align:center">6.857</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">45</td>
+<td style="text-align:center">管理系统</td>
+<td style="text-align:center">458</td>
+<td style="text-align:center">2139</td>
+<td style="text-align:center">1.083</td>
+<td style="text-align:center">2.729</td>
+<td style="text-align:center">0.974</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">46</td>
+<td style="text-align:center">大学生活</td>
+<td style="text-align:center">598</td>
+<td style="text-align:center">2161</td>
+<td style="text-align:center">2.561</td>
+<td style="text-align:center">4.325</td>
+<td style="text-align:center">7.514</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">47</td>
+<td style="text-align:center">学习类</td>
+<td style="text-align:center">751</td>
+<td style="text-align:center">2175</td>
+<td style="text-align:center">1.721</td>
+<td style="text-align:center">6.919</td>
+<td style="text-align:center">1.622</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">48</td>
+<td style="text-align:center">学习机</td>
+<td style="text-align:center">807</td>
+<td style="text-align:center">2173</td>
+<td style="text-align:center">5.081</td>
+<td style="text-align:center">4.878</td>
+<td style="text-align:center">6.521</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">49</td>
+<td style="text-align:center">学习</td>
+<td style="text-align:center">839</td>
+<td style="text-align:center">2171</td>
+<td style="text-align:center">7.500</td>
+<td style="text-align:center">1.392</td>
+<td style="text-align:center">7.659</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">50</td>
+<td style="text-align:center">中小学生</td>
+<td style="text-align:center">1406</td>
+<td style="text-align:center">2120</td>
+<td style="text-align:center">6.521</td>
+<td style="text-align:center">7.996</td>
+<td style="text-align:center">7.055</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>基于以上信息，cp可以分析自家以及竞品间的KCN。</p>
+<p>（三）判断关键字的其他办法</p>
+<ol>
+<li>软件名称。许多应用软件在自己的名称中其实就会含有一些重要的关键字，所以名称是一个很好的切入点，总体来说，你应该在你的应用中添加一些高流量、高难度的关键字。</li>
+<li>软件描述。仔细观察竞争对手的应用描述，有些应用很可能会在描述中包含潜在关键字。不过值得注意的是，Appstore（ios）的算法可能不会将应用描述中的文字列入排名考虑因素。</li>
+<li>软件评价。竞争对手产品的高分评价中有时候也会有潜在关键字，从五星评价开始找，因为五星评价是最直观的玩家的需求（小雨：对产品设计也需要重视五星玩家/铁粉的需求）。</li>
+<li><a href="http://www.google.cn/trends/" target="_blank" rel="external">谷歌趋势</a>。如果你想知道某个关键字的检索量，其实谷歌趋势也是个不错的选择。依旧以数学游戏作为例子，我们把“数学游戏”作为基础关键字，同时查询“数学运动”和“数学训练”进行对比。对于“数学运动”感兴趣的检索几乎为0，这表明这很有可能是一个冷关键字，除此之外，谷歌趋势还会为你提供一些关键字建议。（小雨：需翻墙）</li>
+</ol>
+<hr>
+<ul>
+<li>第二步：组词拆词，提高KCN</li>
+</ul>
+<p>本段分析竞品的关键词，提取关联性强的关键词，形成关键字集合。仍然以香哈菜谱为例，下图截取香哈菜谱排名靠前的30个关键字。<br><img src="https://raw.githubusercontent.com/fulianguestc/markdownphotos/master/keywords.png" alt="排名靠前的30个关键字"></p>
+<p>（1）寻找竞品关联性强的拆词</p>
+<p>提取关联性强的关联词集合：</p>
+<p>关键词集合1:下厨房美食必备(排名第4)、下厨房必备(5)、下厨(30)、下厨房(34)、厨房(16)、美食(43)、必备(40)、食谱(65)</p>
+<p>关键词集合2:煲汤菜谱大全(11)、煲汤菜谱(11)、菜谱大全(23)</p>
+<p>（2）组合竞品关联性强的关键词</p>
+<p>针对上面三个集合，重新组合下就可以知道，1.下厨房美食必备食谱，2.煲汤菜谱大全。<br>利用分词工具验证一下，食谱、美食、厨房等词被分词概率大。</p>
+<p>分词工具<br><img src="https://raw.githubusercontent.com/fulianguestc/markdownphotos/master/分词工具.png" alt="分词工具"></p>
+<p>终极验证，将上面的组词添加到新版本100个字符进行对比。观察KCN，iAR的变化。</p>
+<hr>
+<ul>
+<li>第三步：快递迭代，筛选好词</li>
+</ul>
+<p>提高KCN值的同时，更需要寻找符合自己的好词，有些热词虽然搜索有排名，但是排名100名开外，没有实际价值。</p>
+<p>怎么找合适的关键词？——关键词拓展<br><img src="https://raw.githubusercontent.com/fulianguestc/markdownphotos/master/关键词扩展.png" alt="关键词拓展"></p>
+<p>想做到喜马拉雅那种地步，还需要做到以下两步——</p>
+<ol>
+<li>更新版本勤快些，有事没事更新下，其实还能获得苹果官方的流量福利；</li>
+<li>对比版本更新的不同，跟踪每个关键字的变化，及时剔除差的关键字，测试新的关键字。不断迭代测试，做100字符优化是门修行。</li>
+</ol>
+<h5 id="六、操作实例示范">六、操作实例示范</h5><p>以酷我K歌举例，带大家一步一步进行实际操作：</p>
+<ol>
+<li>首先利用网址”3“，输入你的app的名字，并记录下你目前已有的关键字。记录下当前你的app的关键字及排序情况。比如，当时我们酷我K歌当时只有9个关键字，分别是：ktv、酷我、酷我音乐、唱歌、音乐、电台、酷我音乐、唱吧、k歌。</li>
+<li>了解3-4个同行业竞品的关键字分布情况。比如把K歌行业的唱吧、爱唱、其他2-3个app的关键字情况同时记录下来——找出他们这些app都重合的关键字及排名前三的关键字，进行对比——结合整个K歌行业的分布情况（唱吧最大，所以我肯定格外“照顾”），估算总结出竞品的最有效的关键字排序情况。由此，我得到的是：音乐 爱音乐 唱歌 爱唱 唱吧 手机ktv 视频 k歌 ktv 电台 直播。</li>
+<li>寻找潜在的关键字。这一步需要分析下当前K歌行业的关联搜索词，并且预判未来可能火的一些词，同时结合时下正在热搜的关键词（需要用到之前的第一个工具，最好是和自己行业相关的词，不能乱加的）。比如，K歌时可能搜索的词有：练歌、直播、伴奏、歌词、练唱图等等；时下正在热搜的词：多听fm、女神、求合体2（可查到关键词排行榜）。预判可能火的词：练歌。</li>
+<li>综上，预估并总结出最终的20-30个左右的关键字。将以上的所有词筛选、合并归整、仔细斟酌，最终我得出的结论，按照排序依次是：音乐,酷我,唱歌,唱吧,爱唱,酷我音乐,酷狗音乐,手机ktv,酷我K歌,爱音乐,酷狗,电台,k歌,K歌达人,视频,秀场,直播,练歌。</li>
+</ol>
+<p>Tips：</p>
+<ol>
+<li>ASO的关键字设置不是一成不变的，需要不定期更换；</li>
+<li>预判能力以及对行业的理解和观察，需要平时的积累；</li>
+<li>规范化：关键字必须跟自己的app相关，和seo一样，可能会被视为作弊；</li>
+<li>太热门的词，比如微信、qq、淘宝等这种，我都试过，一点用都没有。大家都加，等于大家都不加，就算有用，轮到你也没几个量了。</li>
+<li>懂SEO知识的人做ASO会相对容易，逻辑差不多；</li>
+<li>搜索结果可能跟你设置的关键字不一致，没关系。</li>
+<li>根据搜索结果做出相应调整，但某些词一看就临时出来的一些，比如“陪我学”，过一阵子肯定会消失，所以我是不可能添加至关键字设置里的。</li>
+<li>注意关键行业品牌词。比如竞品词，如果做到第一，会被投诉导致苹果警告（最新的搜索规则更改后，涉及品牌的竞品词几乎不存在这种机会了），一般排前5都会存在风险。当然如果不涉及品牌的热门相关词，完全不用担心优化的风险。</li>
+</ol>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/ASO之玩转积分墙/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          ASO之玩转积分墙
+        
+      </div>
+    </a>
+  
+  
+    <a href="/ASO之安卓IOS优化/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ASO之安卓和IOS优化方案</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="ASO之关键词优化" data-title="ASO之关键词优化" data-url="http://sspaiblog.com/ASO之关键词优化/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 少数派
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
