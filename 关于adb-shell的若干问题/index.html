@@ -7,19 +7,34 @@
   <title>关于adb-shell的若干问题 | 少数派报告</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="最近一直在进行安卓开发，在windows下启动adb shell只要配置环境变量就好了，并且网上教程很多，那么在MAC下如何配置呢？
-大体思路是一致的，只是要用命令行来操。">
+大体思路是一致的，只是要用命令行来操。
+首先启动终端，然后输入：
+$ touch .bash_profile
+$ open -e .bash_profile
+这时会打开.bash_profile这个文档,
+export PATH=${PATH}:/Users/***">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于adb-shell的若干问题">
 <meta property="og:url" content="http://sspaiblog.com/关于adb-shell的若干问题/index.html">
 <meta property="og:site_name" content="少数派报告">
 <meta property="og:description" content="最近一直在进行安卓开发，在windows下启动adb shell只要配置环境变量就好了，并且网上教程很多，那么在MAC下如何配置呢？
-大体思路是一致的，只是要用命令行来操。">
+大体思路是一致的，只是要用命令行来操。
+首先启动终端，然后输入：
+$ touch .bash_profile
+$ open -e .bash_profile
+这时会打开.bash_profile这个文档,
+export PATH=${PATH}:/Users/***">
 <meta property="og:image" content="https://raw.githubusercontent.com/fulianguestc/markdownphotos/master/geny.png">
-<meta property="og:updated_time" content="2016-03-08T09:11:10.000Z">
+<meta property="og:updated_time" content="2016-03-08T09:14:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于adb-shell的若干问题">
 <meta name="twitter:description" content="最近一直在进行安卓开发，在windows下启动adb shell只要配置环境变量就好了，并且网上教程很多，那么在MAC下如何配置呢？
-大体思路是一致的，只是要用命令行来操。">
+大体思路是一致的，只是要用命令行来操。
+首先启动终端，然后输入：
+$ touch .bash_profile
+$ open -e .bash_profile
+这时会打开.bash_profile这个文档,
+export PATH=${PATH}:/Users/***">
   
     <link rel="alternative" href="/atom.xml" title="少数派报告" type="application/atom+xml">
   
@@ -207,7 +222,7 @@
   
     <div class="article-meta">
       <a href="/关于adb-shell的若干问题/" class="article-date">
-  	<time datetime="2016-03-08T09:11:11.000Z" itemprop="datePublished">2016-03-08</time>
+  	<time datetime="2016-03-08T09:14:37.000Z" itemprop="datePublished">2016-03-08</time>
 </a>
     </div>
   
@@ -242,13 +257,13 @@
       
         <p>最近一直在进行安卓开发，在windows下启动adb shell只要配置环境变量就好了，并且网上教程很多，那么在MAC下如何配置呢？</p>
 <p>大体思路是一致的，只是要用命令行来操。</p>
-<a id="more"></a>
 <p>首先启动终端，然后输入：</p>
 <pre><code><span class="variable">$ </span>touch .bash_profile
 <span class="variable">$ </span>open -e .bash_profile
 </code></pre><p>这时会打开.bash_profile这个文档,</p>
 <pre><code>export <span class="constant">PATH</span>=<span class="variable">${</span><span class="constant">PATH</span>}<span class="symbol">:/Users/***/sdk/platform-tools</span>
 </code></pre><p>在后面输入<code>platform-tools</code>所在的目录路径，比如笔者的路径就是<code>/Users/***/sdk/platform-tools</code>，所以写成上面的形式。然后直接关闭文档自动保存。</p>
+<a id="more"></a>
 <p>这时候在终端输入<code>adb</code>，就不会提示错误信息了，然后启动安卓模拟器，再次输入<code>adb shell</code>即可。</p>
 <p>进行安卓开发时相信很多人都会用Genymotion，笔者发现默认的ADB会产生端口被占用的问题，其实解决这个问题的方法很简单，只需要在设置中改成自己的sdk就好了。如下图：<br><img src="https://raw.githubusercontent.com/fulianguestc/markdownphotos/master/geny.png" alt="geny"><br>OVER~ ~ ~!</p>
 

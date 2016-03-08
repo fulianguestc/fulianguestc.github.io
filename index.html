@@ -204,7 +204,7 @@
   
     <div class="article-meta">
       <a href="/关于adb-shell的若干问题/" class="article-date">
-  	<time datetime="2016-03-08T09:11:11.000Z" itemprop="datePublished">2016-03-08</time>
+  	<time datetime="2016-03-08T09:14:37.000Z" itemprop="datePublished">2016-03-08</time>
 </a>
     </div>
   
@@ -228,6 +228,12 @@
       
         <p>最近一直在进行安卓开发，在windows下启动adb shell只要配置环境变量就好了，并且网上教程很多，那么在MAC下如何配置呢？</p>
 <p>大体思路是一致的，只是要用命令行来操。</p>
+<p>首先启动终端，然后输入：</p>
+<pre><code><span class="variable">$ </span>touch .bash_profile
+<span class="variable">$ </span>open -e .bash_profile
+</code></pre><p>这时会打开.bash_profile这个文档,</p>
+<pre><code>export <span class="constant">PATH</span>=<span class="variable">${</span><span class="constant">PATH</span>}<span class="symbol">:/Users/***/sdk/platform-tools</span>
+</code></pre><p>在后面输入<code>platform-tools</code>所在的目录路径，比如笔者的路径就是<code>/Users/***/sdk/platform-tools</code>，所以写成上面的形式。然后直接关闭文档自动保存。</p>
       
     </div>
     
