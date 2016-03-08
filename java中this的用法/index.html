@@ -4,18 +4,33 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>少数派报告</title>
+  <title>Java中this的用法 | 少数派报告</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="&amp;lt;!DOCTYPE html&amp;gt;">
-<meta property="og:type" content="website">
-<meta property="og:title" content="少数派报告">
-<meta property="og:url" content="http://sspaiblog.com/404.html">
+  <meta name="description" content="最初接触Java时，就一直无法理解this的用法，觉得很多地方都有它的身影。下面就简单介绍一下this的集中基本用法。
+主要参考书籍《Java核心技术.卷1》。
+1. 隐式参数与显示参数方法用于操作对象以及存取它们的实力域。例如，方法：
+public void raiseSalary(double byPercent)
+{
+    double raise = salary * byPercent">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java中this的用法">
+<meta property="og:url" content="http://sspaiblog.com/java中this的用法/index.html">
 <meta property="og:site_name" content="少数派报告">
-<meta property="og:description" content="&amp;lt;!DOCTYPE html&amp;gt;">
-<meta property="og:updated_time" content="2016-01-19T09:21:59.000Z">
+<meta property="og:description" content="最初接触Java时，就一直无法理解this的用法，觉得很多地方都有它的身影。下面就简单介绍一下this的集中基本用法。
+主要参考书籍《Java核心技术.卷1》。
+1. 隐式参数与显示参数方法用于操作对象以及存取它们的实力域。例如，方法：
+public void raiseSalary(double byPercent)
+{
+    double raise = salary * byPercent">
+<meta property="og:updated_time" content="2016-03-08T09:17:22.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="少数派报告">
-<meta name="twitter:description" content="&amp;lt;!DOCTYPE html&amp;gt;">
+<meta name="twitter:title" content="Java中this的用法">
+<meta name="twitter:description" content="最初接触Java时，就一直无法理解this的用法，觉得很多地方都有它的身影。下面就简单介绍一下this的集中基本用法。
+主要参考书籍《Java核心技术.卷1》。
+1. 隐式参数与显示参数方法用于操作对象以及存取它们的实力域。例如，方法：
+public void raiseSalary(double byPercent)
+{
+    double raise = salary * byPercent">
   
     <link rel="alternative" href="/atom.xml" title="少数派报告" type="application/atom+xml">
   
@@ -199,11 +214,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-java中this的用法" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/404.html" class="article-date">
-  	<time datetime="2016-01-19T09:21:59.000Z" itemprop="datePublished">2016-01-19</time>
+      <a href="/java中this的用法/" class="article-date">
+  	<time datetime="2016-03-08T09:17:22.000Z" itemprop="datePublished">2016-03-08</time>
 </a>
     </div>
   
@@ -212,23 +227,93 @@
       <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Java中this的用法
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/this/">this</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Java/">Java</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <!DOCTYPE html>
-<html>
-	<head>
-	</head>
-	<body>
-		<script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8" homepageurl="http://sspaiblog.com" homepagename="回到主页">
-		</script>
-	</body>
-</html>
+        <p>最初接触Java时，就一直无法理解<code>this</code>的用法，觉得很多地方都有它的身影。下面就简单介绍一下<code>this</code>的集中基本用法。</p>
+<p>主要参考书籍《Java核心技术.卷1》。</p>
+<h5 id="1-_隐式参数与显示参数">1. 隐式参数与显示参数</h5><p>方法用于操作对象以及存取它们的实力域。例如，方法：</p>
+<pre><code><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">raiseSalary</span><span class="params">(<span class="keyword">double</span> byPercent)</span>
+</span>{
+    <span class="keyword">double</span> raise = salary * byPercent / <span class="number">100</span>;
+    salary += raise;
+}
+</code></pre><p><code>raiseSalary</code>方法有两个参数。第一个参数被称为<strong>隐式</strong>参数，是出现在方法名前的<code>Employee</code>类(本方法所在类)对象。第二个参数位于方法名后面括号中的数值，这是一个<strong>显式</strong>参数。</p>
+<p>显示参数是明显地列在方法声明中的的显示参数，例如<code>double byparent</code>。隐式参数没有出现在方法声明中。</p>
+<a id="more"></a>
+<p>在每一个方法中，关键字<code>this</code>表示隐式参数。如果需要的话，可以用下列方式编写<code>raiseSalary</code>方法：</p>
+<pre><code><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">raiseSalary</span><span class="params">(<span class="keyword">double</span> byPercent)</span>
+</span>{
+    <span class="keyword">double</span> raise = <span class="keyword">this</span>.salary*byPercent/<span class="number">100</span>;
+    <span class="keyword">this</span>.salary += raise;
+}
+</code></pre><p>这样的好处是可以将实力域与局部变量明显地区分开来</p>
+<h5 id="2-_参数名">2. 参数名</h5><p>在编写很小的构造器时，常常在参数名上出现错误。通常，参数用单个字符命名：</p>
+<pre><code><span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(String n, <span class="keyword">double</span> s)</span>
+</span>{
+    name = n;
+    salary = s;
+}
+</code></pre><p>还一种常用的技巧,它基于这样的事实:参数变量用同样的名字将实例域屏蔽起来。例如,如果将参数命名为salary,salary将引用这个参数,而不是实例域。但是,可以采用<code>this.salary</code>的 形式访问实例域。回想一下,this指示隐式参数,也就是被构造的对象。下面是一个示例：</p>
+<pre><code><span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(String name, <span class="keyword">double</span> salary)</span>
+</span>{
+    <span class="keyword">this</span>.name = name;
+    <span class="keyword">this</span>.salary = salary;
+}
+</code></pre><h5 id="3-_调用另一个构造器">3. 调用另一个构造器</h5><p>关键字this引用方法的隐式参数。然而,这个关键字还有另外一个含义。</p>
+<p>如果构造器的第一个语句形如this(…),这个构造器将调用同一个类的另一个构造器。下面是一个典型的例子:</p>
+<pre><code><span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(<span class="keyword">double</span> s)</span>
+</span>{
+    <span class="comment">// calls Employee(String, double)</span>
+    <span class="keyword">this</span>(<span class="string">"Employee #"</span> + nextId, s);
+    nextId;
+}
+</code></pre><p>当调用<code>new Employee(60000)</code>时,<code>Employee(double)</code>构造器将调用<code>Employee(String, double)</code>构造器。    </p>
+<p>采用这样的方法使用this关键字非常有用，这样对公共的构造器代码部分之编写一次即可。</p>
+<h5 id="4-_this与super的异同">4. this与super的异同</h5><p>有些人认为super与this引用是类似的概念,实际上,这样比较并不太恰当。这是因 为super不是一个对象的引用,不能将super赋给另一个对象变量,它只是一个指示编译器 调用超类方法的特有关键字。</p>
+<p>关键字this有两个用途:一是引用隐式参数,二是调用该类其他的构造 器。同样,super关键字也有两个用途:一是调用超类的方法,二是调用超类的构造器。 在调用构造器的时候,这两个关键字的使用方式很相似。调用构造器的语句只能作为另 一个构造器的第一条语句出现。构造参数既可以传递给本类(this)的其他构造器,也可 以传递给超类(super)的构造器。</p>
+
       
     </div>
     
   </div>
   
     
+<nav id="article-nav">
+  
+  
+    <a href="/关于adb-shell的若干问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于adb-shell的若干问题</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
   
 </article>
 
@@ -258,7 +343,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="undefined" data-title="" data-url="http://sspaiblog.com/404.html"></div>
+	<div class="ds-thread" data-thread-key="java中this的用法" data-title="Java中this的用法" data-url="http://sspaiblog.com/java中this的用法/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -302,7 +387,7 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
