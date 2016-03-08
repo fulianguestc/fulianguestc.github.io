@@ -120,7 +120,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/ASO/" style="font-size: 15px;">ASO</a> <a href="/tags/Object/" style="font-size: 10px;">Object</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/产品策划-运营/" style="font-size: 20px;">产品策划/运营</a> <a href="/tags/基本类型/" style="font-size: 10px;">基本类型</a> <a href="/tags/引用、强弱软虚/" style="font-size: 10px;">引用、强弱软虚</a>
+						<a href="/tags/ASO/" style="font-size: 10px;">ASO</a> <a href="/tags/产品策划-运营/" style="font-size: 20px;">产品策划/运营</a>
 					</div>
 				</section>
 				
@@ -200,11 +200,11 @@
 
       <div class="body-wrap">
   
-    <article id="post-Object有哪些公有方法" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-ASO之基本概念" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/Object有哪些公有方法/" class="article-date">
-  	<time datetime="2016-01-19T07:06:18.000Z" itemprop="datePublished">2016-01-19</time>
+      <a href="/ASO之基本概念/" class="article-date">
+  	<time datetime="2016-02-29T01:50:05.000Z" itemprop="datePublished">2016-02-29</time>
 </a>
     </div>
   
@@ -217,7 +217,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/Object有哪些公有方法/">Object中公有方法</a>
+      <a class="article-title" href="/ASO之基本概念/">ASO之基本概念</a>
     </h1>
   
 
@@ -226,37 +226,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>参考书籍：《Java核心技术》、《Java编程思想》</p>
-<p>Obeject是所有类的超类，java是一门单根继承的程序语言。所有类都是由Object类扩展而来的。</p>
-<h5 id="equals方法">equals方法</h5><p>用于检测一个对象是否等于另一个对象。在Object类中，这个方法用于判断两个对象是否具有相同的引用。如果两个对象具有相同的引用，它们一定是相等的。</p>
-<p>下面看一个例子：</p>
-<pre><code><span class="keyword">class</span> <span class="title">Test</span>{
-    <span class="keyword">int</span> index;
-}
-
-<span class="keyword">public</span> <span class="keyword">class</span> <span class="title">TestEqual</span>{
-    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span>(<span class="params">String[] args</span>)</span>{
-        Test test1 = <span class="keyword">new</span> Test();
-        Test test2 = <span class="keyword">new</span> Test();
-        System.<span class="keyword">out</span>.print(test1.equals(test2));
-    }
-}
-</code></pre><p>这个测试的结果是false。这是因为equals方法是比较引用的，所以除非在自己的新类中覆盖equals方法，否则不可能实现出相等的结果。    </p>
-<p>Java中要求equals方法具有下面的特性：</p>
-<ol>
-<li>自反性：对于任何非空引用x，x.equals(x)应该返回true。</li>
-<li>对称性：对于任何引用x和y，当且仅当y.equals(x)返回true，x.equals(y)也应该返回true。</li>
-<li>传递性：对于任何引用x、y和z，如果x.equals(y)返回true，y.equals(z)返回true，x.equals(z)也应该返回true。</li>
-<li>一致性：如果x和y引用的对象没有发生变化，反复调用x.equals(y)应该返回同样地结果。</li>
-<li>对于任意非空引用x，x.equals(null)应该返回false。</li>
-</ol>
-<p>我们以后再来看如何在自定义类中编写合适的equals方法。</p>
-<h5 id="hashCode方法">hashCode方法</h5><p>散列码（hash code）是由对象导出的一个整型值。散列码是没有规律的。如果x和y是两个不同的对象，<code>x.hashCode()</code>和y.hashCode()基本上不会相同。</p>
-<p>Equals和hashCode的定义必须一致：如果x.equals(y)返回true，那么x.hashcode()就必须与y.hashcode()具有相同的值。</p>
-<h5 id="toString方法">toString方法</h5><p>它用于返回表示对象的字符串。只要对象与一个字符串通过操作符“+”连接起来，Java编译就会自动地调用toString方法，以便获得这个对象的字符串描述。每一个非基本类型的对象都有一个toString方法，而且当编译器需要一个String而只有一个对象时，该方法便会得到调用。</p>
-<hr>
-<p>这里只是对Object中一些公用方法的简单介绍，更详细的介绍我们以后在讨论。</p>
-
+        <blockquote>
+<p>总结自公众号【姑婆那些事儿】ASO优化系列，并融入自己的思考——</p>
+</blockquote>
+<h5 id="ASO是什么？">ASO是什么？</h5><p>ASO(全称App Store Optimization)是指应用商店的搜索优化，是针对你的APP所在的APP市场（国内仅限于apple store）进行搜索入口的数量及搜索结果排名提升的过程。<br><img src="https://raw.githubusercontent.com/fulianguestc/markdownphotos/master/ASO.png" alt="ASO1"><br>
       
     </div>
     
@@ -264,499 +237,19 @@
       
       
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Object/">Object</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ASO/">ASO</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/产品策划-运营/">产品策划/运营</a></li></ul>
 	</div>
 
       
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Java/">Java</a>
+	<a class="article-category-link" href="/categories/工作日志/">工作日志</a>
 	</div>
 
 
       
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-switch能否用string作为参数" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/switch能否用string作为参数/" class="article-date">
-  	<time datetime="2015-11-06T09:04:37.000Z" itemprop="datePublished">2015-11-06</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/switch能否用string作为参数/">两个小问题</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>今天来看两个小问题。</p>
-<h5 id="switch能否用String作为参数">switch能否用String作为参数</h5><p>case标签必须是整数或枚举常量，不能测试字符串。例如，下面这段代码就存在错误。</p>
-<pre><code><span class="built_in">String</span> input = <span class="attribute">...</span>;
-switch(input){ <span class="comment">//ERROR</span>
-    <span class="keyword">case</span> <span class="string">"A"</span>: <span class="comment">//ERROR</span>
-        <span class="attribute">...</span>
-        break;
-    <span class="attribute">...</span>
-}
-</code></pre><p>但是从Java SE 7开始，case标签还可以是字符串字面量。也就是像上面的写法在Java SE 7中是没有问题的。</p>
-<hr>
-<h5 id="equals与==的区别">equals与==的区别</h5><p>检测字符串是否相等可以使equals方法检测两个字符串是否相等。对于表达式：</p>
-<pre><code>s.<span class="function"><span class="title">equals</span><span class="params">(t)</span></span>
-</code></pre><p>如果字符串s与字符串t相等，则返回true；否则，返回false。</p>
-<p>要想检测两个字符串是否相等，而不区分大小写，可以使用<code>equalsIgnoreCase</code>方法。</p>
-<p>一定不能使用<code>==</code>运算符检测两个字符串是否相等！这个运算符只能够确定两个字符串是否放在同一个位置，它们必然相等。但是，完全有可能将内容相同的多个字符串的拷贝放置在不同的位置上。（引用）</p>
-<pre><code><span class="built_in">String</span> greeting = <span class="string">"Hello"</span>;
-<span class="keyword">if</span>(greeting == <span class="string">"Hello"</span>) <span class="attribute">...</span> <span class="comment">//probably true</span>
-<span class="keyword">if</span>(greeting<span class="built_in">.</span>substring(<span class="number">0</span>,<span class="number">3</span>) == <span class="string">"Hel"</span>) <span class="attribute">...</span> probably <span class="literal">false</span>
-</code></pre><p>我们再看一个例子</p>
-<pre><code><span class="keyword">public</span> <span class="keyword">class</span> Test{
-    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>{
-        Integer n1 = <span class="keyword">new</span> Integer(<span class="number">47</span>);
-        Integer n2 = <span class="keyword">new</span> Integer(<span class="number">47</span>);
-        System.out.println(n1 == n2);
-    }
-}
-</code></pre><p>这段代码的输出是false。这是因为<code>==</code>比较的是对象的引用。那么如果我们想比较两个对象的实际内容是否相同，就必须使用特殊方法equals()。但是该方法如果直接在自定义类中调用那就又有很多问题。以后我们会讨论。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Java/">Java</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Java中的四种引用" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/Java中的四种引用/" class="article-date">
-  	<time datetime="2015-11-06T08:50:10.000Z" itemprop="datePublished">2015-11-06</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/Java中的四种引用/">Java中的四种引用</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>文章出自<a href="https://weblogs.java.net/blog/enicholas/archive/2006/05/understanding_w.html" target="_blank" rel="external">Understanding</a>；</li>
-<li>译文出自<a href="http://droidyue.com/blog/2014/10/12/understanding-weakreference-in-java/" target="_blank" rel="external">技术小黑屋</a>，感谢分享。 </li>
-</ul>
-<hr>
-<h5 id="强引用(Strong_Reference)">强引用(Strong Reference)</h5><p>强引用就是我们经常使用的引用，其写法如下</p>
-<pre><code><span class="built_in">StringBuffer</span> buffer = <span class="keyword">new</span> <span class="built_in">StringBuffer</span>();
-</code></pre><p>上面创建了一个StringBuffer对象，并将这个对象的（强）引用存到变量buffer中。是的，就是这个小儿科的操作（请原谅我这样的说法）。强引用最重要的就是它能够让引用变得强（Strong），这就决定了它和垃圾回收器的交互。具体来说，如果一个对象通过一串强引用链接可到达(Strongly reachable)，它是不会被回收的。如果你不想让你正在使用的对象被回收，这就正是你所需要的。</p>
-<p><strong>但是强引用如此之强</strong></p>
-<p>在一个程序里，将一个类设置成不可被扩展是有点不太常见的，当然这个完全可以通过类标记成final实现。或者也可以更加复杂一些，就是通过内部包含了未知数量具体实现的工厂方法返回一个接口(Interface)。举个例子，我们想要使用一个叫做Widget的类，但是这个类不能被继承，所以无法增加新的功能。</p>
-<p>但是我们如果想追踪Widget对象的额外信息，我们该怎么办？ 假设我们需要记录每个对象的序列号，但是由于Widget类并不包含这个属性，而且也不能扩展导致我们也不能增加这个属性。其实一点问题也没有，HashMap完全可以解决上述的问题。</p>
-<pre><code>serialNumberMap.<span class="keyword">put</span>(widget, widgetSerialNumber);
-</code></pre><p>这表面看上去没有问题，但是widget对象的强引用很有可能会引发问题。我们可以确信当一个widget序列号不需要时，我们应该将这个条目从map中移除。如果我们没有移除的话，可能会导致内存泄露，亦或者我们手动移除时删除了我们正在使用的widgets，会导致有效数据的丢失。其实这些问题很类似，这就是没有垃圾回收机制的语言管理内存时常遇到的问题。但是我们不用去担心这个问题，因为我们使用的时具有垃圾回收机制的Java语言。</p>
-<p>另一个强引用可能带来的问题就是缓存,尤其是像图片这样的大文件的缓存。假设你有一个程序需要处理用户提供的图片，通常的做法就是做图片数据缓存，因为从磁盘加载图片代价很大，并且同时我们也想避免在内存中同时存在两份一样的图片数据。</p>
-<p>缓存被设计的目的就是避免我们去再次加载哪些不需要的文件。你会很快发现在缓存中会一直包含一个到已经指向内存中图片数据的引用。使用强引用会强制图片数据留在内存，这就需要你来决定什么时候图片数据不需要并且手动从缓存中移除，进而可以让垃圾回收器回收。因此你再一次被强制做垃圾回收器该做的工作，并且人为决定是该清理到哪一个对象。</p>
-<hr>
-<h5 id="弱引用(Weak_Reference)">弱引用(Weak Reference)</h5><p>弱引用简单来说就是将对象留在内存的能力不是那么强的引用。使用WeakReference，垃圾回收器会帮你来决定引用的对象何时回收并且将对象从内存移除。创建弱引用如下</p>
-<pre><code>WeakReference<span class="tag">&lt;<span class="title">Widget</span>&gt;</span> weakWidget = 
-                            new WeakReference<span class="tag">&lt;<span class="title">Widget</span>&gt;</span>(widget);
-</code></pre><p>使用weakWidget.get()就可以得到真实的Widget对象，因为弱引用不能阻挡垃圾回收器对其回收，你会发现（当没有任何强引用到widget对象时）使用get时突然返回null。</p>
-<p>解决上述的widget序列数记录的问题，最简单的办法就是使用Java内置的WeakHashMap类。WeakHashMap和HashMap几乎一样，唯一的区别就是它的键（不是值!!!）使用WeakReference引用。当WeakHashMap的键标记为垃圾的时候，这个键对应的条目就会自动被移除。这就避免了上面不需要的Widget对象手动删除的问题。使用WeakHashMap可以很便捷地转为HashMap或者Map。</p>
-<h5 id="引用队列(Reference_Queue)">引用队列(Reference Queue)</h5><p>一旦弱引用对象开始返回null，该弱引用指向的对象就被标记成了垃圾。而这个弱引用对象（非其指向的对象）就没有什么用了。通常这时候需要进行一些清理工作。比如WeakHashMap会在这时候移除没用的条目来避免保存无限制增长的没有意义的弱引用。</p>
-<p>引用队列可以很容易地实现跟踪不需要的引用。当你在构造WeakReference时传入一个ReferenceQueue对象，当该引用指向的对象被标记为垃圾的时候，这个引用对象会自动地加入到引用队列里面。接下来，你就可以在固定的周期，处理传入的引用队列，比如做一些清理工作来处理这些没有用的引用对象。</p>
-<hr>
-<h5 id="四种引用">四种引用</h5><p>Java中实际上有四种强度不同的引用，从强到弱它们分别是，强引用，软引用，弱引用和虚引用。上面部分介绍了强引用和弱引用，下面介绍剩下的两个，软引用和虚引用。</p>
-<h5 id="软引用（Soft_Reference）">软引用（Soft Reference）</h5><p>软引用基本上和弱引用差不多，只是相比弱引用，它阻止垃圾回收期回收其指向的对象的能力强一些。如果一个对象是弱引用可到达，那么这个对象会被垃圾回收器接下来的回收周期销毁。但是如果是软引用可以到达，那么这个对象会停留在内存更时间上长一些。当内存不足时垃圾回收器才会回收这些软引用可到达的对象。</p>
-<p>由于软引用可到达的对象比弱引用可达到的对象滞留内存时间会长一些，我们可以利用这个特性来做缓存。这样的话，你就可以节省了很多事情，垃圾回收器会关心当前哪种可到达类型以及内存的消耗程度来进行处理。</p>
-<h5 id="虚引用_（Phantom_Reference）">虚引用 （Phantom Reference）</h5><p>与软引用，弱引用不同，虚引用指向的对象十分脆弱，我们不可以通过get方法来得到其指向的对象。它的唯一作用就是当其指向的对象被回收之后，自己被加入到引用队列，用作记录该引用指向的对象已被销毁。</p>
-<p>当弱引用的指向对象变得弱引用可到达，该弱引用就会加入到引用队列。这一操作发生在对象析构或者垃圾回收真正发生之前。理论上，这个即将被回收的对象是可以在一个不符合规范的析构方法里面重新复活。但是这个弱引用会销毁。虚引用只有在其指向的对象从内存中移除掉之后才会加入到引用队列中。其get方法一直返回null就是为了阻止其指向的几乎被销毁的对象重新复活。</p>
-<p>虚引用使用场景主要由两个。它允许你知道具体何时其引用的对象从内存中移除。而实际上这是Java中唯一的方式。这一点尤其表现在处理类似图片的大文件的情况。当你确定一个图片数据对象应该被回收，你可以利用虚引用来判断这个对象回收之后在继续加载下一张图片。这样可以尽可能地避免可怕的内存溢出错误。</p>
-<p>第二点，虚引用可以避免很多析构时的问题。finalize方法可以通过创建强引用指向快被销毁的对象来让这些对象重新复活。然而，一个重写了finalize方法的对象如果想要被回收掉，需要经历两个单独的垃圾收集周期。在第一个周期中，某个对象被标记为可回收，进而才能进行析构。但是因为在析构过程中仍有微弱的可能这个对象会重新复活。这种情况下，在这个对象真实销毁之前，垃圾回收器需要再次运行。因为析构可能并不是很及时，所以在调用对象的析构之前，需要经历数量不确定的垃圾收集周期。这就意味着在真正清理掉这个对象的时候可能发生很大的延迟。这就是为什么当大部分堆被标记成垃圾时还是会出现烦人的内存溢出错误。</p>
-<p>使用虚引用，上述情况将引刃而解，当一个虚引用加入到引用队列时，你绝对没有办法得到一个销毁了的对象。因为这时候，对象已经从内存中销毁了。因为虚引用不能被用作让其指向的对象重生，所以其对象会在垃圾回收的第一个周期就将被清理掉。</p>
-<p>显而易见，finalize方法不建议被重写。因为虚引用明显地安全高效，去掉finalize方法可以虚拟机变得明显简单。当然你也可以去重写这个方法来实现更多。这完全看个人选择。</p>
-<h5 id="总结">总结</h5><p>我想看到这里，很多人开始发牢骚了，为什么你要讲一个过去十年的老古董API呢，好吧，以我的经验看，很多的Java程序员并不是很了解这个知识，我认为有一些深入的理解是很必要的，同时我希望大家能从本文中收获一些东西。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/引用、强弱软虚/">引用、强弱软虚</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Java/">Java</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Java的基本数据类型" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/Java的基本数据类型/" class="article-date">
-  	<time datetime="2015-11-02T08:33:49.000Z" itemprop="datePublished">2015-11-02</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/Java的基本数据类型/">Java的基本数据类型以及它们的封装类</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Java是一种强类型语言，所以需要为每一个变量声明一种类型。在Java中，一共有8种基本类型，其中有4种整型、2种浮点类型、1钟字符类型char和1种表示真值的boolean类型。</p>
-<p><strong>备注：</strong>Java有一个能够表示任意精度的算术包，通常称为“大数值”。但它并不是一种新的Java类型，而是一种Java对象。</p>
-<h4 id="整型">整型</h4><p>提供了4种整形，允许时负数，而且不存在无符号类型。int，4字节，32位；short，2字节，16位；long，8字节，64位；byte，1字节，4位。</p>
-<p>byte和short类型主要用于特定场合，例如，底层的文件处理或者需要控制占用存储空间量的大数组。整形范围是固定的，不会有软件移植的问题。</p>
-<h4 id="浮点类型">浮点类型</h4><p>Java中有两种浮点类型。float，4字节；double，8字节。float范围-2^128~2^128，double的精度是float类型的2倍。</p>
-<h4 id="char类型">char类型</h4><p>强烈建议不要在程序中使用char类型，最好将需要处理的字符串用抽象数据类型表示。</p>
-<h4 id="boolean类型">boolean类型</h4><p>有两个值：false和true。整型值和布尔值之间不能相互转换。</p>
-<h4 id="大数值（不是基本类型）">大数值（不是基本类型）</h4><p>如果基本的整数和浮点精度不能够满足需求，那么可以使用java.math包中的两个很有用的类：BigInteger和BigDecimal。这两个类可以处理包含任意长度数字序列的数值。</p>
-<p>使用静态的<code>valueOf</code>方法可以将普通的数值转换为大数值：</p>
-<pre><code><span class="keyword">BigInteger </span>a = <span class="keyword">BigInteger.valueOf(100);</span>
-</code></pre><p>但是不能直接用算术运算符进行处理。而需要使用大数值类中的方法。例如：</p>
-<pre><code>BigInteger c = <span class="operator">a</span>.<span class="built_in">add</span>(b)<span class="comment">;//c = a +b</span>
-</code></pre><h4 id="基本类型的封装类">基本类型的封装类</h4><p>我们一般用new将对象存储在“堆”里，所以用new创建一个对象——特别是小的、简单的变量，往往不是很有效，所以，对于这些类型，java不是用new来创建变量，而是创建一个不是引用的“自动”变量，这个变量直接存储“值”，并置于堆中，因此更加高效。</p>
-<p>有时候我们需要将int这样的基本类型转为对象。所有的基本类型都有一个与之对应的类。例如Integer类对应基本类型int。这些类被称为包装器。这些对象包装器的名字是：Integer、Long、Float、Double、Short、Byte、Character、Void和Boolean。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/基本类型/">基本类型</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Java/">Java</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-java中this的用法" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/java中this的用法/" class="article-date">
-  	<time datetime="2015-10-23T14:10:49.000Z" itemprop="datePublished">2015-10-23</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/java中this的用法/">Java中this的用法</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最初接触Java时，就一直无法理解<code>this</code>的用法，觉得很多地方都有它的身影。下面就简单介绍一下<code>this</code>的集中基本用法。</p>
-<p>主要参考书籍《Java核心技术.卷1》。</p>
-<h5 id="1-_隐式参数与显示参数">1. 隐式参数与显示参数</h5><hr>
-<p>方法用于操作对象以及存取它们的实力域。例如，方法：</p>
-<pre><code><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">raiseSalary</span><span class="params">(<span class="keyword">double</span> byPercent)</span>
-</span>{
-    <span class="keyword">double</span> raise = salary * byPercent / <span class="number">100</span>;
-    salary += raise;
-}
-</code></pre><p><code>raiseSalary</code>方法有两个参数。第一个参数被称为<strong>隐式</strong>参数，是出现在方法名前的<code>Employee</code>类(本方法所在类)对象。第二个参数位于方法名后面括号中的数值，这是一个<strong>显式</strong>参数。</p>
-<p>显示参数是明显地列在方法声明中的的显示参数，例如<code>double byparent</code>。隐式参数没有出现在方法声明中。</p>
-<p>在每一个方法中，关键字<code>this</code>表示隐式参数。如果需要的话，可以用下列方式编写<code>raiseSalary</code>方法：</p>
-<pre><code><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">raiseSalary</span><span class="params">(<span class="keyword">double</span> byPercent)</span>
-</span>{
-    <span class="keyword">double</span> raise = <span class="keyword">this</span>.salary*byPercent/<span class="number">100</span>;
-    <span class="keyword">this</span>.salary += raise;
-}
-</code></pre><p>这样的好处是可以将实力域与局部变量明显地区分开来</p>
-<h5 id="2-_参数名">2. 参数名</h5><hr>
-<p>在编写很小的构造器时，常常在参数名上出现错误。通常，参数用单个字符命名：</p>
-<pre><code><span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(String n, <span class="keyword">double</span> s)</span>
-</span>{
-    name = n;
-    salary = s;
-}
-</code></pre><p>还一种常用的技巧,它基于这样的事实:参数变量用同样的名字将实例域屏蔽起来。例如,如果将参数命名为salary,salary将引用这个参数,而不是实例域。但是,可以采用<code>this.salary</code>的 形式访问实例域。回想一下,this指示隐式参数,也就是被构造的对象。下面是一个示例：</p>
-<pre><code><span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(String name, <span class="keyword">double</span> salary)</span>
-</span>{
-    <span class="keyword">this</span>.name = name;
-    <span class="keyword">this</span>.salary = salary;
-}
-</code></pre><h5 id="3-_调用另一个构造器">3. 调用另一个构造器</h5><hr>
-<p>关键字this引用方法的隐式参数。然而,这个关键字还有另外一个含义。</p>
-<p>如果构造器的第一个语句形如this(…),这个构造器将调用同一个类的另一个构造器。下面是一个典型的例子:</p>
-<pre><code><span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(<span class="keyword">double</span> s)</span>
-</span>{
-    <span class="comment">// calls Employee(String, double)</span>
-    <span class="keyword">this</span>(<span class="string">"Employee #"</span> + nextId, s);
-    nextId;
-}
-</code></pre><p>当调用<code>new Employee(60000)</code>时,<code>Employee(double)</code>构造器将调用<code>Employee(String, double)</code>构造器。    </p>
-<p>采用这样的方法使用this关键字非常有用，这样对公共的构造器代码部分之编写一次即可。</p>
-<h5 id="4-_this与super的异同">4. this与super的异同</h5><hr>
-<p>有些人认为super与this引用是类似的概念,实际上,这样比较并不太恰当。这是因 为super不是一个对象的引用,不能将super赋给另一个对象变量,它只是一个指示编译器 调用超类方法的特有关键字。</p>
-<p>关键字this有两个用途:一是引用隐式参数,二是调用该类其他的构造 器。同样,super关键字也有两个用途:一是调用超类的方法,二是调用超类的构造器。 在调用构造器的时候,这两个关键字的使用方式很相似。调用构造器的语句只能作为另 一个构造器的第一条语句出现。构造参数既可以传递给本类(this)的其他构造器,也可 以传递给超类(super)的构造器。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/this/">this</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Java/">Java</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-关于adb-shell的若干问题" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/关于adb-shell的若干问题/" class="article-date">
-  	<time datetime="2015-10-11T15:47:37.000Z" itemprop="datePublished">2015-10-11</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/关于adb-shell的若干问题/">关于adb-shell的若干问题</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近一直在进行安卓开发，在windows下启动adb shell只要配置环境变量就好了，并且网上教程很多，那么在MAC下如何配置呢？</p>
-<p>大体思路是一致的，只是要用命令行来操。</p>
-<p>首先启动终端，然后输入：</p>
-<pre><code><span class="variable">$ </span>touch .bash_profile
-<span class="variable">$ </span>open -e .bash_profile
-</code></pre><p>这时会打开.bash_profile这个文档,</p>
-<pre><code>export <span class="constant">PATH</span>=<span class="variable">${</span><span class="constant">PATH</span>}<span class="symbol">:/Users/***/sdk/platform-tools</span>
-</code></pre><p>在后面输入<code>platform-tools</code>所在的目录路径，比如笔者的路径就是<code>/Users/***/sdk/platform-tools</code>，所以写成上面的形式。然后直接关闭文档自动保存。</p>
-<p>这时候在终端输入<code>adb</code>，就不会提示错误信息了，然后启动安卓模拟器，再次输入<code>adb shell</code>即可。</p>
-<p>进行安卓开发时相信很多人都会用Genymotion，笔者发现默认的ADB会产生端口被占用的问题，其实解决这个问题的方法很简单，只需要在设置中改成自己的sdk就好了。如下图：<br><img src="https://raw.githubusercontent.com/fulianguestc/markdownphotos/master/geny.png" alt="geny"><br>OVER~ ~ ~!</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Android/">Android</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/hello-world/" class="article-date">
-  	<time datetime="2015-10-10T09:18:10.000Z" itemprop="datePublished">2015-10-10</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
+        <p class="article-more-link">
+          <a  href="/ASO之基本概念/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
