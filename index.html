@@ -204,7 +204,7 @@
   
     <div class="article-meta">
       <a href="/Java的基本数据类型/" class="article-date">
-  	<time datetime="2016-03-09T08:35:35.000Z" itemprop="datePublished">2016-03-09</time>
+  	<time datetime="2016-03-09T08:40:30.000Z" itemprop="datePublished">2016-03-09</time>
 </a>
     </div>
   
@@ -230,17 +230,6 @@
 <p><strong>备注：</strong>Java有一个能够表示任意精度的算术包，通常称为“大数值”。但它并不是一种新的Java类型，而是一种Java对象。</p>
 <h5 id="整型">整型</h5><p>提供了4种整形，允许时负数，而且不存在无符号类型。int，4字节，32位；short，2字节，16位；long，8字节，64位；byte，1字节，4位。</p>
 <p>byte和short类型主要用于特定场合，例如，底层的文件处理或者需要控制占用存储空间量的大数组。整形范围是固定的，不会有软件移植的问题。</p>
-<h5 id="浮点类型">浮点类型</h5><p>Java中有两种浮点类型。float，4字节；double，8字节。float范围-2^128~2^128，double的精度是float类型的2倍。</p>
-<h5 id="char类型">char类型</h5><p>强烈建议不要在程序中使用char类型，最好将需要处理的字符串用抽象数据类型表示。</p>
-<h5 id="boolean类型">boolean类型</h5><p>有两个值：false和true。整型值和布尔值之间不能相互转换。</p>
-<h5 id="void">void</h5><h5 id="大数值（不是基本类型）">大数值（不是基本类型）</h5><p>如果基本的整数和浮点精度不能够满足需求，那么可以使用java.math包中的两个很有用的类：BigInteger和BigDecimal。这两个类可以处理包含任意长度数字序列的数值。</p>
-<p>使用静态的<code>valueOf</code>方法可以将普通的数值转换为大数值：</p>
-<pre><code><span class="keyword">BigInteger </span>a = <span class="keyword">BigInteger.valueOf(100);</span>
-</code></pre><p>但是不能直接用算术运算符进行处理。而需要使用大数值类中的方法。例如：</p>
-<pre><code>BigInteger c = <span class="operator">a</span>.<span class="built_in">add</span>(b)<span class="comment">;//c = a + b</span>
-</code></pre><h5 id="基本类型的封装类">基本类型的封装类</h5><p>我们一般用new将对象存储在“堆”里，所以用new创建一个对象——特别是小的、简单的变量，往往不是很有效，所以，对于这些类型，java不是用new来创建变量，而是创建一个不是引用的“自动”变量，这个变量直接存储“值”，并置于堆中，因此更加高效。</p>
-<p>有时候我们需要将int这样的基本类型转为对象。所有的基本类型都有一个与之对应的类。例如Integer类对应基本类型int。这些类被称为包装器。这些对象包装器的名字是：Integer、Long、Float、Double、Short、Byte、Character、Void和Boolean。</p>
-
       
     </div>
     
@@ -257,6 +246,10 @@
 	</div>
 
 
+      
+        <p class="article-more-link">
+          <a  href="/Java的基本数据类型/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
