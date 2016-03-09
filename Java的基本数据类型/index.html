@@ -4,27 +4,24 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>产品设计思考(2)：拾光挑战是否可以同时进行 | 少数派报告</title>
+  <title>Java的基本数据类型以及它们的封装类 | 少数派报告</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这篇是我关于拾光产品挑战模块的思考。
-【挑战模块设计】为什么要设计挑战模块？
-用户对挑战项目的参与度很高（如同样反人性的戒客），可以考虑设计长期挑战/关卡。不同等级可以参与的挑战不同，引导用户积极提升等级，提高活跃度。
-详见《产品设计思考：我为什么要引入拾光奖学金模块》。">
+  <meta name="description" content="Java是一种强类型语言，所以需要为每一个变量声明一种类型。在Java中，一共有8种基本类型，其中有4种整型、2种浮点类型、1钟字符类型char和1种表示真值的boolean类型。
+备注：Java有一个能够表示任意精度的算术包，通常称为“大数值”。但它并不是一种新的Java类型，而是一种Java对象。
+整型提供了4种整形，允许时负数，而且不存在无符号类型。int，4字节，32位；short，2字节">
 <meta property="og:type" content="article">
-<meta property="og:title" content="产品设计思考(2)：拾光挑战是否可以同时进行">
-<meta property="og:url" content="http://sspaiblog.com/产品设计之拾光挑战/index.html">
+<meta property="og:title" content="Java的基本数据类型以及它们的封装类">
+<meta property="og:url" content="http://sspaiblog.com/Java的基本数据类型/index.html">
 <meta property="og:site_name" content="少数派报告">
-<meta property="og:description" content="这篇是我关于拾光产品挑战模块的思考。
-【挑战模块设计】为什么要设计挑战模块？
-用户对挑战项目的参与度很高（如同样反人性的戒客），可以考虑设计长期挑战/关卡。不同等级可以参与的挑战不同，引导用户积极提升等级，提高活跃度。
-详见《产品设计思考：我为什么要引入拾光奖学金模块》。">
-<meta property="og:updated_time" content="2016-02-29T02:30:50.000Z">
+<meta property="og:description" content="Java是一种强类型语言，所以需要为每一个变量声明一种类型。在Java中，一共有8种基本类型，其中有4种整型、2种浮点类型、1钟字符类型char和1种表示真值的boolean类型。
+备注：Java有一个能够表示任意精度的算术包，通常称为“大数值”。但它并不是一种新的Java类型，而是一种Java对象。
+整型提供了4种整形，允许时负数，而且不存在无符号类型。int，4字节，32位；short，2字节">
+<meta property="og:updated_time" content="2016-03-09T08:35:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="产品设计思考(2)：拾光挑战是否可以同时进行">
-<meta name="twitter:description" content="这篇是我关于拾光产品挑战模块的思考。
-【挑战模块设计】为什么要设计挑战模块？
-用户对挑战项目的参与度很高（如同样反人性的戒客），可以考虑设计长期挑战/关卡。不同等级可以参与的挑战不同，引导用户积极提升等级，提高活跃度。
-详见《产品设计思考：我为什么要引入拾光奖学金模块》。">
+<meta name="twitter:title" content="Java的基本数据类型以及它们的封装类">
+<meta name="twitter:description" content="Java是一种强类型语言，所以需要为每一个变量声明一种类型。在Java中，一共有8种基本类型，其中有4种整型、2种浮点类型、1钟字符类型char和1种表示真值的boolean类型。
+备注：Java有一个能够表示任意精度的算术包，通常称为“大数值”。但它并不是一种新的Java类型，而是一种Java对象。
+整型提供了4种整形，允许时负数，而且不存在无符号类型。int，4字节，32位；short，2字节">
   
     <link rel="alternative" href="/atom.xml" title="少数派报告" type="application/atom+xml">
   
@@ -208,11 +205,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-产品设计之拾光挑战" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Java的基本数据类型" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/产品设计之拾光挑战/" class="article-date">
-  	<time datetime="2016-02-29T02:30:50.000Z" itemprop="datePublished">2016-02-29</time>
+      <a href="/Java的基本数据类型/" class="article-date">
+  	<time datetime="2016-03-09T08:35:35.000Z" itemprop="datePublished">2016-03-09</time>
 </a>
     </div>
   
@@ -225,7 +222,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      产品设计思考(2)：拾光挑战是否可以同时进行
+      Java的基本数据类型以及它们的封装类
     </h1>
   
 
@@ -234,12 +231,12 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/产品策划-运营/">产品策划/运营</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/基本类型/">基本类型</a></li></ul>
 	</div>
 
         
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/工作日志/">工作日志</a>
+	<a class="article-category-link" href="/categories/Java/">Java</a>
 	</div>
 
 
@@ -249,24 +246,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>这篇是我关于拾光产品挑战模块的思考。</p>
-<p>【挑战模块设计】为什么要设计挑战模块？</p>
-<p>用户对挑战项目的参与度很高（如同样反人性的戒客），可以考虑设计长期挑战/关卡。不同等级可以参与的挑战不同，引导用户积极提升等级，提高活跃度。</p>
-<p>详见<a href="http://sspaiblog.com/产品设计之拾光奖学金模块/">《产品设计思考：我为什么要引入拾光奖学金模块》</a>。</p>
-<a id="more"></a>
-<p>【挑战模块设计】为什么可同时参与多个挑战？</p>
-<p>考研党的挑战周期很长，考虑到盈利，我们需要让考研党能够在参加短期挑战的同时，也能同时参加考研挑战、**商家挑战等。所以，在产品设计上，我们思考：</p>
-<ol>
-<li>同一等级下可以有多个挑战——（来点成本小的挑战，比如电子书，考研券）让用户参加完一个挑战，马上会有下一个，给他们以期待，努力完成闯关，提高用户留存率。<br>效果：后期引入电子书，确实吸引了一批真正对学习感兴趣的人。</li>
-<li>同一等级下挑战的时间长短不一样——一个星期的，半个月的，一个月的。这样即使用户同时参与了，也不会同时结束，即A挑战结束了，B挑战正好还有一个星期结束，B结束了C还有不太长时间结束。此方法可以解决用户同时参与挑战，同时失败的问题。</li>
-</ol>
-<p>产品还需改进：</p>
-<ol>
-<li>挑战设计还不大合理，给用户的反馈机制不够；——需要增加更多反馈，如挑战成功后推送消息；弹框通知领取奖品；拾光币在首页右上角显示等；</li>
-<li>用户可以同时参加，会导致他在能够参与的情况下，一次性点击挑战多项，若失败就容易一起失败。失败了还不能重复。——需要设计规则，如一次只能参与最多3项挑战；失败挑战可重复。</li>
-<li>挑战发布频次问题。同一个等级的时候，如果挑战少了的话，参加完了一个。否则很长一段时间没有下一个，用户就会觉得没动力。——失败挑战可重复；定期发布挑战（需要设计发布标准）。</li>
-</ol>
-<p>鉴于后期团队转向开发可预见盈利的项目“团团课”，此改进遥遥无期。而我，也因为时间问题不得不离开团队，开始我的研究生毕业设计。<br>还有很多产品设计和运营方案待后人去实施，可惜CEO似乎不打算继续发力运营。他想做个可盈利的项目去创业，这是他学生时代最后一次机会。我也理解他的心情。<br>只是对拾光，我深爱，也遗憾。</p>
+        <p>Java是一种强类型语言，所以需要为每一个变量声明一种类型。在Java中，一共有8种基本类型，其中有4种整型、2种浮点类型、1钟字符类型char和1种表示真值的boolean类型。</p>
+<p><strong>备注：</strong>Java有一个能够表示任意精度的算术包，通常称为“大数值”。但它并不是一种新的Java类型，而是一种Java对象。</p>
+<h5 id="整型">整型</h5><p>提供了4种整形，允许时负数，而且不存在无符号类型。int，4字节，32位；short，2字节，16位；long，8字节，64位；byte，1字节，4位。</p>
+<p>byte和short类型主要用于特定场合，例如，底层的文件处理或者需要控制占用存储空间量的大数组。整形范围是固定的，不会有软件移植的问题。</p>
+<h5 id="浮点类型">浮点类型</h5><p>Java中有两种浮点类型。float，4字节；double，8字节。float范围-2^128~2^128，double的精度是float类型的2倍。</p>
+<h5 id="char类型">char类型</h5><p>强烈建议不要在程序中使用char类型，最好将需要处理的字符串用抽象数据类型表示。</p>
+<h5 id="boolean类型">boolean类型</h5><p>有两个值：false和true。整型值和布尔值之间不能相互转换。</p>
+<h5 id="void">void</h5><h5 id="大数值（不是基本类型）">大数值（不是基本类型）</h5><p>如果基本的整数和浮点精度不能够满足需求，那么可以使用java.math包中的两个很有用的类：BigInteger和BigDecimal。这两个类可以处理包含任意长度数字序列的数值。</p>
+<p>使用静态的<code>valueOf</code>方法可以将普通的数值转换为大数值：</p>
+<pre><code><span class="keyword">BigInteger </span>a = <span class="keyword">BigInteger.valueOf(100);</span>
+</code></pre><p>但是不能直接用算术运算符进行处理。而需要使用大数值类中的方法。例如：</p>
+<pre><code>BigInteger c = <span class="operator">a</span>.<span class="built_in">add</span>(b)<span class="comment">;//c = a + b</span>
+</code></pre><h5 id="基本类型的封装类">基本类型的封装类</h5><p>我们一般用new将对象存储在“堆”里，所以用new创建一个对象——特别是小的、简单的变量，往往不是很有效，所以，对于这些类型，java不是用new来创建变量，而是创建一个不是引用的“自动”变量，这个变量直接存储“值”，并置于堆中，因此更加高效。</p>
+<p>有时候我们需要将int这样的基本类型转为对象。所有的基本类型都有一个与之对应的类。例如Integer类对应基本类型int。这些类被称为包装器。这些对象包装器的名字是：Integer、Long、Float、Double、Short、Byte、Character、Void和Boolean。</p>
 
       
     </div>
@@ -276,18 +269,9 @@
     
 <nav id="article-nav">
   
-    <a href="/软件开发之后/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          软件开发之后……
-        
-      </div>
-    </a>
   
-  
-    <a href="/产品设计之拾光奖学金模块/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">产品设计思考(1)：我为什么要引入拾光奖学金模块</div>
+    <a href="/java中this的用法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java中this的用法</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -322,7 +306,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="产品设计之拾光挑战" data-title="产品设计思考(2)：拾光挑战是否可以同时进行" data-url="http://sspaiblog.com/产品设计之拾光挑战/"></div>
+	<div class="ds-thread" data-thread-key="Java的基本数据类型" data-title="Java的基本数据类型以及它们的封装类" data-url="http://sspaiblog.com/Java的基本数据类型/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
