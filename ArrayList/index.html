@@ -4,24 +4,21 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Java的基本数据类型以及它们的封装类 | 少数派报告</title>
+  <title>ArrayList、LinkedList、Vector的区别 | 少数派报告</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Java是一种强类型语言，所以需要为每一个变量声明一种类型。在Java中，一共有8种基本类型，其中有4种整型、2种浮点类型、1钟字符类型char和1种表示真值的boolean类型。
-备注：Java有一个能够表示任意精度的算术包，通常称为“大数值”。但它并不是一种新的Java类型，而是一种Java对象。
-整型提供了4种整形，允许时负数，而且不存在无符号类型。int，4字节，32位；short，2字节">
+  <meta name="description" content="这三者均为可伸缩数组，既可以动态改变长度的数组。
+ArrayList和Vector都是基于存储元素的Object[] array来实现的，它们会在内存中开辟一块连续的空间来存储，由于数据存储是连续的，所以可以通过下标来访问元素，索引数据的速度比较快，但是在插入元素时执行得比较慢。ArrayList和Vector都有一个初始化容量的大小，当里面存储的元素超过这个大小时就需要动态的扩充存储空间。为了提">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java的基本数据类型以及它们的封装类">
-<meta property="og:url" content="http://sspaiblog.com/Java的基本数据类型/index.html">
+<meta property="og:title" content="ArrayList、LinkedList、Vector的区别">
+<meta property="og:url" content="http://sspaiblog.com/ArrayList/index.html">
 <meta property="og:site_name" content="少数派报告">
-<meta property="og:description" content="Java是一种强类型语言，所以需要为每一个变量声明一种类型。在Java中，一共有8种基本类型，其中有4种整型、2种浮点类型、1钟字符类型char和1种表示真值的boolean类型。
-备注：Java有一个能够表示任意精度的算术包，通常称为“大数值”。但它并不是一种新的Java类型，而是一种Java对象。
-整型提供了4种整形，允许时负数，而且不存在无符号类型。int，4字节，32位；short，2字节">
-<meta property="og:updated_time" content="2016-03-09T08:52:50.000Z">
+<meta property="og:description" content="这三者均为可伸缩数组，既可以动态改变长度的数组。
+ArrayList和Vector都是基于存储元素的Object[] array来实现的，它们会在内存中开辟一块连续的空间来存储，由于数据存储是连续的，所以可以通过下标来访问元素，索引数据的速度比较快，但是在插入元素时执行得比较慢。ArrayList和Vector都有一个初始化容量的大小，当里面存储的元素超过这个大小时就需要动态的扩充存储空间。为了提">
+<meta property="og:updated_time" content="2016-03-29T08:32:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java的基本数据类型以及它们的封装类">
-<meta name="twitter:description" content="Java是一种强类型语言，所以需要为每一个变量声明一种类型。在Java中，一共有8种基本类型，其中有4种整型、2种浮点类型、1钟字符类型char和1种表示真值的boolean类型。
-备注：Java有一个能够表示任意精度的算术包，通常称为“大数值”。但它并不是一种新的Java类型，而是一种Java对象。
-整型提供了4种整形，允许时负数，而且不存在无符号类型。int，4字节，32位；short，2字节">
+<meta name="twitter:title" content="ArrayList、LinkedList、Vector的区别">
+<meta name="twitter:description" content="这三者均为可伸缩数组，既可以动态改变长度的数组。
+ArrayList和Vector都是基于存储元素的Object[] array来实现的，它们会在内存中开辟一块连续的空间来存储，由于数据存储是连续的，所以可以通过下标来访问元素，索引数据的速度比较快，但是在插入元素时执行得比较慢。ArrayList和Vector都有一个初始化容量的大小，当里面存储的元素超过这个大小时就需要动态的扩充存储空间。为了提">
   
     <link rel="alternative" href="/atom.xml" title="少数派报告" type="application/atom+xml">
   
@@ -205,11 +202,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-Java的基本数据类型" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-ArrayList" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/Java的基本数据类型/" class="article-date">
-  	<time datetime="2016-03-09T08:52:50.000Z" itemprop="datePublished">2016-03-09</time>
+      <a href="/ArrayList/" class="article-date">
+  	<time datetime="2016-03-29T08:32:00.000Z" itemprop="datePublished">2016-03-29</time>
 </a>
     </div>
   
@@ -222,7 +219,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Java的基本数据类型以及它们的封装类
+      ArrayList、LinkedList、Vector的区别
     </h1>
   
 
@@ -231,7 +228,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/基本类型/">基本类型</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ArrayList/">ArrayList</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LinkedList/">LinkedList</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vector/">Vector</a></li></ul>
 	</div>
 
         
@@ -246,21 +243,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Java是一种强类型语言，所以需要为每一个变量声明一种类型。在Java中，一共有8种基本类型，其中有4种整型、2种浮点类型、1钟字符类型char和1种表示真值的boolean类型。</p>
-<p><strong>备注：</strong>Java有一个能够表示任意精度的算术包，通常称为“大数值”。但它并不是一种新的Java类型，而是一种Java对象。</p>
-<h5 id="整型">整型</h5><p>提供了4种整形，允许时负数，而且不存在无符号类型。int，4字节，32位；short，2字节，16位；long，8字节，64位；byte，1字节，4位。</p>
-<p>byte和short类型主要用于特定场合，例如，底层的文件处理或者需要控制占用存储空间量的大数组。整形范围是固定的，不会有软件移植的问题。</p>
-<a id="more"></a>
-<h5 id="浮点类型">浮点类型</h5><p>Java中有两种浮点类型。float，4字节；double，8字节。float范围-2^128~2^128，double的精度是float类型的2倍。</p>
-<h5 id="char类型">char类型</h5><p>强烈建议不要在程序中使用char类型，最好将需要处理的字符串用抽象数据类型表示。</p>
-<h5 id="boolean类型">boolean类型</h5><p>有两个值：false和true。整型值和布尔值之间不能相互转换。</p>
-<h5 id="void">void</h5><h5 id="大数值（不是基本类型）">大数值（不是基本类型）</h5><p>如果基本的整数和浮点精度不能够满足需求，那么可以使用java.math包中的两个很有用的类：BigInteger和BigDecimal。这两个类可以处理包含任意长度数字序列的数值。</p>
-<p>使用静态的<code>valueOf</code>方法可以将普通的数值转换为大数值：</p>
-<pre><code><span class="keyword">BigInteger </span>a = <span class="keyword">BigInteger.valueOf(100);</span>
-</code></pre><p>但是不能直接用算术运算符进行处理。而需要使用大数值类中的方法。例如：</p>
-<pre><code>BigInteger c = <span class="operator">a</span>.<span class="built_in">add</span>(b)<span class="comment">;//c = a + b</span>
-</code></pre><h5 id="基本类型的封装类">基本类型的封装类</h5><p>我们一般用new将对象存储在“堆”里，所以用new创建一个对象——特别是小的、简单的变量，往往不是很有效，所以，对于这些类型，java不是用new来创建变量，而是创建一个不是引用的“自动”变量，这个变量直接存储“值”，并置于堆中，因此更加高效。</p>
-<p>有时候我们需要将int这样的基本类型转为对象。所有的基本类型都有一个与之对应的类。例如Integer类对应基本类型int。这些类被称为包装器。这些对象包装器的名字是：Integer、Long、Float、Double、Short、Byte、Character、Void和Boolean。</p>
+        <p>这三者均为可伸缩数组，既可以动态改变长度的数组。</p>
+<p>ArrayList和Vector都是基于存储元素的Object[] array来实现的，它们会在内存中开辟一块连续的空间来存储，由于数据存储是连续的，所以可以通过下标来访问元素，索引数据的速度比较快，但是在插入元素时执行得比较慢。ArrayList和Vector都有一个初始化容量的大小，当里面存储的元素超过这个大小时就需要动态的扩充存储空间。为了提高程序的效率，每次扩充容量不是扩充一个存储单元。Vector默认扩充为原来的2倍，而ArrayList默认扩充为原来的1.5倍。</p>
+<p>ArrayList和Vector最大区别就是synchronization的使用，没有一个ArrayList的方法是同步的，而Vector得绝大多数方法都是直接或间接同步的，所以Vector是线程安全的，ArrayList不是线程安全的，所以Vector的性能略差一些。</p>
+<p>LinkedList是采用双向列表来实现的，对数据的索引需要从头部开始遍历，所以随机访问效率比较低，但是插入元素时不需要对数据进行移动，所以插入效率较高，但它是非线性安全的容器。</p>
 
       
     </div>
@@ -270,18 +256,18 @@
     
 <nav id="article-nav">
   
-    <a href="/拆书帮1/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/String/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          《拆书帮：这样读书就够了》（一）
+          String、StringBuffer与StringBuilder的区别
         
       </div>
     </a>
   
   
-    <a href="/java中this的用法/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Java中this的用法</div>
+    <a href="/hashCode的作用/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">hashCode的作用</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -316,7 +302,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Java的基本数据类型" data-title="Java的基本数据类型以及它们的封装类" data-url="http://sspaiblog.com/Java的基本数据类型/"></div>
+	<div class="ds-thread" data-thread-key="ArrayList" data-title="ArrayList、LinkedList、Vector的区别" data-url="http://sspaiblog.com/ArrayList/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
