@@ -204,7 +204,7 @@
   
     <div class="article-meta">
       <a href="/hashCode的作用/" class="article-date">
-  	<time datetime="2016-03-31T12:23:55.000Z" itemprop="datePublished">2016-03-31</time>
+  	<time datetime="2016-03-31T12:28:53.000Z" itemprop="datePublished">2016-03-31</time>
 </a>
     </div>
   
@@ -226,7 +226,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>有一种数据结构可以快速地查找所需要的对象，这就是散列表（hash code）。散列表为每个对象计算一个整数，称为散列码。散列码是由对象的实例域产生的一个整数。<strong>hashcode方法的主要作用</strong>是为了配合基于散列的集合一起正常运行，这样的散列集合包括HashSet、HashMap以及HashTable。</p>
+        <p>有一种数据结构可以快速地查找所需要的对象，这就是散列表（hash table）。散列表为每个对象计算一个整数，称为散列码（hash code）。散列码是由对象的实例域产生的一个整数。<strong>hashcode方法的主要作用</strong>是为了配合基于散列的集合一起正常运行，这样的散列集合包括HashSet、HashMap以及HashTable。</p>
 <p>当向集合中插入对象时，如何判别在集合中是否已经存在该对象了？（集合中不允许重复的元素存在）。如果采用equals方法逐一去比较，效率很低，这时我们采用hashcode方法，当集合要添加新的对象时，先调用这个对象的hashcode方法，得到对应的hashcode值，实际上在HashMap的具体实现中会用一个table保存已经存进去的对象的hashcode值，如果table中没有该hashcode值，它就可以直接存进去，不用进行任何比较了；如果存在该hashcode值，就调用它的equals方法与新元素进行比较，相同的话就不存了，不相同就散列其它的地址，所以这里存在一个冲突解决的问题，这样一来实际调用equals方法的次数就大大降低了。</p>
 <p>那么我们能根据hashcode值判断两个对象是否相等吗？答案是不可以，<strong>因为不同的对象可能会生成相同的hashcode值</strong>。虽然不能根据hashcode值判断两个对象是否相等，但是如果两个对象的hashcode值不等，则必定是两个不同的对象。如果要判断两个对象是否真正相等，必须通过equals方法。所以要想在自定义类中比较两个对象是否相等，<strong>需要重新覆盖hashcode和equals方法</strong>。equals只能保证两个对象是在逻辑上是相等的，但是在hashmap进行get操作时，会因为得到的hashcode值不同而结果不同。</p>
 <p><a href="https://www.cs.usfca.edu/~galles/visualization/OpenHash.html" target="_blank" rel="external">用链地址法解决冲突的动画演示</a></p>
