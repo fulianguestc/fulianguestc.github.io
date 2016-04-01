@@ -4,45 +4,21 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>产品经理的七层修炼 | 少数派报告</title>
+  <title>Java容器简介 | 少数派报告</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="第一层：需求细化与研发跟进
-
-初级：写文档，做原型；（此时是接需求；是参加会议的人；向人要文档模板）
-懂点设计（给UI看），懂点技术（给技术看）
-跟需求，催催催，盯盯盯    
-
-建议：
-
-做客服，熟悉用户；例如，阿里巴巴的产品入职，先做3个月客服——知道所有的痛点在哪里。用各种方法去接触客户。现在大家的成长速度都非常快，很难耐下性子，浮躁的心，先静下来。做客服，成长非常大。
-写TC（写详细的测试">
+  <meta name="description" content="Collection接口Collection是整个集合框架的基础，它里面储存一组对象，表示不同类型的Collections，它的作用知识提供维护一组对象的基本接口而已。包含了大量集合接口以及这些接口的实现类和操作它们的算法。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="产品经理的七层修炼">
-<meta property="og:url" content="http://sspaiblog.com/产品经理的七层修炼/index.html">
+<meta property="og:title" content="Java容器简介">
+<meta property="og:url" content="http://sspaiblog.com/Java容器简介/index.html">
 <meta property="og:site_name" content="少数派报告">
-<meta property="og:description" content="第一层：需求细化与研发跟进
-
-初级：写文档，做原型；（此时是接需求；是参加会议的人；向人要文档模板）
-懂点设计（给UI看），懂点技术（给技术看）
-跟需求，催催催，盯盯盯    
-
-建议：
-
-做客服，熟悉用户；例如，阿里巴巴的产品入职，先做3个月客服——知道所有的痛点在哪里。用各种方法去接触客户。现在大家的成长速度都非常快，很难耐下性子，浮躁的心，先静下来。做客服，成长非常大。
-写TC（写详细的测试">
-<meta property="og:updated_time" content="2016-03-16T06:30:29.000Z">
+<meta property="og:description" content="Collection接口Collection是整个集合框架的基础，它里面储存一组对象，表示不同类型的Collections，它的作用知识提供维护一组对象的基本接口而已。包含了大量集合接口以及这些接口的实现类和操作它们的算法。">
+<meta property="og:image" content="https://coding.net/u/fulianguestc/p/markdownphotos/git/raw/master/Collection接口/集合结构.png">
+<meta property="og:image" content="https://coding.net/u/fulianguestc/p/markdownphotos/git/raw/master/Collection接口/Collection操作1.png">
+<meta property="og:image" content="https://coding.net/u/fulianguestc/p/markdownphotos/git/raw/master/Collection接口/Collection操作2.png">
+<meta property="og:updated_time" content="2016-04-01T06:40:49.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="产品经理的七层修炼">
-<meta name="twitter:description" content="第一层：需求细化与研发跟进
-
-初级：写文档，做原型；（此时是接需求；是参加会议的人；向人要文档模板）
-懂点设计（给UI看），懂点技术（给技术看）
-跟需求，催催催，盯盯盯    
-
-建议：
-
-做客服，熟悉用户；例如，阿里巴巴的产品入职，先做3个月客服——知道所有的痛点在哪里。用各种方法去接触客户。现在大家的成长速度都非常快，很难耐下性子，浮躁的心，先静下来。做客服，成长非常大。
-写TC（写详细的测试">
+<meta name="twitter:title" content="Java容器简介">
+<meta name="twitter:description" content="Collection接口Collection是整个集合框架的基础，它里面储存一组对象，表示不同类型的Collections，它的作用知识提供维护一组对象的基本接口而已。包含了大量集合接口以及这些接口的实现类和操作它们的算法。">
   
     <link rel="alternative" href="/atom.xml" title="少数派报告" type="application/atom+xml">
   
@@ -226,11 +202,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-产品经理的七层修炼" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Java容器简介" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/产品经理的七层修炼/" class="article-date">
-  	<time datetime="2016-03-16T06:30:29.000Z" itemprop="datePublished">2016-03-16</time>
+      <a href="/Java容器简介/" class="article-date">
+  	<time datetime="2016-04-01T06:40:49.000Z" itemprop="datePublished">2016-04-01</time>
 </a>
     </div>
   
@@ -243,7 +219,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      产品经理的七层修炼
+      Java容器简介
     </h1>
   
 
@@ -252,12 +228,12 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/产品/">产品</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Collection/">Collection</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Map/">Map</a></li></ul>
 	</div>
 
         
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/工作日志/">工作日志</a>
+	<a class="article-category-link" href="/categories/Java/">Java</a>
 	</div>
 
 
@@ -267,53 +243,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>第一层：需求细化与研发跟进</p>
-<ol>
-<li>初级：写文档，做原型；（此时是接需求；是参加会议的人；向人要文档模板）</li>
-<li>懂点设计（给UI看），懂点技术（给技术看）</li>
-<li>跟需求，催催催，盯盯盯    </li>
-</ol>
-<p>建议：</p>
-<ol>
-<li>做客服，熟悉用户；<br>例如，阿里巴巴的产品入职，先做3个月客服——知道所有的痛点在哪里。用各种方法去接触客户。现在大家的成长速度都非常快，很难耐下性子，浮躁的心，先静下来。做客服，成长非常大。</li>
-<li>写TC（写详细的测试用例/读一遍），熟悉产品；<br>写TC，比做需求文档要好；因为产品经理一般抓大放小，而测试需要了解产品方方面面的细节、在意分支流程、边界条件、异常处理等，而产品经理用TC抓入门，能够在职场里突出。</li>
-<li>请吃饭，熟悉团队；产品经理作为枢纽，需要跟每个人成为朋友；跟技术/设计/市场/运营/老板一起吃饭，和团队充分熟悉，做事情会顺畅很多；</li>
-</ol>
+        <p><img src="https://coding.net/u/fulianguestc/p/markdownphotos/git/raw/master/Collection接口/集合结构.png" alt="集合示意图"></p>
+<h4 id="Collection接口">Collection接口</h4><p>Collection是整个集合框架的基础，它里面储存一组对象，表示不同类型的Collections，它的作用知识提供维护一组对象的基本接口而已。包含了大量集合接口以及这些接口的实现类和操作它们的算法。</p>
 <a id="more"></a>
-<p>第二层：主动挖掘与项目管理</p>
+<p>List称为有序的Collection。它按对象进入的顺序保存对象，所以能对列表中的每个元素的插入和删除位置进行精准的控制。同时，它可以保存重复的对象。实现List接口的Arraylist、LinkedList和Vector在之前简单的讲过了。</p>
+<p>Stack继承自Vector，实现一个先进后出的堆栈。</p>
+<p>Set表示数学意义上的集合概念。最主要的特点是集合中的元素不能重复，所以存入Set的每个元素都必须定义equals()方法来确保对象的唯一性。该接口有两个实现类：HashSet和TreeSet。其中TreeSet实现了SortedSet接口，所以TreeSet容器中的元素是有序的。</p>
+<p>Map没有继承Collection接口，提供了一个从键映射到值的数据结构。它用于保存键值对，其中值可以重复，但键是唯一的，不能重复。Java类库中有多个实现该接口的类：HashMap、TreeMap、LinkedHashMap、WeakHashMap和IdentityHashMap。虽然他们都实现了相同的接口，但执行效率是不同的。HashMAP是基于散列表实现的，采用对象的HashCode可以进行快速查询。LinkedHashMap采用列表维护内部的顺序。TreeMap基于红黑树的数据结构来实现的，内部元素是按需排列的。</p>
+<h4 id="HashMap和HashTable的区别">HashMap和HashTable的区别</h4><p>HashMap是一个最常用的Map，它根据键的HashCode值存储数据，根据键可以直接获取它的值，具有很快的访问速度。HashMap和HashTable都采用了hash方法进行索引，所以二者有很多相似之处，也有一些区别：</p>
 <ol>
-<li>见用户，挖需求，探人性；（主动去见用户）</li>
-<li>抢资源，跟项目；（成为发起项目的人；跟进项目，兼职项目经理，从被动变主动；成为call会的人）</li>
-<li>优化文档，优化流程；（主动修改文档，加check point）</li>
+<li>HashMap是HashTable的轻量级实现（非线程安全的实现），它们都实现了Map接口，主要区别在于HashMap允许null键值的存在，而HashTable不允许。</li>
+<li>HashMap把HashTable的contains方法去掉了，改成了containsValue和containsKey,因为contains方法容易让人误解。</li>
+<li>HashTable的方法是线程安全的，而HashMap不支持线程的同步，所以它不是线程安全的。所以HashMap的效率要高于HashTable。</li>
 </ol>
-<p>第三层：完整产品与大局观</p>
-<ol>
-<li>做取舍，砍需求；<br>做减法，需要考虑我要做什么，不做什么。因为，完美不是“无一分可加”，而是“无一分可减”。</li>
-<li>时间大局观：规划与迭代。<br>规划1.1，1.2，2.0版本应该做什么……<br>学习方法：找著名的产品，从1.0到4.0，5.0，一点点去分析，它先做什么后做什么。比如看淘宝，支付宝，微信等如何一步步规划、发展、迭代。（APP store有更新日志）</li>
-<li>空间大局观：借力市场、运营；从产品模块或功能，到负责一个完整产品了。</li>
-</ol>
-<p>放大到整个生命周期——</p>
-<ol>
-<li>创意/设计<br>问题正确（找对需求），解决方案靠谱；</li>
-<li>研发/生产<br>做得出来，不断优化；</li>
-<li>运营/销售<br>卖得出去，赚得到钱；验证商业模式</li>
-<li>市场/品牌<br>铺地开，叫得响；</li>
-</ol>
-<p>第四层：完整的产品和大局观——产品线与带团队</p>
-<ol>
-<li>养新人，带团队：养1.2层的新人，希望新人快速提高</li>
-<li>解构产品，分而治之：<br>明白如何分解任务；比如，购物车是一个单独的产品经理，购物车有非常复杂的规则体系，先做哪个后做哪个，如何结算。</li>
-<li>从“物”上升到“人、物”<br>从业务到团队，更多的人大家一起达到这个目标；</li>
-</ol>
-<p>第五层：成功案例与影响力</p>
-<p>很难达到，绝大多数都难操盘过一个成功案例，才是牛逼的产品经理。<br>随缘。</p>
-<p>第六层：业务理解与跨职能管理</p>
-<ol>
-<li>从完整产品到商业闭环；</li>
-<li>从“人、物”上升到“人，财，物”；（需求——产品，大局观——流量——如何变成真正的用户——有了用户怎么开始搞到收入——盈利，有了收入怎么赚钱）<br>3.这时候要带跨职能团队（成为产品的头，市场的头——事业部负责人）；</li>
-</ol>
-<p>第七层:自己成功到助人成功</p>
-<p>真正可以做一辈子的事。<br>想的明白，才能够活的通透。</p>
+<p>TreeMap实现了SortMap接口，能够把它保存的记录根据键排序，所以取出来的是排序好的键值对，如果需要按顺序遍历键，那TreeMap会更好。</p>
+<p>LinkedHashMap是HashMap的一个子类，如果需要输出的顺序和输入的相同，那么用LinkedHashMap可以实现。</p>
+<p>WeakHashMap与HashMap类似，二者的不同之处在于key采用的是弱引用的方式，只要key不再被外部引用，就可以被垃圾回收器回收。而HashMap中key采用的是强引用方式，当key没有被外部引用时，只有这个key从HashMap中删除后才可以被垃圾回收器回收。</p>
+<p>ConcurrentHashMap允许多个修改操作并发进行，关键在于使用了锁分离技术。它使用了多个锁来控制对hash表的不同部分进行修改。ConcurrentHashMap内部使用段(Segment)来表示这些不同的部分，每个段其实就是一个小的hashtable，它们有自己的锁。只要多个修改操作发生在不同的段上，它们就可以并发进行。</p>
+<h4 id="Collection和Collections有什么区别">Collection和Collections有什么区别</h4><p>Collection是一个集合接口，提供了对集合对象进行基本操作的通用接口方法，实现该接口的类主要有List和Set，该接口的设计目标是为各种具体的集合提供最大化统一的操作方式。<br>Collections是针对集合类的一个包装类，提供了一系列静态方法来实现对各种集合的搜索、排序、线程安全化等操作，其中大多数方法都是用来处理线性表。</p>
+<p>Collection的功能方法<br><img src="https://coding.net/u/fulianguestc/p/markdownphotos/git/raw/master/Collection接口/Collection操作1.png" alt="Collection操作1"><br><img src="https://coding.net/u/fulianguestc/p/markdownphotos/git/raw/master/Collection接口/Collection操作2.png" alt="Collection操作2"></p>
 
       
     </div>
@@ -323,18 +271,9 @@
     
 <nav id="article-nav">
   
-    <a href="/Object公有方法/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Object中公有方法
-        
-      </div>
-    </a>
   
-  
-    <a href="/switch能否用string作为参数/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">两个小问题</div>
+    <a href="/hashCode的作用/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">hashCode的作用</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -369,7 +308,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="产品经理的七层修炼" data-title="产品经理的七层修炼" data-url="http://sspaiblog.com/产品经理的七层修炼/"></div>
+	<div class="ds-thread" data-thread-key="Java容器简介" data-title="Java容器简介" data-url="http://sspaiblog.com/Java容器简介/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
