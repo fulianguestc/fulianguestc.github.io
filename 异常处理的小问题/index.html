@@ -4,17 +4,21 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Category: 工作日志 | 少数派报告</title>
+  <title>异常处理的小问题 | 少数派报告</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="think+">
-<meta property="og:type" content="website">
-<meta property="og:title" content="少数派报告">
-<meta property="og:url" content="http://sspaiblog.com/categories/工作日志/page/2/index.html">
+  <meta name="description" content="try里有return，finally还执行吗？在Java语言的异常处理中，finally块的作用是为了保证无论出现什么情况，finally块里的代码一定会被执行。
+由于程序执行return就意味着结束对当前函数的调用并跳出当前函数，因此任何语句执行都只能在return前执行，所以finally块里的代码也是在return前执行的。此外，如果finally中有return语句，那么将会覆盖别处的r">
+<meta property="og:type" content="article">
+<meta property="og:title" content="异常处理的小问题">
+<meta property="og:url" content="http://sspaiblog.com/异常处理的小问题/index.html">
 <meta property="og:site_name" content="少数派报告">
-<meta property="og:description" content="think+">
+<meta property="og:description" content="try里有return，finally还执行吗？在Java语言的异常处理中，finally块的作用是为了保证无论出现什么情况，finally块里的代码一定会被执行。
+由于程序执行return就意味着结束对当前函数的调用并跳出当前函数，因此任何语句执行都只能在return前执行，所以finally块里的代码也是在return前执行的。此外，如果finally中有return语句，那么将会覆盖别处的r">
+<meta property="og:updated_time" content="2016-04-05T07:34:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="少数派报告">
-<meta name="twitter:description" content="think+">
+<meta name="twitter:title" content="异常处理的小问题">
+<meta name="twitter:description" content="try里有return，finally还执行吗？在Java语言的异常处理中，finally块的作用是为了保证无论出现什么情况，finally块里的代码一定会被执行。
+由于程序执行return就意味着结束对当前函数的调用并跳出当前函数，因此任何语句执行都只能在return前执行，所以finally块里的代码也是在return前执行的。此外，如果finally中有return语句，那么将会覆盖别处的r">
   
     <link rel="alternative" href="/atom.xml" title="少数派报告" type="application/atom+xml">
   
@@ -198,131 +202,138 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-异常处理的小问题" class="article article-type-post" itemscope itemprop="blogPost">
   
+    <div class="article-meta">
+      <a href="/异常处理的小问题/" class="article-date">
+  	<time datetime="2016-04-05T07:34:38.000Z" itemprop="datePublished">2016-04-05</time>
+</a>
+    </div>
   
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      异常处理的小问题
+    </h1>
+  
+
+      </header>
       
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/finally/">finally</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Java/">Java</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/ASO之关键词优化/" class="archive-article-date">
-  	<time datetime="2016-02-29T01:57:47.000Z" itemprop="datePublished">Feb 29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/ASO之关键词优化/">ASO之关键词优化</a>
-    </h1>
-  
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="try里有return，finally还执行吗？">try里有return，finally还执行吗？</h4><p>在Java语言的异常处理中，finally块的作用是为了保证无论出现什么情况，finally块里的代码一定会被执行。</p>
+<p>由于程序执行return就意味着结束对当前函数的调用并跳出当前函数，因此任何语句执行都只能在return前执行，所以finally块里的代码也是在return前执行的。此外，如果finally中有return语句，那么将会覆盖别处的return语句，最终返回的是finally代码块中的return语句。</p>
+<pre><code><span class="keyword">try</span>{
+    <span class="literal">result</span> = <span class="number">2</span>;
+    <span class="keyword">return</span> <span class="literal">result</span>;
+}catch(<span class="type">Exception</span> e){
+    …………
+}<span class="keyword">finally</span>{
+    <span class="literal">result</span> = <span class="number">3</span>;
+}
+</code></pre><a id="more"></a>
+<p>程序在执行到return时会首先将返回值存储起来，其次去执行finally，所以在finally内修改result时不会改变返回值。</p>
+<pre><code><span class="built_in">StringBuffer</span> s = <span class="keyword">new</span> <span class="built_in">StringBuffer</span>(<span class="string">"Hello"</span>);
+<span class="keyword">try</span>{
+    <span class="keyword">return</span> s;
+}<span class="keyword">catch</span>(Exception e){
+    …………
+}<span class="keyword">finally</span>{
+    s.append(<span class="string">" World"</span>);
+}
+</code></pre><p>由于s为引用类型，因此在finally块中修改s将会修改程序的返回结果。</p>
+<p>出现在Java中的finally块一定会被执行吗？</p>
+<ol>
+<li>当程序在进入try语句块之前就出现异常时，会直接结束，不会执行finally块中的代码。</li>
+<li>当程序在try块中强制退出时也不会执行finally块中的代码。例如System.exit(0)。</li>
+</ol>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ASO/">ASO</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/产品策划-运营/">产品策划/运营</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/工作日志/">工作日志</a>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/Java容器简介/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java容器简介</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/ASO之安卓IOS优化/" class="archive-article-date">
-  	<time datetime="2016-02-29T01:53:32.000Z" itemprop="datePublished">Feb 29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/ASO之安卓IOS优化/">ASO之安卓和IOS优化方案</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ASO/">ASO</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/产品策划-运营/">产品策划/运营</a></li></ul>
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/工作日志/">工作日志</a>
-	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/ASO之基本概念/" class="archive-article-date">
-  	<time datetime="2016-02-29T01:50:05.000Z" itemprop="datePublished">Feb 29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/ASO之基本概念/">ASO之基本概念</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ASO/">ASO</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/产品策划-运营/">产品策划/运营</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/工作日志/">工作日志</a>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/categories/工作日志/">&laquo; Prev</a><a class="page-number" href="/categories/工作日志/">1</a><span class="page-number current">2</span>
-    </nav>
-  
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="异常处理的小问题" data-title="异常处理的小问题" data-url="http://sspaiblog.com/异常处理的小问题/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 </div>
       <footer id="footer">
@@ -348,10 +359,10 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
-		isCategory: true,
+		isCategory: false,
 		open_in_new: false
 	}
 </script>
