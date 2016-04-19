@@ -4,21 +4,17 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>hashCode的作用 | 少数派报告</title>
+  <title>Tag: 内部类 | 少数派报告</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="有一种数据结构可以快速地查找所需要的对象，这就是散列表（hash table）。散列表为每个对象计算一个整数，称为散列码（hash code）。散列码是由对象的实例域产生的一个整数。hashcode方法的主要作用是为了配合基于散列的集合一起正常运行，这样的散列集合包括HashSet、HashMap以及HashTable。
-当向集合中插入对象时，如何判别在集合中是否已经存在该对象了？（集合中不允许重">
-<meta property="og:type" content="article">
-<meta property="og:title" content="hashCode的作用">
-<meta property="og:url" content="http://sspaiblog.com/hashCode的作用/index.html">
+  <meta name="description" content="think+">
+<meta property="og:type" content="website">
+<meta property="og:title" content="少数派报告">
+<meta property="og:url" content="http://sspaiblog.com/tags/内部类/index.html">
 <meta property="og:site_name" content="少数派报告">
-<meta property="og:description" content="有一种数据结构可以快速地查找所需要的对象，这就是散列表（hash table）。散列表为每个对象计算一个整数，称为散列码（hash code）。散列码是由对象的实例域产生的一个整数。hashcode方法的主要作用是为了配合基于散列的集合一起正常运行，这样的散列集合包括HashSet、HashMap以及HashTable。
-当向集合中插入对象时，如何判别在集合中是否已经存在该对象了？（集合中不允许重">
-<meta property="og:updated_time" content="2016-03-31T12:28:53.000Z">
+<meta property="og:description" content="think+">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hashCode的作用">
-<meta name="twitter:description" content="有一种数据结构可以快速地查找所需要的对象，这就是散列表（hash table）。散列表为每个对象计算一个整数，称为散列码（hash code）。散列码是由对象的实例域产生的一个整数。hashcode方法的主要作用是为了配合基于散列的集合一起正常运行，这样的散列集合包括HashSet、HashMap以及HashTable。
-当向集合中插入对象时，如何判别在集合中是否已经存在该对象了？（集合中不允许重">
+<meta name="twitter:title" content="少数派报告">
+<meta name="twitter:description" content="think+">
   
     <link rel="alternative" href="/atom.xml" title="少数派报告" type="application/atom+xml">
   
@@ -202,125 +198,57 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-hashCode的作用" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap">
   
-    <div class="article-meta">
-      <a href="/hashCode的作用/" class="article-date">
-  	<time datetime="2016-03-31T12:28:53.000Z" itemprop="datePublished">2016-03-31</time>
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2016" class="archive-year">2016</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/内部类/" class="archive-article-date">
+  	<time datetime="2016-04-19T08:43:20.000Z" itemprop="datePublished">Apr 19</time>
 </a>
-    </div>
+        </div>
+    	 
   
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      hashCode的作用
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/内部类/">内部类</a>
     </h1>
   
 
-      </header>
-      
-      <div class="article-info article-info-post">
-        
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hashCode/">hashCode()</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/内部类/">内部类</a></li></ul>
 	</div>
 
-        
+          
 	<div class="article-category tagcloud">
 	<a class="article-category-link" href="/categories/Java/">Java</a>
 	</div>
 
 
+        </div>
         <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>有一种数据结构可以快速地查找所需要的对象，这就是散列表（hash table）。散列表为每个对象计算一个整数，称为散列码（hash code）。散列码是由对象的实例域产生的一个整数。<strong>hashcode方法的主要作用</strong>是为了配合基于散列的集合一起正常运行，这样的散列集合包括HashSet、HashMap以及HashTable。</p>
-<p>当向集合中插入对象时，如何判别在集合中是否已经存在该对象了？（集合中不允许重复的元素存在）。如果采用equals方法逐一去比较，效率很低，这时我们采用hashcode方法，当集合要添加新的对象时，先调用这个对象的hashcode方法，得到对应的hashcode值，实际上在HashMap的具体实现中会用一个table保存已经存进去的对象的hashcode值，如果table中没有该hashcode值，它就可以直接存进去，不用进行任何比较了；如果存在该hashcode值，就调用它的equals方法与新元素进行比较，相同的话就不存了，不相同就散列其它的地址，所以这里存在一个冲突解决的问题，这样一来实际调用equals方法的次数就大大降低了。</p>
-<p>那么我们能根据hashcode值判断两个对象是否相等吗？答案是不可以，<strong>因为不同的对象可能会生成相同的hashcode值</strong>。虽然不能根据hashcode值判断两个对象是否相等，但是如果两个对象的hashcode值不等，则必定是两个不同的对象。如果要判断两个对象是否真正相等，必须通过equals方法。所以要想在自定义类中比较两个对象是否相等，<strong>需要重新覆盖hashcode和equals方法</strong>。equals只能保证两个对象是在逻辑上是相等的，但是在hashmap进行get操作时，会因为得到的hashcode值不同而结果不同。</p>
-<p><a href="https://www.cs.usfca.edu/~galles/visualization/OpenHash.html" target="_blank" rel="external">用链地址法解决冲突的动画演示</a></p>
-
-      
-    </div>
-    
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/Java容器简介/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Java容器简介
-        
-      </div>
-    </a>
-  
-  
-    <a href="/ArrayList与LinkedList与Vector区别/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">ArrayList、LinkedList、Vector的区别</div>
-      <strong class="article-nav-caption">></strong>
-    </a>
-  
-</nav>
-
-  
 </article>
+  
+  
+    </div></section>
+  
 
-
-<div class="share_jia">
-	<!-- JiaThis Button BEGIN -->
-	<div class="jiathis_style">
-		<span class="jiathis_txt">分享到: &nbsp; </span>
-		<a class="jiathis_button_facebook"></a> 
-    <a class="jiathis_button_twitter"></a>
-    <a class="jiathis_button_plus"></a> 
-    <a class="jiathis_button_tsina"></a>
-		<a class="jiathis_button_cqq"></a>
-		<a class="jiathis_button_douban"></a>
-		<a class="jiathis_button_weixin"></a>
-		<a class="jiathis_button_tumblr"></a>
-    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
-	</div>
-	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
-	<!-- JiaThis Button END -->
-</div>
-
-
-
-
-
-
-<div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="hashCode的作用" data-title="hashCode的作用" data-url="http://sspaiblog.com/hashCode的作用/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"true"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
-
-
+    
 
 </div>
       <footer id="footer">
@@ -346,9 +274,9 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false
 	}
