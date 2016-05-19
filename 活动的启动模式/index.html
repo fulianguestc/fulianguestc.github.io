@@ -16,7 +16,7 @@ singleTops">
 <meta property="og:description" content="Acitivty四种启动模式启动模式一共有四种，分别是standard、singleTop、singleTask和singleInstance。
 standardstandard模式是系统默认的启动模式，在该模式下，每次启动活动，系统就会将该活动添加到返回栈中，而不会考虑返回栈中的情况。例如当活动A处于栈顶时，我们再次启动一次活动A时，系统仍会将一个相同的活动添加到返回栈中。
 singleTops">
-<meta property="og:updated_time" content="2016-05-19T08:32:06.000Z">
+<meta property="og:updated_time" content="2016-05-19T11:46:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Activity与Fragment">
 <meta name="twitter:description" content="Acitivty四种启动模式启动模式一共有四种，分别是standard、singleTop、singleTask和singleInstance。
@@ -209,7 +209,7 @@ singleTops">
   
     <div class="article-meta">
       <a href="/活动的启动模式/" class="article-date">
-  	<time datetime="2016-05-19T08:32:06.000Z" itemprop="datePublished">2016-05-19</time>
+  	<time datetime="2016-05-19T11:46:28.000Z" itemprop="datePublished">2016-05-19</time>
 </a>
     </div>
   
@@ -252,7 +252,7 @@ singleTops">
 <h5 id="singleTask">singleTask</h5><p>singleTop模式避免了在栈顶的活动被重复创建的问题。在singleTask模式下，当启动活动A时，系统会首先检查返回栈中是否用活动A的实例，若没有则重新创建，若有则直接使用该实例，并将返回栈中活动A之前的活动移除栈。</p>
 <a id="more"></a>
 <h5 id="singleInstance">singleInstance</h5><p>singleInstance模式是最为复杂的，在该模式下会创建一个新的返回栈来管理这个活动。当我们要实现其他程序和当前程序共享活动实例时，既可以采用该模式。将活动B设置为该模式，活动A启动活动B，活动B启动活动C，活动B独享一个返回栈，从活动C返回时，会直接返回到活动A。</p>
-<h4 id="Fragment的生命周期">Fragment的生命周期</h4><p>由于fragment是依附于活动的，所以fragment的状态和活动类似，分别为运行状态、暂停状态、体质状态和销毁状态。</p>
+<h4 id="Fragment的生命周期">Fragment的生命周期</h4><p>由于fragment是依附于活动的，所以fragment的状态和活动类似，分别为运行状态、暂停状态、停止状态和销毁状态。</p>
 <p>特殊之处，通过调用FragmentTransaction的remove()/replace()方法将fragment从活动中一处，但在提交之前调用addToBackStack()，这时fragment会进入停止状态，但是若在提交事务之前没有将其添加到返回栈，则fragment变为销毁状态。</p>
 <ul>
 <li>onAttach()<br>当碎片和活动建立关联的时候调用。</li>
