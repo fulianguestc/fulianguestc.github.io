@@ -6,22 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>Activity与Fragment | 少数派报告</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Acitivt四种启动模式启动模式一共有四种，分别是standard、singleTop、singleTask和singleInstance。
+  <meta name="description" content="Acitivty四种启动模式启动模式一共有四种，分别是standard、singleTop、singleTask和singleInstance。
 standardstandard模式是系统默认的启动模式，在该模式下，每次启动活动，系统就会将该活动添加到返回栈中，而不会考虑返回栈中的情况。例如当活动A处于栈顶时，我们再次启动一次活动A时，系统仍会将一个相同的活动添加到返回栈中。
-singleTopsi">
+singleTops">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Activity与Fragment">
 <meta property="og:url" content="http://sspaiblog.com/活动的启动模式/index.html">
 <meta property="og:site_name" content="少数派报告">
-<meta property="og:description" content="Acitivt四种启动模式启动模式一共有四种，分别是standard、singleTop、singleTask和singleInstance。
+<meta property="og:description" content="Acitivty四种启动模式启动模式一共有四种，分别是standard、singleTop、singleTask和singleInstance。
 standardstandard模式是系统默认的启动模式，在该模式下，每次启动活动，系统就会将该活动添加到返回栈中，而不会考虑返回栈中的情况。例如当活动A处于栈顶时，我们再次启动一次活动A时，系统仍会将一个相同的活动添加到返回栈中。
-singleTopsi">
-<meta property="og:updated_time" content="2015-05-14T18:02:00.000Z">
+singleTops">
+<meta property="og:updated_time" content="2016-05-19T08:32:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Activity与Fragment">
-<meta name="twitter:description" content="Acitivt四种启动模式启动模式一共有四种，分别是standard、singleTop、singleTask和singleInstance。
+<meta name="twitter:description" content="Acitivty四种启动模式启动模式一共有四种，分别是standard、singleTop、singleTask和singleInstance。
 standardstandard模式是系统默认的启动模式，在该模式下，每次启动活动，系统就会将该活动添加到返回栈中，而不会考虑返回栈中的情况。例如当活动A处于栈顶时，我们再次启动一次活动A时，系统仍会将一个相同的活动添加到返回栈中。
-singleTopsi">
+singleTops">
   
     <link rel="alternative" href="/atom.xml" title="少数派报告" type="application/atom+xml">
   
@@ -209,7 +209,7 @@ singleTopsi">
   
     <div class="article-meta">
       <a href="/活动的启动模式/" class="article-date">
-  	<time datetime="2016-05-19T08:26:06.000Z" itemprop="datePublished">2016-05-19</time>
+  	<time datetime="2016-05-19T08:32:06.000Z" itemprop="datePublished">2016-05-19</time>
 </a>
     </div>
   
@@ -246,7 +246,7 @@ singleTopsi">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="Acitivt四种启动模式">Acitivt四种启动模式</h4><p>启动模式一共有四种，分别是standard、singleTop、singleTask和singleInstance。</p>
+        <h4 id="Acitivty四种启动模式">Acitivty四种启动模式</h4><p>启动模式一共有四种，分别是standard、singleTop、singleTask和singleInstance。</p>
 <h5 id="standard">standard</h5><p>standard模式是系统默认的启动模式，在该模式下，每次启动活动，系统就会将该活动添加到返回栈中，而不会考虑返回栈中的情况。例如当活动A处于栈顶时，我们再次启动一次活动A时，系统仍会将一个相同的活动添加到返回栈中。</p>
 <h5 id="singleTop">singleTop</h5><p>singleTop模式解决了标准模式下的问题，当处于栈顶的活动启动本身的时候系统不会再创建一个新的实例，不会向返回栈中添加新的活动。</p>
 <h5 id="singleTask">singleTask</h5><p>singleTop模式避免了在栈顶的活动被重复创建的问题。在singleTask模式下，当启动活动A时，系统会首先检查返回栈中是否用活动A的实例，若没有则重新创建，若有则直接使用该实例，并将返回栈中活动A之前的活动移除栈。</p>
