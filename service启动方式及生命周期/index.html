@@ -4,21 +4,24 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>ArrayList、LinkedList、Vector的区别 | 少数派报告</title>
+  <title>Service启动方式及生命周期 | 少数派报告</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这三者均为可伸缩数组，既可以动态改变长度的数组。
-ArrayList和Vector都是基于存储元素的Object[] array来实现的，它们会在内存中开辟一块连续的空间来存储，由于数据存储是连续的，所以可以通过下标来访问元素，索引数据的速度比较快，但是在插入元素时执行得比较慢。ArrayList和Vector都有一个初始化容量的大小，当里面存储的元素超过这个大小时就需要动态的扩充存储空间。为了提">
+  <meta name="description" content="服务作为Android四大组件之一，无法看到它，但它会一直在后台默默地运行，即使用户退出了应用，服务仍然是可以继续运行的。
+Service的启动有两种方式，对Service生命周期的影响也有区别。
+第一种方式当我们定义一个服务时，会重写onCreate()、onStartCommand()和onDestroy()这三个方法，它们是每个服务中最常用到的三个方法。其中onCreate()方法会在服务创">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ArrayList、LinkedList、Vector的区别">
-<meta property="og:url" content="http://sspaiblog.com/ArrayList与LinkedList与Vector区别/index.html">
+<meta property="og:title" content="Service启动方式及生命周期">
+<meta property="og:url" content="http://sspaiblog.com/service启动方式及生命周期/index.html">
 <meta property="og:site_name" content="少数派报告">
-<meta property="og:description" content="这三者均为可伸缩数组，既可以动态改变长度的数组。
-ArrayList和Vector都是基于存储元素的Object[] array来实现的，它们会在内存中开辟一块连续的空间来存储，由于数据存储是连续的，所以可以通过下标来访问元素，索引数据的速度比较快，但是在插入元素时执行得比较慢。ArrayList和Vector都有一个初始化容量的大小，当里面存储的元素超过这个大小时就需要动态的扩充存储空间。为了提">
-<meta property="og:updated_time" content="2016-03-29T08:32:00.000Z">
+<meta property="og:description" content="服务作为Android四大组件之一，无法看到它，但它会一直在后台默默地运行，即使用户退出了应用，服务仍然是可以继续运行的。
+Service的启动有两种方式，对Service生命周期的影响也有区别。
+第一种方式当我们定义一个服务时，会重写onCreate()、onStartCommand()和onDestroy()这三个方法，它们是每个服务中最常用到的三个方法。其中onCreate()方法会在服务创">
+<meta property="og:updated_time" content="2016-05-31T08:16:02.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ArrayList、LinkedList、Vector的区别">
-<meta name="twitter:description" content="这三者均为可伸缩数组，既可以动态改变长度的数组。
-ArrayList和Vector都是基于存储元素的Object[] array来实现的，它们会在内存中开辟一块连续的空间来存储，由于数据存储是连续的，所以可以通过下标来访问元素，索引数据的速度比较快，但是在插入元素时执行得比较慢。ArrayList和Vector都有一个初始化容量的大小，当里面存储的元素超过这个大小时就需要动态的扩充存储空间。为了提">
+<meta name="twitter:title" content="Service启动方式及生命周期">
+<meta name="twitter:description" content="服务作为Android四大组件之一，无法看到它，但它会一直在后台默默地运行，即使用户退出了应用，服务仍然是可以继续运行的。
+Service的启动有两种方式，对Service生命周期的影响也有区别。
+第一种方式当我们定义一个服务时，会重写onCreate()、onStartCommand()和onDestroy()这三个方法，它们是每个服务中最常用到的三个方法。其中onCreate()方法会在服务创">
   
     <link rel="alternative" href="/atom.xml" title="少数派报告" type="application/atom+xml">
   
@@ -202,11 +205,11 @@ ArrayList和Vector都是基于存储元素的Object[] array来实现的，它们
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-ArrayList与LinkedList与Vector区别" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-service启动方式及生命周期" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/ArrayList与LinkedList与Vector区别/" class="article-date">
-  	<time datetime="2016-03-29T08:40:07.000Z" itemprop="datePublished">2016-03-29</time>
+      <a href="/service启动方式及生命周期/" class="article-date">
+  	<time datetime="2016-05-31T08:16:04.000Z" itemprop="datePublished">2016-05-31</time>
 </a>
     </div>
   
@@ -219,7 +222,7 @@ ArrayList和Vector都是基于存储元素的Object[] array来实现的，它们
         
   
     <h1 class="article-title" itemprop="name">
-      ArrayList、LinkedList、Vector的区别
+      Service启动方式及生命周期
     </h1>
   
 
@@ -228,12 +231,12 @@ ArrayList和Vector都是基于存储元素的Object[] array来实现的，它们
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ArrayList/">ArrayList</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LinkedList/">LinkedList</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vector/">Vector</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Service/">Service</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/启动模式/">启动模式</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/生命周期/">生命周期</a></li></ul>
 	</div>
 
         
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Java/">Java</a>
+	<a class="article-category-link" href="/categories/Android/">Android</a>
 	</div>
 
 
@@ -243,10 +246,16 @@ ArrayList和Vector都是基于存储元素的Object[] array来实现的，它们
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>这三者均为可伸缩数组，既可以动态改变长度的数组。</p>
-<p>ArrayList和Vector都是基于存储元素的Object[] array来实现的，它们会在内存中开辟一块连续的空间来存储，由于数据存储是连续的，所以可以通过下标来访问元素，索引数据的速度比较快，但是在插入元素时执行得比较慢。ArrayList和Vector都有一个初始化容量的大小，当里面存储的元素超过这个大小时就需要动态的扩充存储空间。为了提高程序的效率，每次扩充容量不是扩充一个存储单元。Vector默认扩充为原来的2倍，而ArrayList默认扩充为原来的1.5倍。</p>
-<p>ArrayList和Vector最大区别就是synchronization的使用，没有一个ArrayList的方法是同步的，而Vector得绝大多数方法都是直接或间接同步的，所以Vector是线程安全的，ArrayList不是线程安全的，所以Vector的性能略差一些。</p>
-<p>LinkedList是采用双向列表来实现的，对数据的索引需要从头部开始遍历，所以随机访问效率比较低，但是插入元素时不需要对数据进行移动，所以插入效率较高，但它是非线性安全的容器。</p>
+        <p>服务作为Android四大组件之一，无法看到它，但它会一直在后台默默地运行，即使用户退出了应用，服务仍然是可以继续运行的。</p>
+<p>Service的启动有两种方式，对Service生命周期的影响也有区别。</p>
+<h4 id="第一种方式">第一种方式</h4><p>当我们定义一个服务时，会重写onCreate()、onStartCommand()和onDestroy()这三个方法，它们是每个服务中最常用到的三个方法。其中onCreate()方法会在服务创建的时候调用，onStartCommand()方法会在每次服务启动的时候调用，onDestroy()方法会在服务销毁的时候调用。</p>
+<p>通常情况下，我们将执行逻辑写在onStartCommand()方法里，而当服务销毁时，我们会在onDestroy()中去回收不再使用的资源。</p>
+<p>那么如何在一个活动中启动服务呢？我们可以构建一个Intent对象，并调用startService()方法来启动服务，停止服务调用stopService()方法即可。这两个方法都是在活动中定义中，所以服务完全是由活动来决定何时停止的，如果没有调用stopService()方法，服务就会一直处于运行状态。那服务有没有什么办法让自己停下来呢，当然可以，只需要在服务中调用stopSelf()方法即可。</p>
+<p>下面我们看一下onCreate()和onStartCommand()方法的区别。当我们第一次启动服务的时候，两个方法都会被执行，但是如果服务已经被创建，多次调用startService()并不会多次创建服务，但是会多次执行onStartCommand()方法。</p>
+<a id="more"></a>
+<h4 id="第二种方式">第二种方式</h4><p>当我们用上述方式启动服务后会发现，服务一直处于运行状态，但具体执行的是什么逻辑，活动是控制不了的，这时候我们需要一宗方式令活动和服务的联系更紧密些。当我们继承Service新建一个服务时，需要实现Service中的一个抽象方法，即onBind()，借用这个方法令活动与服务产生联系。</p>
+<p>我们在服务中新建一个类继承Binder方法，并在内部提供要执行的方法。并在onBind()方法中返回这个实例。在活动中创建一个ServiceConnection的匿名类，在里面重写onServiceConnected()方法和onServiceDisconnected()方法，这两个方法分别会在活动与服务成功绑定以及解除绑定的时候调用。此时服务与活动还没有绑定，我们仍然在活动中构建一个Intent对象，并调用bindService()和unbindService()进行绑定和解绑服务。这种方式onCreate()方法会执行，但onStartCommand()方法不会执行。</p>
+<h4 id="混合执行">混合执行</h4><p>如果我们在启动服务时，既调用了startService()方法，又调用了bindService()，根据Android系统的机制，一个服务只要被启动或者被绑定了之后，就会一直处于运行状态，必须要让两个条件同时不满足，服务才能被销毁。</p>
 
       
     </div>
@@ -256,18 +265,9 @@ ArrayList和Vector都是基于存储元素的Object[] array来实现的，它们
     
 <nav id="article-nav">
   
-    <a href="/String与StringBuffer与StringBuilder区别/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          String、StringBuffer与StringBuilder的区别
-        
-      </div>
-    </a>
   
-  
-    <a href="/map&bigdata/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">地图和大数据结合的未来</div>
+    <a href="/活动的启动模式/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Activity与Fragment</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -302,7 +302,7 @@ ArrayList和Vector都是基于存储元素的Object[] array来实现的，它们
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="ArrayList与LinkedList与Vector区别" data-title="ArrayList、LinkedList、Vector的区别" data-url="http://sspaiblog.com/ArrayList与LinkedList与Vector区别/"></div>
+	<div class="ds-thread" data-thread-key="service启动方式及生命周期" data-title="Service启动方式及生命周期" data-url="http://sspaiblog.com/service启动方式及生命周期/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
