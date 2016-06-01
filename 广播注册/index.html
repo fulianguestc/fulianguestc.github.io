@@ -4,17 +4,21 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Tag: ArrayList | 少数派报告</title>
+  <title>广播注册方式 | 少数派报告</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="think+">
-<meta property="og:type" content="website">
-<meta property="og:title" content="少数派报告">
-<meta property="og:url" content="http://sspaiblog.com/tags/ArrayList/index.html">
+  <meta name="description" content="广播接收器可以自由地对自己感兴趣的广播进行注册，这样当有相应的广播发出时，广播接收器就能够收到该广播，并在内部执行相应的逻辑。注册广播的方式一般有两种，在代码中注册和在AndroidManifest.xml中注册，其中前者被称为动态注册，后者被称为静态注册。
+动态注册监听广播这种广播不是常驻型广播，广播跟随activity的生命周期。在android下要想接收广播信息，我们需要编写自己的广播接收器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="广播注册方式">
+<meta property="og:url" content="http://sspaiblog.com/广播注册/index.html">
 <meta property="og:site_name" content="少数派报告">
-<meta property="og:description" content="think+">
+<meta property="og:description" content="广播接收器可以自由地对自己感兴趣的广播进行注册，这样当有相应的广播发出时，广播接收器就能够收到该广播，并在内部执行相应的逻辑。注册广播的方式一般有两种，在代码中注册和在AndroidManifest.xml中注册，其中前者被称为动态注册，后者被称为静态注册。
+动态注册监听广播这种广播不是常驻型广播，广播跟随activity的生命周期。在android下要想接收广播信息，我们需要编写自己的广播接收器">
+<meta property="og:updated_time" content="2016-06-01T06:52:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="少数派报告">
-<meta name="twitter:description" content="think+">
+<meta name="twitter:title" content="广播注册方式">
+<meta name="twitter:description" content="广播接收器可以自由地对自己感兴趣的广播进行注册，这样当有相应的广播发出时，广播接收器就能够收到该广播，并在内部执行相应的逻辑。注册广播的方式一般有两种，在代码中注册和在AndroidManifest.xml中注册，其中前者被称为动态注册，后者被称为静态注册。
+动态注册监听广播这种广播不是常驻型广播，广播跟随activity的生命周期。在android下要想接收广播信息，我们需要编写自己的广播接收器">
   
     <link rel="alternative" href="/atom.xml" title="少数派报告" type="application/atom+xml">
   
@@ -198,57 +202,118 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-广播注册" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/ArrayList与LinkedList与Vector区别/" class="archive-article-date">
-  	<time datetime="2016-03-29T08:40:07.000Z" itemprop="datePublished">Mar 29</time>
+    <div class="article-meta">
+      <a href="/广播注册/" class="article-date">
+  	<time datetime="2016-06-01T06:53:04.000Z" itemprop="datePublished">2016-06-01</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/ArrayList与LinkedList与Vector区别/">ArrayList、LinkedList、Vector的区别</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      广播注册方式
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ArrayList/">ArrayList</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LinkedList/">LinkedList</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vector/">Vector</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/广播注册/">广播注册</a></li></ul>
 	</div>
 
-          
+        
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Java/">Java</a>
+	<a class="article-category-link" href="/categories/Android/">Android</a>
 	</div>
 
 
-        </div>
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      </div>
+      
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>广播接收器可以自由地对自己感兴趣的广播进行注册，这样当有相应的广播发出时，广播接收器就能够收到该广播，并在内部执行相应的逻辑。注册广播的方式一般有两种，在代码中注册和在AndroidManifest.xml中注册，其中前者被称为动态注册，后者被称为静态注册。</p>
+<h4 id="动态注册监听广播">动态注册监听广播</h4><p>这种广播不是常驻型广播，广播跟随activity的生命周期。在android下要想接收广播信息，我们需要编写自己的广播接收器，实现一个类继承BroadcastReceiver，并重写里面的onReceiver方法，这样就实现了一个简单的广播接收器。</p>
+<p>当实现了广播接收器，还要设置广播接收器接收广播的类型，然后通过registerRecever方法将广播接收器和接收类型注册到系统中。</p>
+<p>动态注册的广播接收器一定要用unregisterReceicer方法取消注册。</p>
+<h4 id="静态注册广播">静态注册广播</h4><p>动态注册的广播接收器可以自由地控制注册与注销，在灵活性上有很大的优势，但是由于动态注册的广播是与活动的生命周期是一致的，所以必须要在程序启动之后才能接收到广播，而静态注册则可以在程序未启动的情况下接收广播。</p>
+<p>具体方法则是在AndroidManifest.xml文件内的<application>标签内添加<receiver>标签，所有静态注册的广播接收器都是在这里注册的，并且添加广播类型。</receiver></application></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/service启动方式及生命周期/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Service启动方式及生命周期</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="广播注册" data-title="广播注册方式" data-url="http://sspaiblog.com/广播注册/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 </div>
       <footer id="footer">
@@ -274,9 +339,9 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false
 	}
