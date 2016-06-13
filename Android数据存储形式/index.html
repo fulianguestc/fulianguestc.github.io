@@ -4,17 +4,24 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Tag: Collection | 少数派报告</title>
+  <title>Android数据存储形式 | 少数派报告</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="think+">
-<meta property="og:type" content="website">
-<meta property="og:title" content="少数派报告">
-<meta property="og:url" content="http://sspaiblog.com/tags/Collection/index.html">
+  <meta name="description" content="文件存储文件存储是Android中最基本的一种数据存储方式，不对内容进行任何的格式化处理，所有数据都原封不动的保存到文件当中，适合存储一些简单的文本。
+将数据存储到文件中
+利用openFileOutput()方法创建FileOutputStream对象，用于将数据存储到指定的文件中。这个方法接收两个参数，第一个参数是文件名，第二个参数是文件的操作模式，主要有MODE_PRIVATE和MODE_AP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android数据存储形式">
+<meta property="og:url" content="http://sspaiblog.com/Android数据存储形式/index.html">
 <meta property="og:site_name" content="少数派报告">
-<meta property="og:description" content="think+">
+<meta property="og:description" content="文件存储文件存储是Android中最基本的一种数据存储方式，不对内容进行任何的格式化处理，所有数据都原封不动的保存到文件当中，适合存储一些简单的文本。
+将数据存储到文件中
+利用openFileOutput()方法创建FileOutputStream对象，用于将数据存储到指定的文件中。这个方法接收两个参数，第一个参数是文件名，第二个参数是文件的操作模式，主要有MODE_PRIVATE和MODE_AP">
+<meta property="og:updated_time" content="2016-06-13T12:57:58.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="少数派报告">
-<meta name="twitter:description" content="think+">
+<meta name="twitter:title" content="Android数据存储形式">
+<meta name="twitter:description" content="文件存储文件存储是Android中最基本的一种数据存储方式，不对内容进行任何的格式化处理，所有数据都原封不动的保存到文件当中，适合存储一些简单的文本。
+将数据存储到文件中
+利用openFileOutput()方法创建FileOutputStream对象，用于将数据存储到指定的文件中。这个方法接收两个参数，第一个参数是文件名，第二个参数是文件的操作模式，主要有MODE_PRIVATE和MODE_AP">
   
     <link rel="alternative" href="/atom.xml" title="少数派报告" type="application/atom+xml">
   
@@ -200,57 +207,93 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-Android数据存储形式" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/Java容器简介/" class="archive-article-date">
-  	<time datetime="2016-04-01T06:40:49.000Z" itemprop="datePublished">Apr 1</time>
+    <div class="article-meta">
+      <a href="/Android数据存储形式/" class="article-date">
+  	<time datetime="2016-06-13T12:57:58.000Z" itemprop="datePublished">2016-06-13</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Java容器简介/">Java容器简介</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Android数据存储形式
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Collection/">Collection</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Map/">Map</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据存储/">数据存储</a></li></ul>
 	</div>
 
-          
+        
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Java/">Java</a>
+	<a class="article-category-link" href="/categories/Android/">Android</a>
 	</div>
 
 
-        </div>
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      </div>
+      
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="文件存储">文件存储</h4><p>文件存储是Android中最基本的一种数据存储方式，不对内容进行任何的格式化处理，所有数据都原封不动的保存到文件当中，适合存储一些简单的文本。</p>
+<p>将数据存储到文件中</p>
+<p>利用openFileOutput()方法创建FileOutputStream对象，用于将数据存储到指定的文件中。这个方法接收两个参数，第一个参数是文件名，第二个参数是文件的操作模式，主要有MODE_PRIVATE和MODE_APPEND两种模式。其中MODE_PRIVATE是当指定同样文件名时所写入内容将会覆盖原文件中的内容，而MODE_APPEND是向已有文件中追加内容。</p>
+<p>读取数据与写入数据类似，主要使用openFileInput()方法，然后利用Java的各种流的知识进行读写操作。</p>
+<h4 id="SharedPreferences存储">SharedPreferences存储</h4><p>SharedPreferences存储是使用键值对的方式来存储数据的，也就是当保存一条数据时，需要给这个数据提供一个对应的键值，这样在读取的时候就可以通过这个键将相应的数据读取出来。</p>
+<a id="more"></a>
+<p>要想使用SharedPreferences来存储数据，首先要获得SharedPreferences对象。主要有三种方法。</p>
+<p>1.Context类中的getSharedPreferences()方法</p>
+<p>词方法接受两个参数，第一个参数用于指定SharedPreferences文件名称，第二个参数用于指定操作模式，主要有两种模式MODE_PRIVATE和MODE_MULTI_PROCESS。第一种模式表示只有当前的应用程序才可以对去操作，第二个模式则表示会有对个进程对其操作。</p>
+<p>2.Activity类中的getPreferences()方法</p>
+<p>这个方法和上个方法类似，不过只有一个操作模式的参数，会默认当前活动的类名为SharedPreferences的文件名。</p>
+<p>3.PreferenceManager类中的getDefaultSharedPreferences()方法</p>
+<p>这是一个静态方法，它接收一个Context参数，并自动将当前应用程序包名作为文件名。</p>
+<p>获取SharedPreferences对象后，就可以存储数据了。</p>
+<ol>
+<li>调用edit()方法获取SharedPreferences.Editor对象。</li>
+<li>利用putBoolean()方法和putString()方法等添加数据。</li>
+<li>调用commit()方法将添加的数据提交，完成数据的存储。</li>
+</ol>
+<h4 id="SQLite数据库存储">SQLite数据库存储</h4><p>这一部分我们将在后面介绍，前面的两种方法很简单，但是它们比较适合保存一些简单的数据和键值对信息，当需要存储大量复杂的关系型数据时，就需要数据库来完成。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/ContentProvider介绍/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ContentProvider介绍</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+
 
 </div>
       <footer id="footer">
@@ -276,9 +319,9 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false
 	}
