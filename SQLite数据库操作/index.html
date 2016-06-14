@@ -4,31 +4,21 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>ASO之玩转积分墙 | 少数派报告</title>
+  <title>SQLite数据库操作 | 少数派报告</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="总结自公众号【姑婆那些事儿】ASO优化系列，并融入自己的思考——
-
-之前讨论过热词覆盖：
-能带来有效流量的词是要保留的，有效的关键词的热度不一定高，热度高的关键词不一定流量最大，这里需要做一个取舍，主要看该词是否和你的App适配。（热度高，又与你的app相关，则流量大）。
-如何检验一个词带来多少量呢，比如，一个“约炮app”，做“交友”这个关键词，如果你做到第一了，维持7天左右时间，算出平均新增，">
+  <meta name="description" content="创建数据库Android为了方便我们能够方便的管理数据库，专门提供了一个SQLiteOpenHelper帮助类，借助这个类进行数据库的创建与升级。
+SQLiteOpenHelper类是一个抽象类，我们需要创建一个自己的帮助类来继承它，重写抽象方法onCreate()和onUpgrade()，实现创建和升级的逻辑。还有另外两个重要的方法getReadableDatabase()和getWritabl">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ASO之玩转积分墙">
-<meta property="og:url" content="http://sspaiblog.com/ASO之玩转积分墙/index.html">
+<meta property="og:title" content="SQLite数据库操作">
+<meta property="og:url" content="http://sspaiblog.com/SQLite数据库操作/index.html">
 <meta property="og:site_name" content="少数派报告">
-<meta property="og:description" content="总结自公众号【姑婆那些事儿】ASO优化系列，并融入自己的思考——
-
-之前讨论过热词覆盖：
-能带来有效流量的词是要保留的，有效的关键词的热度不一定高，热度高的关键词不一定流量最大，这里需要做一个取舍，主要看该词是否和你的App适配。（热度高，又与你的app相关，则流量大）。
-如何检验一个词带来多少量呢，比如，一个“约炮app”，做“交友”这个关键词，如果你做到第一了，维持7天左右时间，算出平均新增，">
-<meta property="og:image" content="https://raw.githubusercontent.com/fulianguestc/markdownphotos/master/玩图.png">
-<meta property="og:updated_time" content="2016-02-29T02:02:49.000Z">
+<meta property="og:description" content="创建数据库Android为了方便我们能够方便的管理数据库，专门提供了一个SQLiteOpenHelper帮助类，借助这个类进行数据库的创建与升级。
+SQLiteOpenHelper类是一个抽象类，我们需要创建一个自己的帮助类来继承它，重写抽象方法onCreate()和onUpgrade()，实现创建和升级的逻辑。还有另外两个重要的方法getReadableDatabase()和getWritabl">
+<meta property="og:updated_time" content="2016-06-14T09:11:18.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ASO之玩转积分墙">
-<meta name="twitter:description" content="总结自公众号【姑婆那些事儿】ASO优化系列，并融入自己的思考——
-
-之前讨论过热词覆盖：
-能带来有效流量的词是要保留的，有效的关键词的热度不一定高，热度高的关键词不一定流量最大，这里需要做一个取舍，主要看该词是否和你的App适配。（热度高，又与你的app相关，则流量大）。
-如何检验一个词带来多少量呢，比如，一个“约炮app”，做“交友”这个关键词，如果你做到第一了，维持7天左右时间，算出平均新增，">
+<meta name="twitter:title" content="SQLite数据库操作">
+<meta name="twitter:description" content="创建数据库Android为了方便我们能够方便的管理数据库，专门提供了一个SQLiteOpenHelper帮助类，借助这个类进行数据库的创建与升级。
+SQLiteOpenHelper类是一个抽象类，我们需要创建一个自己的帮助类来继承它，重写抽象方法onCreate()和onUpgrade()，实现创建和升级的逻辑。还有另外两个重要的方法getReadableDatabase()和getWritabl">
   
     <link rel="alternative" href="/atom.xml" title="少数派报告" type="application/atom+xml">
   
@@ -214,11 +204,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-ASO之玩转积分墙" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-SQLite数据库操作" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/ASO之玩转积分墙/" class="article-date">
-  	<time datetime="2016-02-29T02:02:49.000Z" itemprop="datePublished">2016-02-29</time>
+      <a href="/SQLite数据库操作/" class="article-date">
+  	<time datetime="2016-06-14T09:11:19.000Z" itemprop="datePublished">2016-06-14</time>
 </a>
     </div>
   
@@ -231,7 +221,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      ASO之玩转积分墙
+      SQLite数据库操作
     </h1>
   
 
@@ -240,12 +230,12 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ASO/">ASO</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/产品策划-运营/">产品策划/运营</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SQLite/">SQLite</a></li></ul>
 	</div>
 
         
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/工作日志/">工作日志</a>
+	<a class="article-category-link" href="/categories/Android/">Android</a>
 	</div>
 
 
@@ -255,54 +245,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>总结自公众号【姑婆那些事儿】ASO优化系列，并融入自己的思考——</p>
-</blockquote>
-<p>之前讨论过热词覆盖：</p>
-<p>能带来有效流量的词是要保留的，有效的关键词的热度不一定高，热度高的关键词不一定流量最大，这里需要做一个取舍，主要看该词是否和你的App适配。（热度高，又与你的app相关，则流量大）。</p>
-<p>如何检验一个词带来多少量呢，比如，一个“约炮app”，做“交友”这个关键词，如果你做到第一了，维持7天左右时间，算出平均新增，减去之前未做ASO时候的新增，方法笨，但实用，准确。前提是渠道比较稳定——有些产品渠道比较多，新增也不稳定，可能这个方法不一定适用。</p>
+        <h4 id="创建数据库">创建数据库</h4><p>Android为了方便我们能够方便的管理数据库，专门提供了一个SQLiteOpenHelper帮助类，借助这个类进行数据库的创建与升级。</p>
+<p>SQLiteOpenHelper类是一个抽象类，我们需要创建一个自己的帮助类来继承它，重写抽象方法onCreate()和onUpgrade()，实现创建和升级的逻辑。还有另外两个重要的方法getReadableDatabase()和getWritableDatabase()。这两个方法都可以创建或打开一个现有的数据库，并返回一个可对数据库读写的对象。不同的是当数据库不可写入时，前者返回的对象将以只读的方式打开数据库，后者将会出现异常。</p>
+<p>SQLiteOpenHelper的构造方法有四个参数，第一个参数是Context，第二个参数是数据库名，第三个参数允许我们在查询数据的时候返回一个自定义Cursor，一般传入null，第四个参数表示当前数据库的版本号，用于对数据库进行升级操作。构建出SQLiteOpenHelper实例后，再调用getReadableDatabase()或getWritableDatabase()方法，会返回一个SQLiteDatabase对象，方便之后的操作，此时onCreate方法会得到执行。</p>
 <a id="more"></a>
-<p>而热词之外，其实还有积分墙方法，总结如下：</p>
-<h5 id="一、微信积分墙">一、微信积分墙</h5><p>微信积分墙，目前是关键词优化的最有效手段。它通过引导用户搜索关键词，找到对应的App，完成下载和激活。</p>
-<p>衡量这个微信积分墙能力大小的关键有两个：用户数和用户质量。</p>
-<p>评价方法如下：</p>
-<ol>
-<li>广告主在线数量多少；</li>
-<li>新App的占比，何为新App？就是你以前没听说过的App；</li>
-<li>最后一个最关键，比如你看到某微信积分墙上某App做了“自拍”这个关键词，先去看下在第几的位置，然后12小时、15小时、18小时后依次观察下排名变动，就知道这个微信积分墙的实力了。</li>
-</ol>
-<p>下方是《玩图》在“首席体验师”上的推广：<br><img src="https://raw.githubusercontent.com/fulianguestc/markdownphotos/master/玩图.png" alt="玩图"></p>
-<p>微信积分墙的优势在于防刷性能好。</p>
-<h5 id="二、列表积分墙">二、列表积分墙</h5><p>列表积分墙，也是传统积分墙。个人认为，无论微信积分墙还是列表积分墙，孰优孰劣的标准取决于：</p>
-<ol>
-<li>是否真量。</li>
-<li>是否活跃。</li>
-</ol>
-<p>只有真实，活跃的量才对冲榜和ASO有效果。</p>
-<p>下面对比一下这些方式的安全系数，可持续性：<br>（安全系数就是风险大小、可持续性就是未来的发展情况以及苹果是否可能打击）</p>
-<ul>
-<li><p>安全系数：覆盖热词＞微信积分墙＞列表积分墙</p>
-</li>
-<li><p>效果：微信积分墙＞列表积分墙＞覆盖热词</p>
-</li>
-<li><p>可持续性：覆盖热词＞微信积分墙＞列表积分墙</p>
-</li>
-<li><p>目前量级：微信积分墙＞列表积分墙</p>
-</li>
-</ul>
-<h5 id="积分墙防作弊">积分墙防作弊</h5><p>IOS推广人员，该如何利用好积分墙呢？首当其冲的是防作弊。<br>防作弊主要有下面一些方案：</p>
-<ol>
-<li>调整数据回调逻辑<br>积分墙是按照CPA结算，CPA的定义是按照指定行为结算。所以可以在行为上做文章。以此调整，希望增加用户使用时长，提升作弊成本。<br>A.下载且联网打开，且使用xx分钟。<br>B.下载且联网打开，且注册账号。<br>C.下载且联网打开，指定行为等等。诸如分享至朋友圈，搜索xx词，好评，创建游戏角色，用xx账号登陆，绑定银行卡等等。（只要想得到，没有做不到）。<br>指定的行为，越复杂，防作弊能力越强。（不过越复杂的行为，意味着激活转化越差）。</li>
-<li>屏蔽部分地区的积分墙的量<br>经过多家CP长时间的缴学费，从万千数据里发现：福建地区作弊率很高，因此建议屏蔽该地区的量。</li>
-<li>识别用户的唯一性<br>A.用户可能会主动或者被动修改信息，导致同一个用户可能有多个设备号，获得多次奖励。另外，不同的参数也可能导致用户的不唯一性。解决的办法是：通过idfa，idfv，mac，openudid，keychan五个参数联合校验用户的唯一性。非唯一的视为无效。<br>B.不以设备号作为身份识别，以苹果账号为唯一身份依据。<br>C.可针对IP、下载时长、路由器BSSID、开机时间、设备名称、粘贴板、Cookie以及其它手机指纹信息联合校验用户的真实性。但由于这些信息都可能被重置，只可作为补充手段。</li>
-<li>建立IDFA白名单（防误杀）<br>根据用户的历史行为和留存时长，判定的正常用户白名单数据库，实时更新。</li>
-<li>IP段黑名单：（可拦截70%的作弊）<br>异常数据较集中、且段内用户留存率严重低于正常值的IP段（C段）数据库，每日更新。</li>
-<li>IP段限量：（可拦截20%的作弊）<br>每个广告，限制每个IP段（C段）72小时内激活数据不超过5个，控制新刷量IP段。</li>
-</ol>
-<p>此外，增加优质流量（ASO，超级APP，广点通，粉丝通等等），提升产品质量是要长期坚持做的。</p>
-<p>备注：CP面临的三大难题：冲榜难、预算少、量不够。</p>
-<p>积分墙冲榜虽然是目前唯一“合法”的路子，但这是土豪们才能玩的，建议广大CP同胞多让公司花点时间优化产品，多去搞点好流量，提升性价比。</p>
-<p>谨记一句话：用最小的成本，获得最大的收益！！</p>
+<h4 id="升级数据库">升级数据库</h4><p>当我们在已有表的数据库中药添加新的表时，按照上述方法创建并不会成功，因为onCreate()方法只有在第一次创建数据库时才会被调用，所以这时我们要用SQLiteOpenHelper的升级功能来解决这个问题。</p>
+<p>首先我们要在onUpgrade()方法中执行数据库的DROP语句，将已存在的表删除，因为如果在创建表时发现这张表已经存在，就会直接报错。然后我们修改SQLiteOpenHelper构造方法里的数据库的版本号（比之前大），就可以让onUpgrade()得到执行。</p>
+<h4 id="添加数据">添加数据</h4><p>SQLiteDatabase中提供了一个insert()方法，这个方法就是专门用于添加数据的。它接收三个参数，第一个参数是表名，第二个参数用于在未指定添加数据的情况下给某些可为空的列自动赋值为NULL，直接传入null即可，第三个参数是一个ContentValues对象，它提供了一系列的put()方法重载，用于向ContentValues中添加数据。</p>
+<h4 id="更新数据">更新数据</h4><p>SQLiteDatabase中提供了一个update()方法用于对数据的更新，这个方法接收四个参数，第一个参数是表名，第二个参数是ContentValues对象，要把更新的数据组装进去，第三、四个参数用于去约束更新某一行或某几行的数据，不指定的话默认更新所有行。</p>
+<h4 id="删除数据">删除数据</h4><p>SQLiteDatabase中提供了一个delete()方法专门用于删除数据，这个方法接收三个参数，第一个参数是表名，第二、第三个参数是用于去约束删除某一行或某几行的数据，不指定的话默认就是删除所有行。</p>
+<h4 id="查询数据">查询数据</h4><p>SQLiteDatabase中提供了一个query()方法用于对数据进行查询，这个方法很复杂，最简单的也要传入七个参数。第一个参数是表名，第二个参数用于指定查询哪几列，如果不指定则默认查询所有列，第三、四个参数用于去约束查询某一行或几行的数据，不指定则默认查询所有行的数据。第五个参数用于指定需要去group by的列，不指定则表示不对查询结果进行group by操作，第六个参数用于对group by之后的数据进行进一步的过滤，不指定则表示不进行过滤，第七个参数用欧冠与指定查询结果的排列方式，不指定则表示使用默认的排列方式。</p>
+<p>调用query()方法后会返回一个Cursor对象，查询到的所有数据都从这个对象中取出。最后要记得调用close()方法来关闭Cursor。</p>
 
       
     </div>
@@ -312,18 +265,9 @@
     
 <nav id="article-nav">
   
-    <a href="/ASO之常用工具总结/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          ASO之常用工具总结
-        
-      </div>
-    </a>
   
-  
-    <a href="/ASO之关键词优化/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">ASO之关键词优化</div>
+    <a href="/Android数据存储形式/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Android数据存储形式</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
