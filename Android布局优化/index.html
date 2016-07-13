@@ -4,17 +4,21 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Archives: 2016/4 | 少数派报告</title>
+  <title>Android布局优化 | 少数派报告</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="think+">
-<meta property="og:type" content="website">
-<meta property="og:title" content="少数派报告">
-<meta property="og:url" content="http://sspaiblog.com/archives/2016/04/index.html">
+  <meta name="description" content="布局重用include我们想象这样一种情况，一个APP的应用内每个界面都有一个标题栏上面有一个back按钮。那么我们是不是需要在每个界面都要重复写一遍这样的标题栏代码呢，这样就会导致代码的大量重复，这个时候我们就可以采用include方式来解决这个问题。
+&amp;lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/andro">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android布局优化">
+<meta property="og:url" content="http://sspaiblog.com/Android布局优化/index.html">
 <meta property="og:site_name" content="少数派报告">
-<meta property="og:description" content="think+">
+<meta property="og:description" content="布局重用include我们想象这样一种情况，一个APP的应用内每个界面都有一个标题栏上面有一个back按钮。那么我们是不是需要在每个界面都要重复写一遍这样的标题栏代码呢，这样就会导致代码的大量重复，这个时候我们就可以采用include方式来解决这个问题。
+&amp;lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/andro">
+<meta property="og:updated_time" content="2016-07-13T11:03:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="少数派报告">
-<meta name="twitter:description" content="think+">
+<meta name="twitter:title" content="Android布局优化">
+<meta name="twitter:description" content="布局重用include我们想象这样一种情况，一个APP的应用内每个界面都有一个标题栏上面有一个back按钮。那么我们是不是需要在每个界面都要重复写一遍这样的标题栏代码呢，这样就会导致代码的大量重复，这个时候我们就可以采用include方式来解决这个问题。
+&amp;lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/andro">
   
     <link rel="alternative" href="/atom.xml" title="少数派报告" type="application/atom+xml">
   
@@ -200,306 +204,84 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-Android布局优化" class="article article-type-post" itemscope itemprop="blogPost">
   
+    <div class="article-meta">
+      <a href="/Android布局优化/" class="article-date">
+  	<time datetime="2016-07-13T11:03:14.000Z" itemprop="datePublished">2016-07-13</time>
+</a>
+    </div>
   
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Android布局优化
+    </h1>
+  
+
+      </header>
       
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ViewStub/">ViewStub</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/include/">include</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/merge/">merge</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Android/">Android</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/抽象类与接口/" class="archive-article-date">
-  	<time datetime="2016-04-20T04:57:41.000Z" itemprop="datePublished">Apr 20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/抽象类与接口/">抽象类与接口</a>
-    </h1>
-  
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="布局重用include">布局重用include</h4><p>我们想象这样一种情况，一个APP的应用内每个界面都有一个标题栏上面有一个back按钮。那么我们是不是需要在每个界面都要重复写一遍这样的标题栏代码呢，这样就会导致代码的大量重复，这个时候我们就可以采用include方式来解决这个问题。</p>
+<pre><code><span class="tag">&lt;<span class="title">LinearLayout</span> <span class="attribute">xmlns:android</span>=<span class="value">"http://schemas.android.com/apk/res/android"</span>  
+    <span class="attribute">android:orientation</span>=<span class="value">"vertical"</span>   
+    <span class="attribute">android:layout_width</span>=<span class="value">”match_parent”</span>  
+    <span class="attribute">android:layout_height</span>=<span class="value">”match_parent”</span>&gt;</span>    
+<span class="tag">&lt;<span class="title">include</span> <span class="attribute">layout</span>=<span class="value">"@layout/title"</span>/&gt;</span> 
+<span class="tag">&lt;/<span class="title">LinearLayout</span>&gt;</span>
+</code></pre><p>title.xml是我们的标题栏代码，只需在每个活动界面用include引入title.xml，不需要重复编码。</p>
+<h4 id="减少视图层级merge">减少视图层级merge</h4><p>merge标签用于减少View树的层次来优化Android的布局，在UI结构优化中起着非常重要的作用，它可以删除多余的层级。merge多用于替换FrameLayout或者当一个布局包含另一个时，merge标签消除视图层次结构中多余的视图组。</p>
+<h4 id="需要时使用ViewStub">需要时使用ViewStub</h4><p>ViewStub标签最大的优点是当你需要时才会加载，使用他并不会影响UI初始化时的性能。各种不常用的布局像进度条、显示错误消息等可以使用该标签，以减少内存使用量，加快渲染速度。ViewStub是一个不可见的，大小为0的View。</p>
+<p>程序在运行期间，某个布局在inflate()后，就不会有变化，除非重新启动。所以当需要在运行时不止一次的显示和隐藏某个布局，ViewStub是做不到的，只能用View的可见性来控制。</p>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/抽象类/">抽象类</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/接口/">接口</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Java/">Java</a>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/XML和JSON简介/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">XML和JSON简介</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/内部类/" class="archive-article-date">
-  	<time datetime="2016-04-19T08:43:20.000Z" itemprop="datePublished">Apr 19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/内部类/">内部类</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/内部类/">内部类</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Java/">Java</a>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/static关键字的作用 /" class="archive-article-date">
-  	<time datetime="2016-04-19T08:42:52.000Z" itemprop="datePublished">Apr 19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/static关键字的作用 /">static关键字</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/static/">static</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Java/">Java</a>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/增长黑客1/" class="archive-article-date">
-  	<time datetime="2016-04-14T08:18:12.000Z" itemprop="datePublished">Apr 14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/增长黑客1/">《增长黑客》1：什么样的人是增长黑客？</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/增长黑客/">增长黑客</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/读书笔记/">读书笔记</a>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/认知维度/" class="archive-article-date">
-  	<time datetime="2016-04-13T07:30:17.000Z" itemprop="datePublished">Apr 13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/认知维度/">当认知维度不够时，应该以什么姿势阅读深度文章？</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/认知维度/">认知维度</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/读书笔记/">读书笔记</a>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/多态简介/" class="archive-article-date">
-  	<time datetime="2016-04-06T08:17:04.000Z" itemprop="datePublished">Apr 6</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/多态简介/">多态简介</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/覆盖/">覆盖</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/重载/">重载</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Java/">Java</a>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/Java面向对象简介/" class="archive-article-date">
-  	<time datetime="2016-04-06T08:12:06.000Z" itemprop="datePublished">Apr 6</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Java面向对象简介/">面向对象简介</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面向对象/">面向对象</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Java/">Java</a>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/异常处理的小问题/" class="archive-article-date">
-  	<time datetime="2016-04-05T07:34:38.000Z" itemprop="datePublished">Apr 5</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/异常处理的小问题/">异常处理的小问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/finally/">finally</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Java/">Java</a>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2016/04/page/2/">2</a><a class="extend next" rel="next" href="/archives/2016/04/page/2/">Next &raquo;</a>
-    </nav>
-  
 
 </div>
       <footer id="footer">
@@ -525,8 +307,8 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false
