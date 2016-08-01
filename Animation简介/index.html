@@ -4,17 +4,27 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Archives: 2016 | 少数派报告</title>
+  <title>Animation简介 | 少数派报告</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="think+">
-<meta property="og:type" content="website">
-<meta property="og:title" content="少数派报告">
-<meta property="og:url" content="http://sspaiblog.com/archives/2016/page/4/index.html">
+  <meta name="description" content="Animation是一个实现android UI界面动画效果的API，Animation提供了一系列的动画效果，可以进行旋转、缩放、淡入淡出等，这些效果可以用在绝大多数控件中。
+Animation从总体上可以分为两类：
+
+Tweened Animation：该类Animation提供了旋转、移动、伸展和淡出等效果。Alpha——淡入淡出，Scale——缩放效果，Rotate——旋转，Transla">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Animation简介">
+<meta property="og:url" content="http://sspaiblog.com/Animation简介/index.html">
 <meta property="og:site_name" content="少数派报告">
-<meta property="og:description" content="think+">
+<meta property="og:description" content="Animation是一个实现android UI界面动画效果的API，Animation提供了一系列的动画效果，可以进行旋转、缩放、淡入淡出等，这些效果可以用在绝大多数控件中。
+Animation从总体上可以分为两类：
+
+Tweened Animation：该类Animation提供了旋转、移动、伸展和淡出等效果。Alpha——淡入淡出，Scale——缩放效果，Rotate——旋转，Transla">
+<meta property="og:updated_time" content="2016-08-01T11:45:21.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="少数派报告">
-<meta name="twitter:description" content="think+">
+<meta name="twitter:title" content="Animation简介">
+<meta name="twitter:description" content="Animation是一个实现android UI界面动画效果的API，Animation提供了一系列的动画效果，可以进行旋转、缩放、淡入淡出等，这些效果可以用在绝大多数控件中。
+Animation从总体上可以分为两类：
+
+Tweened Animation：该类Animation提供了旋转、移动、伸展和淡出等效果。Alpha——淡入淡出，Scale——缩放效果，Rotate——旋转，Transla">
   
     <link rel="alternative" href="/atom.xml" title="少数派报告" type="application/atom+xml">
   
@@ -200,302 +210,112 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-Animation简介" class="article article-type-post" itemscope itemprop="blogPost">
   
+    <div class="article-meta">
+      <a href="/Animation简介/" class="article-date">
+  	<time datetime="2016-08-01T11:45:22.000Z" itemprop="datePublished">2016-08-01</time>
+</a>
+    </div>
   
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Animation简介
+    </h1>
+  
+
+      </header>
       
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Frame-Animation/">Frame Animation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tweened-Animations/">Tweened Animations</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Android/">Android</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/异常处理的小问题/" class="archive-article-date">
-  	<time datetime="2016-04-05T07:34:38.000Z" itemprop="datePublished">Apr 5</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/异常处理的小问题/">异常处理的小问题</a>
-    </h1>
-  
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Animation是一个实现android UI界面动画效果的API，Animation提供了一系列的动画效果，可以进行旋转、缩放、淡入淡出等，这些效果可以用在绝大多数控件中。</p>
+<p>Animation从总体上可以分为两类：</p>
+<ul>
+<li>Tweened Animation：该类Animation提供了旋转、移动、伸展和淡出等效果。Alpha——淡入淡出，Scale——缩放效果，Rotate——旋转，Translate——移动效果。</li>
+<li>Frame-by-frame Animation：这一类Animation可以创建一个Drawable序列，这些Drawable可以按照指定的时间间歇一个有一个的显示。</li>
+</ul>
+<h4 id="Tweened_Animation的使用方法：">Tweened Animation的使用方法：</h4><p>第一种方式，使用Tweened Animation的步骤：</p>
+<ol>
+<li>创建一个AnnimationSet对象；</li>
+<li>增加需要创建相应的Animation对象；</li>
+<li>根据项目需求，为Animation对象设置相应的数据；</li>
+<li>黄Animation对象添加到AnnimationSet对象当中；</li>
+<li>使用控件对象爱是执行AnnimationSet。</li>
+</ol>
+<a id="more"></a>
+<p>Tweened Animation的通用方法：</p>
+<ul>
+<li>setDuration(long durationMills)。设置动画持续时间。</li>
+<li>setFillAfter(Boolean fillAfter)。如果fillAfter的值为true，则动画执行后，控件将停留在执行结束的状态</li>
+<li>setBeforeAfter(Boolean fillBefore)。控件回到动画执行之前的状态。</li>
+<li>setStartOffSet(long startOffSet)。设置动画执行之前的执行时间。</li>
+<li>setRepeatCount(int repeatCount)。设置动画重复执行的次数。</li>
+</ul>
+<p>第二种方式：</p>
+<ol>
+<li>在res文件夹下建立一个anim文件夹；</li>
+<li>创建xml文件，并首先加入set标签；</li>
+<li>并在该标签中加入ratate、alpha等标签；</li>
+<li>在代码中使用AnimationUtils的loadAnimation装载xml文件，并生成Animation对象，再使用控件对象执行Animation。</li>
+</ol>
+<h4 id="Frame-By-Frame_Animation的使用方法">Frame-By-Frame Animation的使用方法</h4><p>该方式是一帧一帧的格式显示动画效果。</p>
+<pre><code>&lt;animation-list <span class="string">xmlns:</span>android=<span class="string">"http://schemas.android.com/apk/res/android"</span>  <span class="string">android:</span>oneshot=<span class="string">"false"</span>&gt; 
+    &lt;item <span class="string">android:</span>drawable=<span class="string">"@drawable/ic_launcher"</span> <span class="string">android:</span>duration=<span class="string">"50"</span>/&gt;
+    &lt;item <span class="string">android:</span>drawable=<span class="string">"@drawable/ic_launcher"</span> <span class="string">android:</span>duration=<span class="string">"50"</span>/&gt;
+&lt;/animation-list&gt;
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/finally/">finally</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Java/">Java</a>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+imageView.setBackgroundResource(R.anim.anim);
+AnimationDrawable animationDrawable = (AnimationDrawable)imageView.getBackground();
+animationDrawable.start();
+</code></pre>
+      
+    </div>
+    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/反射简介/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">反射简介</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/Java容器简介/" class="archive-article-date">
-  	<time datetime="2016-04-01T06:40:49.000Z" itemprop="datePublished">Apr 1</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Java容器简介/">Java容器简介</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Collection/">Collection</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Map/">Map</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Java/">Java</a>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/hashCode的作用/" class="archive-article-date">
-  	<time datetime="2016-03-31T12:28:53.000Z" itemprop="datePublished">Mar 31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/hashCode的作用/">hashCode的作用</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hashCode/">hashCode()</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Java/">Java</a>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/ArrayList与LinkedList与Vector区别/" class="archive-article-date">
-  	<time datetime="2016-03-29T08:40:07.000Z" itemprop="datePublished">Mar 29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/ArrayList与LinkedList与Vector区别/">ArrayList、LinkedList、Vector的区别</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ArrayList/">ArrayList</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LinkedList/">LinkedList</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vector/">Vector</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Java/">Java</a>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/String与StringBuffer与StringBuilder区别/" class="archive-article-date">
-  	<time datetime="2016-03-29T08:40:07.000Z" itemprop="datePublished">Mar 29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/String与StringBuffer与StringBuilder区别/">String、StringBuffer与StringBuilder的区别</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/String/">String</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/StringBuffer/">StringBuffer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/StringBuilder/">StringBuilder</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Java/">Java</a>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/map&bigdata/" class="archive-article-date">
-  	<time datetime="2016-03-16T14:26:44.000Z" itemprop="datePublished">Mar 16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/map&bigdata/">地图和大数据结合的未来</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/工作日志/">工作日志</a>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/高德地图竞品分析/" class="archive-article-date">
-  	<time datetime="2016-03-16T14:12:03.000Z" itemprop="datePublished">Mar 16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/高德地图竞品分析/">高德地图竞品分析</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/产品/">产品</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/工作日志/">工作日志</a>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/Object公有方法/" class="archive-article-date">
-  	<time datetime="2016-03-16T06:31:01.000Z" itemprop="datePublished">Mar 16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Object公有方法/">Object中公有方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Object/">Object</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Java/">Java</a>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2016/page/3/">&laquo; Prev</a><a class="page-number" href="/archives/2016/">1</a><a class="page-number" href="/archives/2016/page/2/">2</a><a class="page-number" href="/archives/2016/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/archives/2016/page/5/">5</a><a class="page-number" href="/archives/2016/page/6/">6</a><a class="extend next" rel="next" href="/archives/2016/page/5/">Next &raquo;</a>
-    </nav>
-  
 
 </div>
       <footer id="footer">
@@ -521,8 +341,8 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false
