@@ -4,37 +4,17 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>关于adb-shell的若干问题 | 少数派报告</title>
+  <title>Archives: 2016/8 | 少数派报告</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最近一直在进行安卓开发，在windows下启动adb shell只要配置环境变量就好了，并且网上教程很多，那么在MAC下如何配置呢？
-大体思路是一致的，只是要用命令行来操。
-首先启动终端，然后输入：
-$ touch .bash_profile
-$ open -e .bash_profile
-这时会打开.bash_profile这个文档,
-export PATH=${PATH}:/Users/***">
-<meta property="og:type" content="article">
-<meta property="og:title" content="关于adb-shell的若干问题">
-<meta property="og:url" content="http://sspaiblog.com/关于adb-shell的若干问题/index.html">
+  <meta name="description" content="think+">
+<meta property="og:type" content="website">
+<meta property="og:title" content="少数派报告">
+<meta property="og:url" content="http://sspaiblog.com/archives/2016/08/index.html">
 <meta property="og:site_name" content="少数派报告">
-<meta property="og:description" content="最近一直在进行安卓开发，在windows下启动adb shell只要配置环境变量就好了，并且网上教程很多，那么在MAC下如何配置呢？
-大体思路是一致的，只是要用命令行来操。
-首先启动终端，然后输入：
-$ touch .bash_profile
-$ open -e .bash_profile
-这时会打开.bash_profile这个文档,
-export PATH=${PATH}:/Users/***">
-<meta property="og:image" content="https://raw.githubusercontent.com/fulianguestc/markdownphotos/master/geny.png">
-<meta property="og:updated_time" content="2016-03-08T09:14:37.000Z">
+<meta property="og:description" content="think+">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于adb-shell的若干问题">
-<meta name="twitter:description" content="最近一直在进行安卓开发，在windows下启动adb shell只要配置环境变量就好了，并且网上教程很多，那么在MAC下如何配置呢？
-大体思路是一致的，只是要用命令行来操。
-首先启动终端，然后输入：
-$ touch .bash_profile
-$ open -e .bash_profile
-这时会打开.bash_profile这个文档,
-export PATH=${PATH}:/Users/***">
+<meta name="twitter:title" content="少数派报告">
+<meta name="twitter:description" content="think+">
   
     <link rel="alternative" href="/atom.xml" title="少数派报告" type="application/atom+xml">
   
@@ -220,89 +200,57 @@ export PATH=${PATH}:/Users/***">
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-关于adb-shell的若干问题" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap">
   
-    <div class="article-meta">
-      <a href="/关于adb-shell的若干问题/" class="article-date">
-  	<time datetime="2016-03-08T09:14:37.000Z" itemprop="datePublished">2016-03-08</time>
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2016" class="archive-year">2016</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/反射简介/" class="archive-article-date">
+  	<time datetime="2016-08-01T08:15:33.000Z" itemprop="datePublished">Aug 1</time>
 </a>
-    </div>
+        </div>
+    	 
   
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      关于adb-shell的若干问题
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/反射简介/">反射简介</a>
     </h1>
   
 
-      </header>
-      
-      <div class="article-info article-info-post">
-        
-        
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/反射/">反射</a></li></ul>
+	</div>
+
+          
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Android/">Android</a>
+	<a class="article-category-link" href="/categories/Java/">Java</a>
 	</div>
 
 
+        </div>
         <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近一直在进行安卓开发，在windows下启动adb shell只要配置环境变量就好了，并且网上教程很多，那么在MAC下如何配置呢？</p>
-<p>大体思路是一致的，只是要用命令行来操。</p>
-<p>首先启动终端，然后输入：</p>
-<pre><code><span class="variable">$ </span>touch .bash_profile
-<span class="variable">$ </span>open -e .bash_profile
-</code></pre><p>这时会打开.bash_profile这个文档,</p>
-<pre><code>export <span class="constant">PATH</span>=<span class="variable">${</span><span class="constant">PATH</span>}<span class="symbol">:/Users/***/sdk/platform-tools</span>
-</code></pre><p>在后面输入<code>platform-tools</code>所在的目录路径，比如笔者的路径就是<code>/Users/***/sdk/platform-tools</code>，所以写成上面的形式。然后直接关闭文档自动保存。</p>
-<a id="more"></a>
-<p>这时候在终端输入<code>adb</code>，就不会提示错误信息了，然后启动安卓模拟器，再次输入<code>adb shell</code>即可。</p>
-<p>进行安卓开发时相信很多人都会用Genymotion，笔者发现默认的ADB会产生端口被占用的问题，其实解决这个问题的方法很简单，只需要在设置中改成自己的sdk就好了。如下图：<br><img src="https://raw.githubusercontent.com/fulianguestc/markdownphotos/master/geny.png" alt="geny"><br>OVER~ ~ ~!</p>
-
-      
-    </div>
-    
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/java中this的用法/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Java中this的用法
-        
-      </div>
-    </a>
-  
-  
-    <a href="/软件开发之后/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">软件开发之后……</div>
-      <strong class="article-nav-caption">></strong>
-    </a>
-  
-</nav>
-
-  
 </article>
+  
+  
+    </div></section>
+  
 
-
-
-
-
-
-
+    
 
 </div>
       <footer id="footer">
@@ -328,8 +276,8 @@ export PATH=${PATH}:/Users/***">
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false
