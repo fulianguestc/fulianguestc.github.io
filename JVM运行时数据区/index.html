@@ -4,21 +4,25 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>异常处理的小问题 | 少数派报告</title>
+  <title>JVM运行时数据区 | 少数派报告</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="try里有return，finally还执行吗？在Java语言的异常处理中，finally块的作用是为了保证无论出现什么情况，finally块里的代码一定会被执行。
-由于程序执行return就意味着结束对当前函数的调用并跳出当前函数，因此任何语句执行都只能在return前执行，所以finally块里的代码也是在return前执行的。此外，如果finally中有return语句，那么将会覆盖别处的r">
+  <meta name="description" content="Java虚拟机在执行Java程序的过程中会把它所管理的内存划分为若干个不同的数据区域，有些区域随着虚拟机进程的启动而存在，有些区域则依赖用户线程的启动和结束而存在。
+
+程序计数器它的作用可以看做是当前线程所执行的字节码的信号指示器。每条线程都需要有一个独立的程序计数器，各条线程之间计数器相互不影响，独立存储，我们称这类区域为线程私有的内存。如果线程执行的是一个Java方法，这个计数器记录的是正在执">
 <meta property="og:type" content="article">
-<meta property="og:title" content="异常处理的小问题">
-<meta property="og:url" content="http://sspaiblog.com/异常处理的小问题/index.html">
+<meta property="og:title" content="JVM运行时数据区">
+<meta property="og:url" content="http://sspaiblog.com/JVM运行时数据区/index.html">
 <meta property="og:site_name" content="少数派报告">
-<meta property="og:description" content="try里有return，finally还执行吗？在Java语言的异常处理中，finally块的作用是为了保证无论出现什么情况，finally块里的代码一定会被执行。
-由于程序执行return就意味着结束对当前函数的调用并跳出当前函数，因此任何语句执行都只能在return前执行，所以finally块里的代码也是在return前执行的。此外，如果finally中有return语句，那么将会覆盖别处的r">
-<meta property="og:updated_time" content="2016-04-05T07:34:38.000Z">
+<meta property="og:description" content="Java虚拟机在执行Java程序的过程中会把它所管理的内存划分为若干个不同的数据区域，有些区域随着虚拟机进程的启动而存在，有些区域则依赖用户线程的启动和结束而存在。
+
+程序计数器它的作用可以看做是当前线程所执行的字节码的信号指示器。每条线程都需要有一个独立的程序计数器，各条线程之间计数器相互不影响，独立存储，我们称这类区域为线程私有的内存。如果线程执行的是一个Java方法，这个计数器记录的是正在执">
+<meta property="og:image" content="https://coding.net/u/fulianguestc/p/markdownphotos/git/raw/master/JavaMemory.png">
+<meta property="og:updated_time" content="2016-08-11T08:04:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="异常处理的小问题">
-<meta name="twitter:description" content="try里有return，finally还执行吗？在Java语言的异常处理中，finally块的作用是为了保证无论出现什么情况，finally块里的代码一定会被执行。
-由于程序执行return就意味着结束对当前函数的调用并跳出当前函数，因此任何语句执行都只能在return前执行，所以finally块里的代码也是在return前执行的。此外，如果finally中有return语句，那么将会覆盖别处的r">
+<meta name="twitter:title" content="JVM运行时数据区">
+<meta name="twitter:description" content="Java虚拟机在执行Java程序的过程中会把它所管理的内存划分为若干个不同的数据区域，有些区域随着虚拟机进程的启动而存在，有些区域则依赖用户线程的启动和结束而存在。
+
+程序计数器它的作用可以看做是当前线程所执行的字节码的信号指示器。每条线程都需要有一个独立的程序计数器，各条线程之间计数器相互不影响，独立存储，我们称这类区域为线程私有的内存。如果线程执行的是一个Java方法，这个计数器记录的是正在执">
   
     <link rel="alternative" href="/atom.xml" title="少数派报告" type="application/atom+xml">
   
@@ -204,11 +208,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-异常处理的小问题" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-JVM运行时数据区" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/异常处理的小问题/" class="article-date">
-  	<time datetime="2016-04-05T07:34:38.000Z" itemprop="datePublished">2016-04-05</time>
+      <a href="/JVM运行时数据区/" class="article-date">
+  	<time datetime="2016-08-11T08:04:06.000Z" itemprop="datePublished">2016-08-11</time>
 </a>
     </div>
   
@@ -221,7 +225,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      异常处理的小问题
+      JVM运行时数据区
     </h1>
   
 
@@ -230,12 +234,12 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/finally/">finally</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java内存区域/">Java内存区域</a></li></ul>
 	</div>
 
         
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Java/">Java</a>
+	<a class="article-category-link" href="/categories/Java虚拟机/">Java虚拟机</a>
 	</div>
 
 
@@ -245,32 +249,35 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="try里有return，finally还执行吗？">try里有return，finally还执行吗？</h4><p>在Java语言的异常处理中，finally块的作用是为了保证无论出现什么情况，finally块里的代码一定会被执行。</p>
-<p>由于程序执行return就意味着结束对当前函数的调用并跳出当前函数，因此任何语句执行都只能在return前执行，所以finally块里的代码也是在return前执行的。此外，如果finally中有return语句，那么将会覆盖别处的return语句，最终返回的是finally代码块中的return语句。</p>
-<pre><code><span class="keyword">try</span>{
-    <span class="literal">result</span> = <span class="number">2</span>;
-    <span class="keyword">return</span> <span class="literal">result</span>;
-}catch(<span class="type">Exception</span> e){
-    …………
-}<span class="keyword">finally</span>{
-    <span class="literal">result</span> = <span class="number">3</span>;
-}
-</code></pre><a id="more"></a>
-<p>程序在执行到return时会首先将返回值存储起来，其次去执行finally，所以在finally内修改result时不会改变返回值。</p>
-<pre><code><span class="built_in">StringBuffer</span> s = <span class="keyword">new</span> <span class="built_in">StringBuffer</span>(<span class="string">"Hello"</span>);
-<span class="keyword">try</span>{
-    <span class="keyword">return</span> s;
-}<span class="keyword">catch</span>(Exception e){
-    …………
-}<span class="keyword">finally</span>{
-    s.append(<span class="string">" World"</span>);
-}
-</code></pre><p>由于s为引用类型，因此在finally块中修改s将会修改程序的返回结果。</p>
-<p>出现在Java中的finally块一定会被执行吗？</p>
+        <p>Java虚拟机在执行Java程序的过程中会把它所管理的内存划分为若干个不同的数据区域，有些区域随着虚拟机进程的启动而存在，有些区域则依赖用户线程的启动和结束而存在。</p>
+<p><img src="https://coding.net/u/fulianguestc/p/markdownphotos/git/raw/master/JavaMemory.png" alt="Java内存"></p>
+<h5 id="程序计数器">程序计数器</h5><p>它的作用可以看做是当前线程所执行的字节码的信号指示器。每条线程都需要有一个独立的程序计数器，各条线程之间计数器相互不影响，独立存储，我们称这类区域为<strong>线程私有</strong>的内存。如果线程执行的是一个Java方法，这个计数器记录的是正在执行虚拟机字节码指令的地址，如果执行的是Native方法，计数器值则为空。</p>
+<p>这个内存区域是唯一一个在JVM中没有规定OOM情况的区域。</p>
+<a id="more"></a>
+<h5 id="Java虚拟机栈">Java虚拟机栈</h5><p>Java虚拟机栈也是线程私有的，它的生命周期与线程相同。</p>
+<p>虚拟机栈描述的是Java方法运行时的内存模型：每个方法在执行的同时会创建一个栈帧（方法运行时的基础数据结构）用于存储<strong>局部变量表、操作数栈、动态链接、方法出口</strong>等信息。每一个方法从调研直至执行完成的过程，就对应着一个栈帧在虚拟机栈中入栈到出栈的过程。</p>
+<p>局部变量表中存放了编译期可知的各种基本数据类型、对象引用和returnAddress类型（指向一条字节码指令的地址）。局部变量表所需的内存空间在编译期间完成分配，所需空间是完全确定的，在方法运行期间不会改变。</p>
+<p>在这个区域有两种异常情况：</p>
 <ol>
-<li>当程序在进入try语句块之前就出现异常时，会直接结束，不会执行finally块中的代码。</li>
-<li>当程序在try块中强制退出时也不会执行finally块中的代码。例如System.exit(0)。</li>
+<li>如果线程请求的栈深度大于虚拟机所允许的深度，将抛出StackOverflowError异常。</li>
+<li>如果虚拟机栈可以动态扩展（也可以固定长度），但是扩展时无法申请到足够内存，就会抛出OOM异常。</li>
 </ol>
+<h5 id="本地方法栈">本地方法栈</h5><p>本地方法栈与虚拟机栈所发挥的作用是类似的，区别就是一个为Java方法服务，一个为Native方法服务。</p>
+<h5 id="Java堆">Java堆</h5><p>Java堆是JVM所管理的内存中最大的一块，该区域是被所有线程共享的一块区域，在虚拟机启动时创建。</p>
+<p>此区域的唯一目的就是存放对象实例，几乎所有的对象实例及数组都在这里分配内存。</p>
+<p>Java堆是垃圾收集器管理的主要区域，因此很多时候也被称为GC堆。</p>
+<p>当前主流的虚拟机都是按照可扩展来实现的，如果堆中没有内存完成实例分配，并且堆也无法再扩展时，就会抛出OOM异常。</p>
+<h5 id="方法区">方法区</h5><p>方法区与Java堆一样，是被线程共享的区域，它用于存储已被虚拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等数据。这个方法区也可被称作<strong>永生代</strong>（GC比较少）。这个区域的内存回收目标主要是针对常量池的回收和对类型的卸载。</p>
+<p>当方法区无法满足内存分配需求时，将抛出OOM异常。</p>
+<h5 id="运行时常量池">运行时常量池</h5><p>运行时常量池是方法区的一部分，用于存放编译期生成的各种字面量和符号引用，这部分内容将在类加载后进入方法区的运行时常量池中存放。</p>
+<p>字面量比较接近Java语言层面的常量概念，例如文本字符串、声明为final的常量值等。而符号引用属于编译原理方面的概念，包括了下面三类常量：</p>
+<ul>
+<li>类和接口的全限定名</li>
+<li>字段的名称和描述符</li>
+<li>方法的名称和描述符</li>
+</ul>
+<p>当常量池无法再申请到内存时会抛出OOM异常。</p>
+<h5 id="直接内存">直接内存</h5><p>直接内存不是JVM运行时数据区的一部分，本机直接内存的分配不会受到Java堆大小的限制，但是，既然是内存，则肯定还是会受到本机总内存的大小及处理器寻址空间的限制。如果各个内存区域的总和大于物理内存限制，会导致OOM异常。</p>
 
       
     </div>
@@ -280,18 +287,9 @@
     
 <nav id="article-nav">
   
-    <a href="/Java面向对象简介/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          面向对象简介
-        
-      </div>
-    </a>
   
-  
-    <a href="/Java容器简介/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Java容器简介</div>
+    <a href="/map&bigdata/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">地图和大数据结合的未来</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
