@@ -4,17 +4,26 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Archives: 2016/7 | 少数派报告</title>
+  <title>JVM对象探秘 | 少数派报告</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="think+">
-<meta property="og:type" content="website">
-<meta property="og:title" content="少数派报告">
-<meta property="og:url" content="http://sspaiblog.com/archives/2016/07/index.html">
+  <meta name="description" content="对象的创建在我们编程时，创建对象通常时用new关键字来完成的，在虚拟机中的创建会是怎样的一个过程呢？
+虚拟机遇到一条new指令，首先将去检查是否能在常量池中定位到一个类的符号引用，并且检查这个符号引用代表的类是否已被加载、解析和初始化过。如果没有，就先执行相应的类加载过程。
+类加载通过后，虚拟机将为新生对象分配内存，对象所需大小在类加载后即可确定下来，分配内存即把一块确定大小的内存从Java堆中划">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JVM对象探秘">
+<meta property="og:url" content="http://sspaiblog.com/JVM对象探秘/index.html">
 <meta property="og:site_name" content="少数派报告">
-<meta property="og:description" content="think+">
+<meta property="og:description" content="对象的创建在我们编程时，创建对象通常时用new关键字来完成的，在虚拟机中的创建会是怎样的一个过程呢？
+虚拟机遇到一条new指令，首先将去检查是否能在常量池中定位到一个类的符号引用，并且检查这个符号引用代表的类是否已被加载、解析和初始化过。如果没有，就先执行相应的类加载过程。
+类加载通过后，虚拟机将为新生对象分配内存，对象所需大小在类加载后即可确定下来，分配内存即把一块确定大小的内存从Java堆中划">
+<meta property="og:image" content="https://coding.net/u/fulianguestc/p/markdownphotos/git/raw/master/%25E5%258F%25A5%25E6%259F%2584%25E8%25AE%25BF%25E9%2597%25AE.png">
+<meta property="og:image" content="https://coding.net/u/fulianguestc/p/markdownphotos/git/raw/master/%25E7%259B%25B4%25E6%258E%25A5%25E6%258C%2587%25E9%2592%2588.png">
+<meta property="og:updated_time" content="2016-08-15T07:21:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="少数派报告">
-<meta name="twitter:description" content="think+">
+<meta name="twitter:title" content="JVM对象探秘">
+<meta name="twitter:description" content="对象的创建在我们编程时，创建对象通常时用new关键字来完成的，在虚拟机中的创建会是怎样的一个过程呢？
+虚拟机遇到一条new指令，首先将去检查是否能在常量池中定位到一个类的符号引用，并且检查这个符号引用代表的类是否已被加载、解析和初始化过。如果没有，就先执行相应的类加载过程。
+类加载通过后，虚拟机将为新生对象分配内存，对象所需大小在类加载后即可确定下来，分配内存即把一块确定大小的内存从Java堆中划">
   
     <link rel="alternative" href="/atom.xml" title="少数派报告" type="application/atom+xml">
   
@@ -200,232 +209,91 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-JVM对象探秘" class="article article-type-post" itemscope itemprop="blogPost">
   
+    <div class="article-meta">
+      <a href="/JVM对象探秘/" class="article-date">
+  	<time datetime="2016-08-15T07:21:41.000Z" itemprop="datePublished">2016-08-15</time>
+</a>
+    </div>
   
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JVM对象探秘
+    </h1>
+  
+
+      </header>
       
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/对象的创建、布局、定位、死亡/">对象的创建、布局、定位、死亡</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Java虚拟机/">Java虚拟机</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/Handler/" class="archive-article-date">
-  	<time datetime="2016-07-29T06:06:01.000Z" itemprop="datePublished">Jul 29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Handler/">异步消息处理机制</a>
-    </h1>
-  
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="对象的创建">对象的创建</h5><p>在我们编程时，创建对象通常时用new关键字来完成的，在虚拟机中的创建会是怎样的一个过程呢？</p>
+<p>虚拟机遇到一条new指令，首先将去检查是否能在常量池中定位到一个类的符号引用，并且检查这个符号引用代表的类是否已被加载、解析和初始化过。如果没有，就先执行相应的类加载过程。</p>
+<p>类加载通过后，虚拟机将为新生对象分配内存，对象所需大小在类加载后即可确定下来，分配内存即把一块确定大小的内存从Java堆中划分出来。</p>
+<p>有两种分配方式，指针碰撞和空闲列表。</p>
+<ul>
+<li>假设Java堆中的内存是绝对规整的，所有用过的内存放在一边，空闲的内存放在另一边，指针作为分界点的指示器，那分配的内存就仅仅是把指针移动与对象大小相等的一段距离，这种方式称为指针碰撞。</li>
+<li>假如Java堆中内存不是规整的，虚拟机就需要维护一个列表，记录哪块内存是可用的，在分配的时候从列表找到一块足够大的空间划分给对象，并更新列表记录，这种分配方式称为空闲列表。</li>
+</ul>
+<p>当对象的创建很频繁时，会产生线程安全的问题，可以对内存分配进行同步处理，或者给每个线程在Java堆中预先分配一小块内存。</p>
+<a id="more"></a>
+<h5 id="对象的内存布局">对象的内存布局</h5><p>对象在内存中存储的布局可以分为三块区域：对象头、实例数据和对齐填充。</p>
+<p>对象头包括两部分信息，第一部分用于存储对象自身的运行时数据，如哈希码、GC分代年龄、锁状态标志等。第二部分是<strong>类型指针</strong>，虚拟机通过这个指针来确定这个对象是哪个类的实例。</p>
+<p>实例数据部分存储的是对象真正的有效信息。（各种类型的字段内容）。</p>
+<p>对齐填充没有特别含义，起着占位符的作用。</p>
+<h5 id="对象的访问定位">对象的访问定位</h5><p>Java程序需要通过栈上的对象引用数据来操作堆上的具体对象，目前主流的访问方式有句柄和直接指针两种。</p>
+<p>句柄访问。Java堆会划分出一块内存作为句柄池，reference中存储的就是对象的句柄地址，而句柄中包含了对象实例数据与类型数据的具体地址信息。该方法最大的好处就是句柄池的地址是稳定的，在对象被移动时，只会改变句柄中指针地址。<br><img src="https://coding.net/u/fulianguestc/p/markdownphotos/git/raw/master/%25E5%258F%25A5%25E6%259F%2584%25E8%25AE%25BF%25E9%2597%25AE.png" alt="句柄访问"><br>直接指针。reference中存储的直接就是对象地址。该方法最大的好处是速度更快，节省了时间的开销。（比较常用）<br><img src="https://coding.net/u/fulianguestc/p/markdownphotos/git/raw/master/%25E7%259B%25B4%25E6%258E%25A5%25E6%258C%2587%25E9%2592%2588.png" alt="直接指针"></p>
+<h5 id="对象的死亡判断">对象的死亡判断</h5><p>引用计数法。给对象添加一个计数器，每当有一个地方引用它时，计数器就加1；当引用失效时，计数器值就减1；任何时刻计数器为0的对象就是不可能再被使用的。实现简单，判定效率高。但是不能解决循环引用的问题。</p>
+<p>可达性分析法。基本思想是通过一些列的称为<strong>GC Roots</strong>的对象作为起始点，从这些节点开始向下搜索，搜索走过的路径称为<strong>引用链</strong>。当一个对象到GC Roots没有任何引用链相连，证明此对象是不可用的。</p>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Handler/">Handler</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/异步消息/">异步消息</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Android/">Android</a>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/JVM运行时数据区/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JVM运行时数据区</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/多线程简介/" class="archive-article-date">
-  	<time datetime="2016-07-29T06:05:13.000Z" itemprop="datePublished">Jul 29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/多线程简介/">多线程简介</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AsyncTask/">AsyncTask</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IntentService/">IntentService</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Thread/">Thread</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Android/">Android</a>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/泛型简介/" class="archive-article-date">
-  	<time datetime="2016-07-15T07:26:04.000Z" itemprop="datePublished">Jul 15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/泛型简介/">泛型小问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/for-each/">for-each</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/泛型/">泛型</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Java/">Java</a>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/Android布局优化/" class="archive-article-date">
-  	<time datetime="2016-07-13T11:03:31.000Z" itemprop="datePublished">Jul 13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Android布局优化/">Android布局优化</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ViewStub/">ViewStub</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/include/">include</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/merge/">merge</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Android/">Android</a>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/XML和JSON简介/" class="archive-article-date">
-  	<time datetime="2016-07-12T10:02:51.000Z" itemprop="datePublished">Jul 12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/XML和JSON简介/">XML和JSON简介</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JSON/">JSON</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/XML/">XML</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Android/">Android</a>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/android基本布局/" class="archive-article-date">
-  	<time datetime="2016-07-11T10:44:48.000Z" itemprop="datePublished">Jul 11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/android基本布局/">Android基本布局</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UI布局/">UI布局</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Android/">Android</a>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 </div>
       <footer id="footer">
@@ -451,8 +319,8 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false
