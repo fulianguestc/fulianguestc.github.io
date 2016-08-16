@@ -4,17 +4,24 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Archives: 2016/3 | 少数派报告</title>
+  <title>垃圾收集算法 | 少数派报告</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="think+">
-<meta property="og:type" content="website">
-<meta property="og:title" content="少数派报告">
-<meta property="og:url" content="http://sspaiblog.com/archives/2016/03/index.html">
+  <meta name="description" content="上篇文章中提到了判断对象是否死亡的方法，可达性分析算法。如果算法中判断出不可达的对象，也并不是确认死亡的。至少要经历两次标记过程才能宣告一个对象死亡。如果对象在进行可达性分析后发现没在引用链中，则会被进行一次标记并进行一次筛选，筛选条件是此对象是否有必要执行finalize()方法。
+如果对象被判定有必要执行finalize方法，那么将这个对象放置在一个叫做F-Queue的队列中，稍后GC将对队列">
+<meta property="og:type" content="article">
+<meta property="og:title" content="垃圾收集算法">
+<meta property="og:url" content="http://sspaiblog.com/垃圾收集算法/index.html">
 <meta property="og:site_name" content="少数派报告">
-<meta property="og:description" content="think+">
+<meta property="og:description" content="上篇文章中提到了判断对象是否死亡的方法，可达性分析算法。如果算法中判断出不可达的对象，也并不是确认死亡的。至少要经历两次标记过程才能宣告一个对象死亡。如果对象在进行可达性分析后发现没在引用链中，则会被进行一次标记并进行一次筛选，筛选条件是此对象是否有必要执行finalize()方法。
+如果对象被判定有必要执行finalize方法，那么将这个对象放置在一个叫做F-Queue的队列中，稍后GC将对队列">
+<meta property="og:image" content="https://coding.net/u/fulianguestc/p/markdownphotos/git/raw/master/markSweep.png">
+<meta property="og:image" content="https://coding.net/u/fulianguestc/p/markdownphotos/git/raw/master/copy.png">
+<meta property="og:image" content="https://coding.net/u/fulianguestc/p/markdownphotos/git/raw/master/markTrim.png">
+<meta property="og:updated_time" content="2016-08-16T06:57:07.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="少数派报告">
-<meta name="twitter:description" content="think+">
+<meta name="twitter:title" content="垃圾收集算法">
+<meta name="twitter:description" content="上篇文章中提到了判断对象是否死亡的方法，可达性分析算法。如果算法中判断出不可达的对象，也并不是确认死亡的。至少要经历两次标记过程才能宣告一个对象死亡。如果对象在进行可达性分析后发现没在引用链中，则会被进行一次标记并进行一次筛选，筛选条件是此对象是否有必要执行finalize()方法。
+如果对象被判定有必要执行finalize方法，那么将这个对象放置在一个叫做F-Queue的队列中，稍后GC将对队列">
   
     <link rel="alternative" href="/atom.xml" title="少数派报告" type="application/atom+xml">
   
@@ -200,302 +207,81 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-垃圾收集算法" class="article article-type-post" itemscope itemprop="blogPost">
   
+    <div class="article-meta">
+      <a href="/垃圾收集算法/" class="article-date">
+  	<time datetime="2016-08-16T06:57:49.000Z" itemprop="datePublished">2016-08-16</time>
+</a>
+    </div>
   
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      垃圾收集算法
+    </h1>
+  
+
+      </header>
       
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/标记清除、复制、标记整理、分代收集/">标记清除、复制、标记整理、分代收集</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Java虚拟机/">Java虚拟机</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/hashCode的作用/" class="archive-article-date">
-  	<time datetime="2016-03-31T12:28:53.000Z" itemprop="datePublished">Mar 31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/hashCode的作用/">hashCode的作用</a>
-    </h1>
-  
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>上篇文章中提到了判断对象是否死亡的方法，可达性分析算法。如果算法中判断出不可达的对象，也并不是确认死亡的。至少要经历两次标记过程才能宣告一个对象死亡。如果对象在进行可达性分析后发现没在引用链中，则会被进行一次标记并进行一次筛选，筛选条件是此对象是否有必要执行finalize()方法。</p>
+<p>如果对象被判定有必要执行finalize方法，那么将这个对象放置在一个叫做F-Queue的队列中，稍后GC将对队列中的对象进行第二次标记，这个时候就真的被回收了。</p>
+<h5 id="标记-清除算法">标记-清除算法</h5><p>标记-清除算法是最基础的收集算法，算法分为标记和清除两个阶段：首先标记出所有需要被清除的对象，在标记完成后统一回收所有被标记的对象。<br><img src="https://coding.net/u/fulianguestc/p/markdownphotos/git/raw/master/markSweep.png" alt="标记清除算法"><br>该算法有两个不足：一个是效率问题，标记和清除的两个过程的效率都不高；另一个是空间问题，标记清除之后会有大量的不连续的内存碎片，空间碎片太多可能后导致以后在程序运行的过程中如果要分配较大的对象时，无法找到足够的连续内存而不得不提前出发另一个垃圾收集动作。</p>
+<a id="more"></a>
+<h5 id="复制算法">复制算法</h5><p>复制算法主要是为了解决效率问题，它将可用内存按容量划分为大小相等的两块，每次只是用其中的一块。当这一块的内存用完了，就将还活着的对象复制到另一块上面，然后再把使用过的内存空间一次清理掉。这种算法不需要考虑内存的碎片化问题，但是代价是将内存缩小为原来的一半。<br><img src="https://coding.net/u/fulianguestc/p/markdownphotos/git/raw/master/copy.png" alt="复制算法"></p>
+<h5 id="标记整理算法">标记整理算法</h5><p>复制算法在对象存活率较高时就要进行较多的复制操作，效率会变低，所以在老年代一般不会选取这种算法。根据老年代的特点，提出一种新的标记整理算法，标记过程与标记清除算法一样，但后续步骤不是直接对可回收的对象进行清除，而是让所有存活的对象都向一端移动，然后直接清理掉边界意外的内存。<br><img src="https://coding.net/u/fulianguestc/p/markdownphotos/git/raw/master/markTrim.png" alt="标记整理算法"></p>
+<h5 id="分代收集算法">分代收集算法</h5><p>当前的JVM都采用分代收集的算法，根据对象存活周期的不同将内存划分为几块，一般是把Java堆分为新生代和老年代（再细分一点有Eden空间、From Survivor空间、To Surviver空间），这样就可以根据各个年代的特点采用最适当的收集算法。</p>
+<p>在新生代中，每次垃圾收集时都发现有大批对象死去，只有少量存活，那就选用复制算法，只需要付出少量存活对象的复制成本就可以完成收集。而老年代中因为对象存活率高，没有额外空间对它进行分配，就必须使用标记清除或者标记整理算法来回收。</p>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hashCode/">hashCode()</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Java/">Java</a>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/JVM对象探秘/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JVM对象探秘</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/ArrayList与LinkedList与Vector区别/" class="archive-article-date">
-  	<time datetime="2016-03-29T08:40:07.000Z" itemprop="datePublished">Mar 29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/ArrayList与LinkedList与Vector区别/">ArrayList、LinkedList、Vector的区别</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ArrayList/">ArrayList</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LinkedList/">LinkedList</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vector/">Vector</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Java/">Java</a>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/String与StringBuffer与StringBuilder区别/" class="archive-article-date">
-  	<time datetime="2016-03-29T08:40:07.000Z" itemprop="datePublished">Mar 29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/String与StringBuffer与StringBuilder区别/">String、StringBuffer与StringBuilder的区别</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/String/">String</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/StringBuffer/">StringBuffer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/StringBuilder/">StringBuilder</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Java/">Java</a>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/高德地图竞品分析/" class="archive-article-date">
-  	<time datetime="2016-03-16T14:12:03.000Z" itemprop="datePublished">Mar 16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/高德地图竞品分析/">高德地图竞品分析</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/产品/">产品</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/工作日志/">工作日志</a>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/Object公有方法/" class="archive-article-date">
-  	<time datetime="2016-03-16T06:31:01.000Z" itemprop="datePublished">Mar 16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Object公有方法/">Object中公有方法</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Object/">Object</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Java/">Java</a>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/产品经理的七层修炼/" class="archive-article-date">
-  	<time datetime="2016-03-16T06:30:29.000Z" itemprop="datePublished">Mar 16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/产品经理的七层修炼/">产品经理的七层修炼</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/产品/">产品</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/工作日志/">工作日志</a>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/switch能否用string作为参数/" class="archive-article-date">
-  	<time datetime="2016-03-14T03:45:18.000Z" itemprop="datePublished">Mar 14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/switch能否用string作为参数/">两个小问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Java/">Java</a>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/Java中的四种引用/" class="archive-article-date">
-  	<time datetime="2016-03-12T15:42:03.000Z" itemprop="datePublished">Mar 12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Java中的四种引用/">Java中的四种引用</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/引用、强弱软虚/">引用、强弱软虚</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Java/">Java</a>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2016/03/page/2/">2</a><a class="extend next" rel="next" href="/archives/2016/03/page/2/">Next &raquo;</a>
-    </nav>
-  
 
 </div>
       <footer id="footer">
@@ -521,8 +307,8 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false
