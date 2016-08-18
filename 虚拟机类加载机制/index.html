@@ -4,37 +4,22 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>关于adb-shell的若干问题 | 少数派报告</title>
+  <title>类加载机制简介 | 少数派报告</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最近一直在进行安卓开发，在windows下启动adb shell只要配置环境变量就好了，并且网上教程很多，那么在MAC下如何配置呢？
-大体思路是一致的，只是要用命令行来操。
-首先启动终端，然后输入：
-$ touch .bash_profile
-$ open -e .bash_profile
-这时会打开.bash_profile这个文档,
-export PATH=${PATH}:/Users/***">
+  <meta name="description" content="Java的源代码是经过编译器编译成字节码，然后由JVM解释执行，而不是像C/C++一样经过编译和链接后生成可执行的二进制代码，所以Java的执行速度比较慢，但是可以跨平台执行。
+虚拟机类加载机制Class文件中描述的各种信息，最终都需要加载到虚拟机中之后才能运行和使用。虚拟机把描述类的数据从Class文件加载到内存，并对数据进行校验、转换解析和初始化，最终形成可以被虚拟机直接使用的Java类型，这">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于adb-shell的若干问题">
-<meta property="og:url" content="http://sspaiblog.com/关于adb-shell的若干问题/index.html">
+<meta property="og:title" content="类加载机制简介">
+<meta property="og:url" content="http://sspaiblog.com/虚拟机类加载机制/index.html">
 <meta property="og:site_name" content="少数派报告">
-<meta property="og:description" content="最近一直在进行安卓开发，在windows下启动adb shell只要配置环境变量就好了，并且网上教程很多，那么在MAC下如何配置呢？
-大体思路是一致的，只是要用命令行来操。
-首先启动终端，然后输入：
-$ touch .bash_profile
-$ open -e .bash_profile
-这时会打开.bash_profile这个文档,
-export PATH=${PATH}:/Users/***">
-<meta property="og:image" content="https://raw.githubusercontent.com/fulianguestc/markdownphotos/master/geny.png">
-<meta property="og:updated_time" content="2016-03-08T09:14:37.000Z">
+<meta property="og:description" content="Java的源代码是经过编译器编译成字节码，然后由JVM解释执行，而不是像C/C++一样经过编译和链接后生成可执行的二进制代码，所以Java的执行速度比较慢，但是可以跨平台执行。
+虚拟机类加载机制Class文件中描述的各种信息，最终都需要加载到虚拟机中之后才能运行和使用。虚拟机把描述类的数据从Class文件加载到内存，并对数据进行校验、转换解析和初始化，最终形成可以被虚拟机直接使用的Java类型，这">
+<meta property="og:image" content="https://coding.net/u/fulianguestc/p/markdownphotos/git/raw/master/classLife.png">
+<meta property="og:updated_time" content="2016-08-18T03:39:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于adb-shell的若干问题">
-<meta name="twitter:description" content="最近一直在进行安卓开发，在windows下启动adb shell只要配置环境变量就好了，并且网上教程很多，那么在MAC下如何配置呢？
-大体思路是一致的，只是要用命令行来操。
-首先启动终端，然后输入：
-$ touch .bash_profile
-$ open -e .bash_profile
-这时会打开.bash_profile这个文档,
-export PATH=${PATH}:/Users/***">
+<meta name="twitter:title" content="类加载机制简介">
+<meta name="twitter:description" content="Java的源代码是经过编译器编译成字节码，然后由JVM解释执行，而不是像C/C++一样经过编译和链接后生成可执行的二进制代码，所以Java的执行速度比较慢，但是可以跨平台执行。
+虚拟机类加载机制Class文件中描述的各种信息，最终都需要加载到虚拟机中之后才能运行和使用。虚拟机把描述类的数据从Class文件加载到内存，并对数据进行校验、转换解析和初始化，最终形成可以被虚拟机直接使用的Java类型，这">
   
     <link rel="alternative" href="/atom.xml" title="少数派报告" type="application/atom+xml">
   
@@ -220,11 +205,11 @@ export PATH=${PATH}:/Users/***">
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-关于adb-shell的若干问题" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-虚拟机类加载机制" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/关于adb-shell的若干问题/" class="article-date">
-  	<time datetime="2016-03-08T09:14:37.000Z" itemprop="datePublished">2016-03-08</time>
+      <a href="/虚拟机类加载机制/" class="article-date">
+  	<time datetime="2016-08-18T03:39:33.000Z" itemprop="datePublished">2016-08-18</time>
 </a>
     </div>
   
@@ -237,7 +222,7 @@ export PATH=${PATH}:/Users/***">
         
   
     <h1 class="article-title" itemprop="name">
-      关于adb-shell的若干问题
+      类加载机制简介
     </h1>
   
 
@@ -245,9 +230,13 @@ export PATH=${PATH}:/Users/***">
       
       <div class="article-info article-info-post">
         
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/类加载/">类加载</a></li></ul>
+	</div>
+
         
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Android/">Android</a>
+	<a class="article-category-link" href="/categories/Java虚拟机/">Java虚拟机</a>
 	</div>
 
 
@@ -257,17 +246,20 @@ export PATH=${PATH}:/Users/***">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最近一直在进行安卓开发，在windows下启动adb shell只要配置环境变量就好了，并且网上教程很多，那么在MAC下如何配置呢？</p>
-<p>大体思路是一致的，只是要用命令行来操。</p>
-<p>首先启动终端，然后输入：</p>
-<pre><code><span class="variable">$ </span>touch .bash_profile
-<span class="variable">$ </span>open -e .bash_profile
-</code></pre><p>这时会打开.bash_profile这个文档,</p>
-<pre><code>export <span class="constant">PATH</span>=<span class="variable">${</span><span class="constant">PATH</span>}<span class="symbol">:/Users/***/sdk/platform-tools</span>
-</code></pre><p>在后面输入<code>platform-tools</code>所在的目录路径，比如笔者的路径就是<code>/Users/***/sdk/platform-tools</code>，所以写成上面的形式。然后直接关闭文档自动保存。</p>
+        <p>Java的源代码是经过编译器编译成<strong>字节码</strong>，然后由JVM解释执行，而不是像C/C++一样经过编译和链接后生成可执行的二进制代码，所以Java的执行速度比较慢，但是可以跨平台执行。</p>
+<h4 id="虚拟机类加载机制">虚拟机类加载机制</h4><p>Class文件中描述的各种信息，最终都需要加载到虚拟机中之后才能运行和使用。虚拟机把描述类的数据从Class文件加载到内存，并对数据进行校验、转换解析和初始化，最终形成可以被虚拟机直接使用的Java类型，这就是虚拟机的类加载机制。</p>
+<p>类从被加载到虚拟机内存中开始，到卸载出内存为止，它的整个生命周期包括：加载、验证、准备、解析、初始化、使用和卸载7个阶段，其中验证、准备、解析统称为连接。<br><img src="https://coding.net/u/fulianguestc/p/markdownphotos/git/raw/master/classLife.png" alt="类的生命周期"></p>
 <a id="more"></a>
-<p>这时候在终端输入<code>adb</code>，就不会提示错误信息了，然后启动安卓模拟器，再次输入<code>adb shell</code>即可。</p>
-<p>进行安卓开发时相信很多人都会用Genymotion，笔者发现默认的ADB会产生端口被占用的问题，其实解决这个问题的方法很简单，只需要在设置中改成自己的sdk就好了。如下图：<br><img src="https://raw.githubusercontent.com/fulianguestc/markdownphotos/master/geny.png" alt="geny"><br>OVER~ ~ ~!</p>
+<h5 id="加载">加载</h5><p>在加载阶段，虚拟机需要完成以下3件事：</p>
+<ol>
+<li>通过一个类的全限定名来获取定义此类的二进制流。</li>
+<li>将这个字节流所代表的静态存储结构转化为方法区的运行时数据结构。</li>
+<li>在内存中生成一个代表这个类的Class对象，作为方法区这个类的各种数据的访问入口。</li>
+</ol>
+<h5 id="验证">验证</h5><p>为了确保Class文件的字节流中包含的信息符合当前JVM的需求，并且不会危害虚拟机自身的安全。</p>
+<h5 id="准备">准备</h5><p>准备阶段是正式为类变量分配内存并设置<strong>类变量</strong>初始值（0值）的阶段，这些变量所使用的内存都将在<strong>方法区</strong>中进行分配。</p>
+<h5 id="解析">解析</h5><p>解析阶段是虚拟机将常量池内的符号引用替换为直接引用的过程。</p>
+<h5 id="初始化">初始化</h5><p>到了初始化阶段，真正开始执行类中定义的Java程序代码（字节码）。</p>
 
       
     </div>
@@ -277,18 +269,9 @@ export PATH=${PATH}:/Users/***">
     
 <nav id="article-nav">
   
-    <a href="/java中this的用法/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Java中this的用法
-        
-      </div>
-    </a>
   
-  
-    <a href="/软件开发之后/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">软件开发之后……</div>
+    <a href="/垃圾收集器/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">垃圾收集器</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
