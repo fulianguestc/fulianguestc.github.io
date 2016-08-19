@@ -4,25 +4,31 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>垃圾收集器 | 少数派报告</title>
+  <title>类加载器和双亲委派模型 | 少数派报告</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="垃圾回收期是内存回收的具体实现。下图是7种作用于不同分代的收集器，如果两个收集器之间存在连线，就说明他们可以搭配使用。
-Serial收集器Serial收集器是单线程收集器，一方面是指它只会用一个CPU或一条手机线程去完成垃圾收集工作，另一方面是它在垃圾收集时，必须暂停其他所有工作线程，直到它收集结束Stop The World。(用户无法控制)
-Serial收集器是Client模式下默认新生代收集">
+  <meta name="description" content="类加载器实现类加载过程的加载阶段的代码块称为类加载器。对于任意一个类，都需要加载它的类加载器和这个类本身一同确立其在JVM中的唯一性。
+从JVM角度来看，只有两种不同弄的类加载器：一种是启动类加载器，使用C/C++实现的；另一种是所有其他的类加载器，这些类都是由Java语言实现。
+
+启动类加载器：负责将存放在\lib目录下的类库加载到虚拟机内存中。
+扩展类加载器：负责加载\lib\ext目录中的所">
 <meta property="og:type" content="article">
-<meta property="og:title" content="垃圾收集器">
-<meta property="og:url" content="http://sspaiblog.com/垃圾收集器/index.html">
+<meta property="og:title" content="类加载器和双亲委派模型">
+<meta property="og:url" content="http://sspaiblog.com/类加载器和双亲委派模型/index.html">
 <meta property="og:site_name" content="少数派报告">
-<meta property="og:description" content="垃圾回收期是内存回收的具体实现。下图是7种作用于不同分代的收集器，如果两个收集器之间存在连线，就说明他们可以搭配使用。
-Serial收集器Serial收集器是单线程收集器，一方面是指它只会用一个CPU或一条手机线程去完成垃圾收集工作，另一方面是它在垃圾收集时，必须暂停其他所有工作线程，直到它收集结束Stop The World。(用户无法控制)
-Serial收集器是Client模式下默认新生代收集">
-<meta property="og:image" content="https://coding.net/u/fulianguestc/p/markdownphotos/git/raw/master/GCcollector.png">
-<meta property="og:updated_time" content="2016-08-17T01:18:52.000Z">
+<meta property="og:description" content="类加载器实现类加载过程的加载阶段的代码块称为类加载器。对于任意一个类，都需要加载它的类加载器和这个类本身一同确立其在JVM中的唯一性。
+从JVM角度来看，只有两种不同弄的类加载器：一种是启动类加载器，使用C/C++实现的；另一种是所有其他的类加载器，这些类都是由Java语言实现。
+
+启动类加载器：负责将存放在\lib目录下的类库加载到虚拟机内存中。
+扩展类加载器：负责加载\lib\ext目录中的所">
+<meta property="og:image" content="https://coding.net/u/fulianguestc/p/markdownphotos/git/raw/master/classLoader.png">
+<meta property="og:updated_time" content="2016-08-19T05:45:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="垃圾收集器">
-<meta name="twitter:description" content="垃圾回收期是内存回收的具体实现。下图是7种作用于不同分代的收集器，如果两个收集器之间存在连线，就说明他们可以搭配使用。
-Serial收集器Serial收集器是单线程收集器，一方面是指它只会用一个CPU或一条手机线程去完成垃圾收集工作，另一方面是它在垃圾收集时，必须暂停其他所有工作线程，直到它收集结束Stop The World。(用户无法控制)
-Serial收集器是Client模式下默认新生代收集">
+<meta name="twitter:title" content="类加载器和双亲委派模型">
+<meta name="twitter:description" content="类加载器实现类加载过程的加载阶段的代码块称为类加载器。对于任意一个类，都需要加载它的类加载器和这个类本身一同确立其在JVM中的唯一性。
+从JVM角度来看，只有两种不同弄的类加载器：一种是启动类加载器，使用C/C++实现的；另一种是所有其他的类加载器，这些类都是由Java语言实现。
+
+启动类加载器：负责将存放在\lib目录下的类库加载到虚拟机内存中。
+扩展类加载器：负责加载\lib\ext目录中的所">
   
     <link rel="alternative" href="/atom.xml" title="少数派报告" type="application/atom+xml">
   
@@ -208,11 +214,11 @@ Serial收集器是Client模式下默认新生代收集">
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-垃圾收集器" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-类加载器和双亲委派模型" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/垃圾收集器/" class="article-date">
-  	<time datetime="2016-08-17T01:18:52.000Z" itemprop="datePublished">2016-08-17</time>
+      <a href="/类加载器和双亲委派模型/" class="article-date">
+  	<time datetime="2016-08-19T05:45:36.000Z" itemprop="datePublished">2016-08-19</time>
 </a>
     </div>
   
@@ -225,7 +231,7 @@ Serial收集器是Client模式下默认新生代收集">
         
   
     <h1 class="article-title" itemprop="name">
-      垃圾收集器
+      类加载器和双亲委派模型
     </h1>
   
 
@@ -234,7 +240,7 @@ Serial收集器是Client模式下默认新生代收集">
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CMS和G1/">CMS和G1</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/内存分配策略/">内存分配策略</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/类加载/">类加载</a></li></ul>
 	</div>
 
         
@@ -249,27 +255,28 @@ Serial收集器是Client模式下默认新生代收集">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>垃圾回收期是内存回收的具体实现。下图是7种作用于不同分代的收集器，如果两个收集器之间存在连线，就说明他们可以搭配使用。<br><img src="https://coding.net/u/fulianguestc/p/markdownphotos/git/raw/master/GCcollector.png" alt="垃圾收集器"></p>
-<h5 id="Serial收集器">Serial收集器</h5><p>Serial收集器是单线程收集器，一方面是指它只会用一个CPU或一条手机线程去完成垃圾收集工作，另一方面是它在垃圾收集时，必须暂停其他所有工作线程，直到它收集结束<strong>Stop The World</strong>。(用户无法控制)</p>
-<p>Serial收集器是Client模式下默认新生代收集器，与其他收集器的单线程相比简单而高效，在新生代采用的是复制算法。</p>
+        <h5 id="类加载器">类加载器</h5><p>实现类加载过程的加载阶段的代码块称为<strong>类加载器</strong>。对于任意一个类，都需要加载它的类加载器和这个类本身一同确立其在JVM中的唯一性。</p>
+<p>从JVM角度来看，只有两种不同弄的类加载器：一种是启动类加载器，使用C/C++实现的；另一种是所有其他的类加载器，这些类都是由Java语言实现。</p>
+<ol>
+<li>启动类加载器：负责将存放在<java home="">\lib目录下的类库加载到虚拟机内存中。</java></li>
+<li>扩展类加载器：负责加载<java home="">\lib\ext目录中的所有类库。</java></li>
+<li>应用程序类加载器（系统类加载器）：负责加载用户类路径上所制定的类库。</li>
+</ol>
+<p>应用程序都是由这3个类加载器互相配合进行加载的。</p>
 <a id="more"></a>
-<h5 id="ParNew收集器">ParNew收集器</h5><p>ParNew收集器是Serial收集器的多线程版本，是在Server模式下在虚拟机中首选的新生代收集器，还有重要的一点就是，<strong>除了Serial收集器外，目前只有它能与CMS收集器配合工作</strong>。他在新生代采用的是复制算法。</p>
-<h5 id="Parallel_Scavenger收集器">Parallel Scavenger收集器</h5><p>Parallel Scavenger收集器是一个新生代收集器，是使用复制算法的收集器，也是并行的多线程收集器。</p>
-<p>它的特点是，它关注的是一个可控制的吞吐量而不是GC时用户的停顿时间。吞吐量即运行用户代码时间/(运行用户代码时间+GC时间)。高吞吐量可以高效率的利用CPU时间，尽快完成运算任务，主要适合在后台运算而不需要太多交互的任务。</p>
-<h5 id="Serial_Old收集器">Serial Old收集器</h5><p>Serial Old收集器是Serial收集器的老年代的版本，使用的是标记整理算法，主要用在Client模式下。</p>
-<h5 id="Parallel_Old收集器">Parallel Old收集器</h5><p>Parallel Old收集器是Parallel Scavenger收集器的老年代版本，使用多线程和标记整理算法。在注重吞吐量的场合都可以考虑Parallel这一组合。</p>
-<h5 id="CMS收集器">CMS收集器</h5><p>CMS（Concurrent Mark Sweep）收集器是一种以获取最短回收停顿时间为目标的收集器，尤其重视服务的响应速度，是基于<strong>标记清除</strong>算法实现的。但是运作过程很是复杂，共有4个步骤：初始标记、并发标记、重新标记、并发清除。</p>
-<p>初始标记和重新标记这两个步骤需要<strong>Stop The World</strong>。初始标记是标记一下GC Roots能直接关联到的对象，速度很快；并发标记是进行GC RootsTracing的过程；重新标记阶段是为了修正并发标记期间因用户程序继续运作而导致标记产生变动的那一部分对象的标记记录。</p>
-<p>耗时最长的并发标记和并发清除过程中收集器都是和用户线程一起工作的，所以总体上讲是并发执行的。主要优点就是并发收集、低停顿；缺点则是占用线程导致应用变慢、并发过程中产生新的垃圾和产生内存碎片。</p>
-<h5 id="G1收集器">G1收集器</h5><p>G1收集器是当今收集器技术的最前沿技术之一，是面向服务端应用的垃圾收集器。</p>
-<p>它具备如下特点，并行与并发执行，不需要其他收集器即可分代收集，空间整合无内存碎片，<strong>可预测停顿</strong>。</p>
-<p>G1收集器将Java堆划分为多个大小相等的独立区域，新生代和老年代也不是物理隔离的，他们都是不需要连续的区域的集合。即回收时不需要对全局进行回收。</p>
-<p>G1收集器也分初始标记、并发标记、最终标记和筛选回收四个步骤。前两个阶段和CMS收集器类似，最终标记也和重新标记类似，筛选回收阶段会对各个Region的回收价值和成本排序，根据用户期望的停顿时间来制定回收计划。</p>
-<h5 id="内存分配策略">内存分配策略</h5><p>新生代GC（Minor GC）：指发生在新生代的垃圾收集动作，因为Java对象大多都具备朝生夕灭的特性，所以Minor GC非常频繁，一般回收速度也比较快。</p>
-<p>老年代GC（Major GC/Full GC）：指发生在老年代的GC，出现了Major GC，经常会伴随至少一次的Minor GC，速度要比Minor GC慢10倍以上。</p>
-<p>大多数情况下，对象在新生代Eden区中分配，当Eden区没有足够空间进行分配时，虚拟机将发起一次Minor GC。</p>
-<p>大对象直接进入老年代，大对象即需要大量连续内存空间的Java对象，最典型的是很长的字符串和数组。大对象会导致内存还有很多空间时就提前触发GC收集。</p>
-<p>长期存活的对象将进入老年代。虚拟机给每个对象定义一个<strong>年龄计数器</strong>，若果Eden中的对象在一次Minor GC后仍然存活，将被移到Survivor空间，年龄置为1，当年龄达到一定程度时就会被转入老年代。</p>
+<h5 id="双亲委派模型">双亲委派模型</h5><p>类加载器之间的这种层次关系称为类加载器的双亲委派模型。<br><img src="https://coding.net/u/fulianguestc/p/markdownphotos/git/raw/master/classLoader.png" alt="类的生命周期"></p>
+<p>双亲委派模型工作过程</p>
+<ol>
+<li>如果一个类加载器收到了类加载请求，它首先不会自己去尝试加载这个类，而是把类加载请求委派给父类加载器去完成。</li>
+<li>每一层的类加载器都把类加载请求委派给父类加载器，直到所有的类加载请求都应该传递给顶层的启动类加载器。</li>
+<li>如果顶层的启动类加载器无法完成加载请求，子类加载器尝试去加载，如果连最初发起类加载请求的类加载器也无法完成加载请求时，将会抛出ClassNotFoundException，而不再调用其子类加载器去进行类加载。</li>
+</ol>
+<p>双亲委派模式的类加载机制的优点是java类它的类加载器一起具备了一种带优先级的层次关系，越是基础的类，越是被上层的类加载器进行加载，保证了java程序的稳定运行。保证了类的唯一性。</p>
+<h5 id="分派">分派</h5><p>分派即重载和重写在Java虚拟机中是如何实现的。</p>
+<p>静态分派：重载。例如Human man = new Man();Human称为变量的静态类型或者外观类型，Man即为实际类型。静态类型在编译期是可知的，实际类型变化的结果在运行期才可确定。</p>
+<p>所有依赖静态类型来定位方法执行版本的分派动作称为静态分派，静态分派的典型应用是方法重载。</p>
+<p>动态分派：在运行期根据实际类型确定方法执行版本的分派过程称为动态分派。</p>
+<p>单分派和多分派，是基于多少种宗量对目标方法进行选择而划分的（需要考虑静态类型，和方法参数的类型）。Java语言是一门静态多分派、动态单分派语言。</p>
 
       
     </div>
@@ -279,18 +286,9 @@ Serial收集器是Client模式下默认新生代收集">
     
 <nav id="article-nav">
   
-    <a href="/虚拟机类加载机制/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          类加载机制简介
-        
-      </div>
-    </a>
   
-  
-    <a href="/垃圾收集算法/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">垃圾收集算法</div>
+    <a href="/虚拟机类加载机制/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">类加载机制简介</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
